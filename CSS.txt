@@ -1,116 +1,116 @@
-1¡¢Çå³ı¸¡¶¯£º
- 1¡¢overflow
-  hidden¡¢auto¡¢scroll
- 2¡¢clear   ÍâÇ½¡¢ÄÚÇ½
-  Right¡¢Left¡¢Both
- 3¡¢clearfix:after{
+1ã€æ¸…é™¤æµ®åŠ¨ï¼š
+ 1ã€overflow
+  hiddenã€autoã€scroll
+ 2ã€clear   å¤–å¢™ã€å†…å¢™
+  Rightã€Leftã€Both
+ 3ã€clearfix:after{
     content:"";
     display:block;
     clear:both;
 }
-2¡¢¾ÓÖĞ£º
- 1¡¢ÎÄ×Ö£ºtext-align:center; line-heignt:ĞĞ¸ß;
- 2¡¢ĞĞÄÚÔªËØ£º¸ø¸¸ÔªËØ£ºtext-align:center;display:table-cell;vertical-align:middle;
- 3¡¢margin:auto;CSS3ÖĞµÄ
-3¡¢±í¸ñ±ß¿ò
+2ã€å±…ä¸­ï¼š
+ 1ã€æ–‡å­—ï¼štext-align:center; line-heignt:è¡Œé«˜;
+ 2ã€è¡Œå†…å…ƒç´ ï¼šç»™çˆ¶å…ƒç´ ï¼štext-align:center;display:table-cell;vertical-align:middle;
+ 3ã€margin:auto;CSS3ä¸­çš„
+3ã€è¡¨æ ¼è¾¹æ¡†
   table {
-	border-collapse:collapse; //±ß¿òÕÛµş
+	border-collapse:collapse; //è¾¹æ¡†æŠ˜å 
 	border-spacing:0;
-	cellspacing:0;//±ß¿ò¼ä¾à
+	cellspacing:0;//è¾¹æ¡†é—´è·
 }
-4¡¢Ñ¡ÔñÆ÷
-	+Ñ¡ÔñÆ÷
+4ã€é€‰æ‹©å™¨
+	+é€‰æ‹©å™¨
 	ul>li*6
 	ul>li+li{
-	//Ñ¡ÔñÃ¿¸öliºóÃæµÄ½ôÁÚliÔªËØ,Í¨³£ÖÆ×÷borderÖĞÏß
+	//é€‰æ‹©æ¯ä¸ªliåé¢çš„ç´§é‚»liå…ƒç´ ,é€šå¸¸åˆ¶ä½œborderä¸­çº¿
 	}
-	div[class^="col-md"]{//°üº¬classÊôĞÔÇÒÒÔcol-md¿ªÍ·µÄdivÔªËØ}
-	div[class*="col-md"]{//°üº¬classÊôĞÔ°üº¬col-mdµÄdivÔªËØ}
-	div[class$="col-md"]{//°üº¬classÊôĞÔÇÒÒÔcol-md½áÊøµÄdivÔªËØ}
-5¡¢text-indent:2em;//Ê×ĞĞËõ½ø£¬remÊÇÒÔhtmlµÄfont-sizeÎªµ¥Î»µÄ
-6¡¢×ÖÌåÒõÓ°£º
-	text-shadow:-5px -10px 4px red;	//×óÓÒÆ«ÒÆ ÉÏÏÂÆ«ÒÆ Ä£ºı¶È ÑÕÉ«
-7¡¢ÎÄ±¾³¬³öÏÔÊ¾...
-	white-space:nowrap;	//ÎÄ±¾³¬³ö²»»»ĞĞ
-	overflow:hidden;	//³¬³öÒş²Ø
-	text-overflow:ellipsis;//³¬³öÏÔÊ¾...
-8¡¢±ß¿òÔ²½Ç
-	border-radius:1px 2px 3px 5px/6px 7px 8px 10px;	//Ç°Ãæ±íÊ¾4¸ö½ÇxÖáµÄ°ë¾¶,ºóÃæÎªyÖá;
-9¡¢Ö¸¶¨ºĞÄ£ĞÍµÄ¿í¸ß
+	div[class^="col-md"]{//åŒ…å«classå±æ€§ä¸”ä»¥col-mdå¼€å¤´çš„divå…ƒç´ }
+	div[class*="col-md"]{//åŒ…å«classå±æ€§åŒ…å«col-mdçš„divå…ƒç´ }
+	div[class$="col-md"]{//åŒ…å«classå±æ€§ä¸”ä»¥col-mdç»“æŸçš„divå…ƒç´ }
+5ã€text-indent:2em;//é¦–è¡Œç¼©è¿›ï¼Œremæ˜¯ä»¥htmlçš„font-sizeä¸ºå•ä½çš„
+6ã€å­—ä½“é˜´å½±ï¼š
+	text-shadow:-5px -10px 4px red;	//å·¦å³åç§» ä¸Šä¸‹åç§» æ¨¡ç³Šåº¦ é¢œè‰²
+7ã€æ–‡æœ¬è¶…å‡ºæ˜¾ç¤º...
+	white-space:nowrap;	//æ–‡æœ¬è¶…å‡ºä¸æ¢è¡Œ
+	overflow:hidden;	//è¶…å‡ºéšè—
+	text-overflow:ellipsis;//è¶…å‡ºæ˜¾ç¤º...
+8ã€è¾¹æ¡†åœ†è§’
+	border-radius:1px 2px 3px 5px/6px 7px 8px 10px;	//å‰é¢è¡¨ç¤º4ä¸ªè§’xè½´çš„åŠå¾„,åé¢ä¸ºyè½´;
+9ã€æŒ‡å®šç›’æ¨¡å‹çš„å®½é«˜
 	box-sizing:border-box	//width=border+padding+content
 	box-sizing:content-box	//width=content
 CSS3
-CSSÊ¹ÓÃÊÖ²á£º
-	 [] ±íÊ¾¿ÉÑ¡Ïî
-	 || »òÕß
-	 |  ¶àÑ¡Ò»
-	 £¿ 0¸ö»ò1¸ö
-	 *  0¸ö»ò¶à¸ö
-	 {} ·¶Î§
+CSSä½¿ç”¨æ‰‹å†Œï¼š
+	 [] è¡¨ç¤ºå¯é€‰é¡¹
+	 || æˆ–è€…
+	 |  å¤šé€‰ä¸€
+	 ï¼Ÿ 0ä¸ªæˆ–1ä¸ª
+	 *  0ä¸ªæˆ–å¤šä¸ª
+	 {} èŒƒå›´
 
-ÉìËõ²¼¾Ö£º
-	1¡¢display:flex; 	//¸ø¸¸ºĞ×ÓÈ·¶¨
-	2¡¢flex-direction:	//×ÓÔªËØÈ·¶¨·½Ïò(Ö÷Öá·½Ïò)
-		row (Ë®Æ½£¬Ä¬ÈÏ)  
-		column (ÊúÖ±)  
-		row reverse (Ë®Æ½·´Ïò) 
+ä¼¸ç¼©å¸ƒå±€ï¼š
+	1ã€display:flex; 	//ç»™çˆ¶ç›’å­ç¡®å®š
+	2ã€flex-direction:	//å­å…ƒç´ ç¡®å®šæ–¹å‘(ä¸»è½´æ–¹å‘)
+		row (æ°´å¹³ï¼Œé»˜è®¤)  
+		column (ç«–ç›´)  
+		row reverse (æ°´å¹³åå‘) 
 		column reverse  
-	3¡¢justify-content:		//ÔÚ¸¸ºĞ×ÓÉÏÈ·¶¨×ÓºĞ×Ó(Ö÷Öá)µÄ¶ÔÆë·½Ê½
-		flex-start (¿ªÊ¼Î»ÖÃ)¡¢
-		flex-end¡¢center (¾ÓÖĞ)¡¢
-		space-around (Æ½¾ù)¡¢
-		space-between (¿¿Á½±ß¶ÔÆë)   
-	4¡¢align-items:		//µ÷Õû²à³éµÄ¶ÔÆë·½Ê½(²àÖá×ÜÊÇ´¹Ö±Ö÷Öá)
-		flex-start (¿ªÊ¼Î»ÖÃ)¡¢
-		flex-end¡¢
-		center (¾ÓÖĞ)¡¢
-		baseline¡¢
+	3ã€justify-content:		//åœ¨çˆ¶ç›’å­ä¸Šç¡®å®šå­ç›’å­(ä¸»è½´)çš„å¯¹é½æ–¹å¼
+		flex-start (å¼€å§‹ä½ç½®)ã€
+		flex-endã€center (å±…ä¸­)ã€
+		space-around (å¹³å‡)ã€
+		space-between (é ä¸¤è¾¹å¯¹é½)   
+	4ã€align-items:		//è°ƒæ•´ä¾§æŠ½çš„å¯¹é½æ–¹å¼(ä¾§è½´æ€»æ˜¯å‚ç›´ä¸»è½´)
+		flex-start (å¼€å§‹ä½ç½®)ã€
+		flex-endã€
+		center (å±…ä¸­)ã€
+		baselineã€
 		stretch	
-	flex-wrap:wrap¡¢nowrap; //¸ø×ÓÔªËØ¡£¿ØÖÆÊÇ·ñ»»ĞĞ
-		align-content:	//Ó¦¶Ôflex-wrapºó»»ĞĞ½øĞĞ¿ØÖÆ£¬ÒÔĞĞÎªµ¥Î»µÄ¶ÔÆë·½Ê½
-		flex-start (¿ªÊ¼Î»ÖÃ)¡¢
-		flex-end¡¢center (¾ÓÖĞ)¡¢
-		space-around (Æ½¾ù)¡¢
-		space-between (¿¿Á½±ß¶ÔÆë)	
-	align-self:		//¿ØÖÆµ¥¸ö×ÓÔªËØ¶ÔÆë·½Ê½£¬¿ÉÒÔ¸²¸Ç¸¸ÔªËØµÄalign-items
-		flex-start (¿ªÊ¼Î»ÖÃ)¡¢
-		flex-end¡¢center (¾ÓÖĞ)¡¢
-		baseline¡¢stretch  
-	flex-flow:ÊÇflex-directionºÍflex-wrapµÄ¼òĞ´ĞÎÊ½
-	flex:1;		¸ø×ÓÔªËØ£¬·ÖÅäÊ£ÓàµÄ¿í¶È±ÈÀı
-	order:5;	¸ø×ÓÔªËØÅÅĞò£¬Ô½´óÔ½ÔÚºóÃæ
-¾¶Ïò½¥±ä£º
-	background-image:radial-gradient(120px 80px at center center,yellow,green); //·øÉä·¶Î§£¬ÖĞĞÄµã£¬ÑÕÉ«µÄÆğÖ¹
+	flex-wrap:wrapã€nowrap; //ç»™å­å…ƒç´ ã€‚æ§åˆ¶æ˜¯å¦æ¢è¡Œ
+		align-content:	//åº”å¯¹flex-wrapåæ¢è¡Œè¿›è¡Œæ§åˆ¶ï¼Œä»¥è¡Œä¸ºå•ä½çš„å¯¹é½æ–¹å¼
+		flex-start (å¼€å§‹ä½ç½®)ã€
+		flex-endã€center (å±…ä¸­)ã€
+		space-around (å¹³å‡)ã€
+		space-between (é ä¸¤è¾¹å¯¹é½)	
+	align-self:		//æ§åˆ¶å•ä¸ªå­å…ƒç´ å¯¹é½æ–¹å¼ï¼Œå¯ä»¥è¦†ç›–çˆ¶å…ƒç´ çš„align-items
+		flex-start (å¼€å§‹ä½ç½®)ã€
+		flex-endã€center (å±…ä¸­)ã€
+		baselineã€stretch  
+	flex-flow:æ˜¯flex-directionå’Œflex-wrapçš„ç®€å†™å½¢å¼
+	flex:1;		ç»™å­å…ƒç´ ï¼Œåˆ†é…å‰©ä½™çš„å®½åº¦æ¯”ä¾‹
+	order:5;	ç»™å­å…ƒç´ æ’åºï¼Œè¶Šå¤§è¶Šåœ¨åé¢
+å¾„å‘æ¸å˜ï¼š
+	background-image:radial-gradient(120px 80px at center center,yellow,green); //è¾å°„èŒƒå›´ï¼Œä¸­å¿ƒç‚¹ï¼Œé¢œè‰²çš„èµ·æ­¢
 
-¹ı¶È£º
+è¿‡åº¦ï¼š
 	transition:all 1s;
-±ä»»£º
+å˜æ¢ï¼š
 	transform:
-		skewx(45deg),xÖáÉÏµÄÅ¤Çú
-		rotate(360deg),	2dĞı×ª
-		scalex(2),	xÖáÉÏµÄËõ·Å
-		translatex(2),	xÖáÉÏµÄÆ½ÒÆ
-	transform-origin:left top;	Ğı×ªºÍËõ·ÅµÄÖĞĞÄµã
-3DĞı×ª£º
+		skewx(45deg),xè½´ä¸Šçš„æ‰­æ›²
+		rotate(360deg),	2dæ—‹è½¬
+		scalex(2),	xè½´ä¸Šçš„ç¼©æ”¾
+		translatex(2),	xè½´ä¸Šçš„å¹³ç§»
+	transform-origin:left top;	æ—‹è½¬å’Œç¼©æ”¾çš„ä¸­å¿ƒç‚¹
+3Dæ—‹è½¬ï¼š
 	transform:rotateZ(360deg);
 	transition:all 3s;
-	transform-origin:left bottom; //Ğı×ªÖĞĞÄµã£¬²»ÒªÉèÔÚhoverÉÏ
-	tramsform-style:preserve-3d;ÈÃÔªËØ¿´ÆğÀ´ÔÚ3d¿Õ¼äÉÏ
-	transform:rotatex(60deg);		//xÖáÉÏĞı×ª
-	perspective:100px;	//ÒÔ100pxµÄ¾àÀë¿´¹ıÈ¥
-	transition:translatez(100px);	//zÖáÉÏµÄÆ½ÒÆ£¬Àë¹Û²ìÕß½ü100px
+	transform-origin:left bottom; //æ—‹è½¬ä¸­å¿ƒç‚¹ï¼Œä¸è¦è®¾åœ¨hoverä¸Š
+	tramsform-style:preserve-3d;è®©å…ƒç´ çœ‹èµ·æ¥åœ¨3dç©ºé—´ä¸Š
+	transform:rotatex(60deg);		//xè½´ä¸Šæ—‹è½¬
+	perspective:100px;	//ä»¥100pxçš„è·ç¦»çœ‹è¿‡å»
+	transition:translatez(100px);	//zè½´ä¸Šçš„å¹³ç§»ï¼Œç¦»è§‚å¯Ÿè€…è¿‘100px
 	
 
-¶¯»­£º
-	animation:rotate 60s steps(60) infinite;//Ãû×Ö£¬¶¯»­³ÖĞøÊ±¼ä£¬60Ãë·Ö60´ÎÍê³É£¬ÎŞÏŞÑ­»·
-	animation-name:change;//¶¯»­Ãû³Æ
-	animation-duration: 5s;//¶¯»­³ÖĞøÊ±¼ä
-	animation-fill-mode:forwards; //¶¯»­ºóµÄ×´Ì¬
-	animation-iteration-count:infinite;//ÎŞÏŞ²¥·Å
-	animation-delay:1s;  //ÑÓÊ±1s
-	animation-play-state:paused; //¶¯»­ÔİÍ£
-	animation-direction:alternate;//¶¯»­·´·½Ïò
-	animation-timing-function:linear;// ¶¯»­ËÙ¶È
+åŠ¨ç”»ï¼š
+	animation:rotate 60s steps(60) infinite;//åå­—ï¼ŒåŠ¨ç”»æŒç»­æ—¶é—´ï¼Œ60ç§’åˆ†60æ¬¡å®Œæˆï¼Œæ— é™å¾ªç¯
+	animation-name:change;//åŠ¨ç”»åç§°
+	animation-duration: 5s;//åŠ¨ç”»æŒç»­æ—¶é—´
+	animation-fill-mode:forwards; //åŠ¨ç”»åçš„çŠ¶æ€
+	animation-iteration-count:infinite;//æ— é™æ’­æ”¾
+	animation-delay:1s;  //å»¶æ—¶1s
+	animation-play-state:paused; //åŠ¨ç”»æš‚åœ
+	animation-direction:alternate;//åŠ¨ç”»åæ–¹å‘
+	animation-timing-function:linear;// åŠ¨ç”»é€Ÿåº¦
 
 @keyframes change {
  0% {
@@ -122,9 +122,9 @@ CSSÊ¹ÓÃÊÖ²á£º
 }
 
 
-#bg:target{  //Ñ¡ÖĞ
+#bg:target{  //é€‰ä¸­
 z-index:4;
 }
-#bg:not(:target){  //²»Ñ¡ÖĞ
+#bg:not(:target){  //ä¸é€‰ä¸­
 z-index:2;
 }

@@ -1,110 +1,110 @@
-1¡¢	<input type="search"/> //¶¨ÒåÄÜµ÷³öËÑË÷°´Å¥µÄ·½Ê½
+1ã€	<input type="search"/> //å®šä¹‰èƒ½è°ƒå‡ºæœç´¢æŒ‰é’®çš„æ–¹å¼
 ***********************************************
-1¡¢	<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
-	//´°¿ÚºÍÉè±¸µÄ´°¿Ú±£³ÖÒ»ÖÂ£¬³õÊ¼Ëõ·ÅÎª1:1(100%),½ûÖ¹ÓÃ»§Ëõ·Å
-2¡¢	div.container;	//¹Ì¶¨¿í¶È 1170px
-	div.container-fluid;	//¿í¶ÈÎª100%;
-3¡¢.page-header		//ÉèÖÃÒ³Í·£¬¸ø±êÌâ¼ÓÒ»¸ö·Ö¸îÏß£¬ÔÚh1ÏÂÓĞÌõÏß
-	.well	//¸øÎÄ±¾µÄ¸¸ÔªËØ£¬°üº¬ÄÚÈİ£¬Ïñ´úÂë¿éÄÇÑù
-4¡¢<del>É¾³ıÏß</del>
-	text-uppercase;	//ËùÓĞÓ¢ÎÄ´óĞ´
-	text-lowercase;	//ËùÓĞÓ¢ÎÄĞ¡Ğ´
-	text-capitalize;	//Ê××ÖÄ¸´óĞ´
-5¡¢	text-left,text-center,text-right;	ÎÄ±¾¶ÔÆë·½Ê½
-	center-block;	//¿é¼¶¾ÓÖĞ
-6¡¢	ul .list-unstyled;	//È¥µôÁĞ±íÇ°ÃæµÄ·ûºÅºÍÔ­ÓĞµÄ¸ñÊ½
-	ul .list-inline;	//°ÑliÖ®¼äµÄÄÚÈİ±ä³ÉºáÏòÅÅÁĞ
-7¡¢±í¸ñ
-	.table 	±í¸ñµÄÒ»¸ö»ùÀà£¬Èç¹û¼ÓÆäËûÑùÊ½£¬¶¼ÔÚ.tableµÄ»ù´¡ÉÏ
-	.table-borderd 	¸ø±í¸ñ¼Ó±ß¿ò
-	.table-hover	 Êó±êĞüÍ£Ğ§¹û
-	.table-striped 	°ßÂíÏßĞ§¹û£¬¸ôĞĞ»ÆÉ«
-	.table-condensed 	±ä½ôÁËÒ»µã
-	.table-responsive 	¸øtableµÄ¸¸ÔªËØ¼Ó£¬±ä³ÉÏìÓ¦Ê½
-8¡¢ÑÕÉ«
-	£¨ÔÚ±í¸ñµÄÃ¿ĞĞ»òµ¥Ôª¸ñ£©
-	.active		Êó±êĞüÍ£ÔÚĞĞ»òµ¥Ôª¸ñÉÏÊ±ËùÉèÖÃµÄÑÕÉ«
-	.success	±êÊ¶³É¹¦»ò»ı¼«µÄ¶¯×÷
-	.info		±êÊ¶ÆÕÍ¨µÄÌáÊ¾ĞÅÏ¢»ò¶¯×÷
-	.warning	±êÊ¶¾¯¸æ»òĞèÒªÓÃ»§×¢Òâ
-	.danger		±êÊ¶Î£ÏÕ»òÇ±ÔÚµÄ´øÀ´¸ºÃæÓ°ÏìµÄ¶¯×÷
-	ÎÄ±¾£º
-	<p class="text-muted">...</p>	//ÈáºÍ¡¢»ÒÉ«
-	<p class="text-primary">...</p>	//³õÊ¼»¯¡¢ÉîÀ¶
-	<p class="text-success">...</p>	//³É¹¦¡¢ÂÌÉ«
-	<p class="text-info">...</p>	//ÌáÊ¾¡¢Ç³À¶
-	<p class="text-warning">...</p>	//¾¯¸æ¡¢³ÈÉ«
-	<p class="text-danger">...</p>	//Î£ÏÕ¡¢Ç³ºì
-	±³¾°£º
+1ã€	<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+	//çª—å£å’Œè®¾å¤‡çš„çª—å£ä¿æŒä¸€è‡´ï¼Œåˆå§‹ç¼©æ”¾ä¸º1:1(100%),ç¦æ­¢ç”¨æˆ·ç¼©æ”¾
+2ã€	div.container;	//å›ºå®šå®½åº¦ 1170px
+	div.container-fluid;	//å®½åº¦ä¸º100%;
+3ã€.page-header		//è®¾ç½®é¡µå¤´ï¼Œç»™æ ‡é¢˜åŠ ä¸€ä¸ªåˆ†å‰²çº¿ï¼Œåœ¨h1ä¸‹æœ‰æ¡çº¿
+	.well	//ç»™æ–‡æœ¬çš„çˆ¶å…ƒç´ ï¼ŒåŒ…å«å†…å®¹ï¼Œåƒä»£ç å—é‚£æ ·
+4ã€<del>åˆ é™¤çº¿</del>
+	text-uppercase;	//æ‰€æœ‰è‹±æ–‡å¤§å†™
+	text-lowercase;	//æ‰€æœ‰è‹±æ–‡å°å†™
+	text-capitalize;	//é¦–å­—æ¯å¤§å†™
+5ã€	text-left,text-center,text-right;	æ–‡æœ¬å¯¹é½æ–¹å¼
+	center-block;	//å—çº§å±…ä¸­
+6ã€	ul .list-unstyled;	//å»æ‰åˆ—è¡¨å‰é¢çš„ç¬¦å·å’ŒåŸæœ‰çš„æ ¼å¼
+	ul .list-inline;	//æŠŠliä¹‹é—´çš„å†…å®¹å˜æˆæ¨ªå‘æ’åˆ—
+7ã€è¡¨æ ¼
+	.table 	è¡¨æ ¼çš„ä¸€ä¸ªåŸºç±»ï¼Œå¦‚æœåŠ å…¶ä»–æ ·å¼ï¼Œéƒ½åœ¨.tableçš„åŸºç¡€ä¸Š
+	.table-borderd 	ç»™è¡¨æ ¼åŠ è¾¹æ¡†
+	.table-hover	 é¼ æ ‡æ‚¬åœæ•ˆæœ
+	.table-striped 	æ–‘é©¬çº¿æ•ˆæœï¼Œéš”è¡Œé»„è‰²
+	.table-condensed 	å˜ç´§äº†ä¸€ç‚¹
+	.table-responsive 	ç»™tableçš„çˆ¶å…ƒç´ åŠ ï¼Œå˜æˆå“åº”å¼
+8ã€é¢œè‰²
+	ï¼ˆåœ¨è¡¨æ ¼çš„æ¯è¡Œæˆ–å•å…ƒæ ¼ï¼‰
+	.active		é¼ æ ‡æ‚¬åœåœ¨è¡Œæˆ–å•å…ƒæ ¼ä¸Šæ—¶æ‰€è®¾ç½®çš„é¢œè‰²
+	.success	æ ‡è¯†æˆåŠŸæˆ–ç§¯æçš„åŠ¨ä½œ
+	.info		æ ‡è¯†æ™®é€šçš„æç¤ºä¿¡æ¯æˆ–åŠ¨ä½œ
+	.warning	æ ‡è¯†è­¦å‘Šæˆ–éœ€è¦ç”¨æˆ·æ³¨æ„
+	.danger		æ ‡è¯†å±é™©æˆ–æ½œåœ¨çš„å¸¦æ¥è´Ÿé¢å½±å“çš„åŠ¨ä½œ
+	æ–‡æœ¬ï¼š
+	<p class="text-muted">...</p>	//æŸ”å’Œã€ç°è‰²
+	<p class="text-primary">...</p>	//åˆå§‹åŒ–ã€æ·±è“
+	<p class="text-success">...</p>	//æˆåŠŸã€ç»¿è‰²
+	<p class="text-info">...</p>	//æç¤ºã€æµ…è“
+	<p class="text-warning">...</p>	//è­¦å‘Šã€æ©™è‰²
+	<p class="text-danger">...</p>	//å±é™©ã€æµ…çº¢
+	èƒŒæ™¯ï¼š
 	<p class="bg-primary">...</p>
 	<p class="bg-success">...</p>
 	<p class="bg-info">...</p>
 	<p class="bg-warning">...</p>
 	<p class="bg-danger">...</p>
-9¡¢ÏìÓ¦Ê½Í¼Æ¬¡¢Í¼Æ¬ĞÎ×´
-	.img-responsive		(½áºÏÕ¤¸ñ)
-	.center-block 		Ë®Æ½¾ÓÖĞ
-	.img-rounded 		Ô²½ÇÍ¼Æ¬
-	.img-circle 		Ô²ĞÎÍ¼Æ¬
-	.img-thumbnail 		ÔÚÍâ±ß¼ÓÒ»¸öÔ²½ÇµÄ±ß¿ò£¬·½ĞÎÍ¼Æ¬
-10¡¢Õ¤¸ñÏµÍ³
-	Ò»¶¨Òª·Åµ½ÈİÆ÷ÖĞ .container/container-fluid
-	.col-xs- :³¬Ğ¡ÆÁÄ» 	x < 768px;
-	.col-sm- :Ğ¡ÆÁÄ»	768px <= x <= 992px;
-	.col-md- :ÖĞµÈÆÁÄ»	992px <= x < 1200px;
-	.col-lg- :´óÆÁÄ»	1200px <= x;
-	ÁĞÆ«ÒÆ£º
-		.col-md-offset- Ö»ÄÜÏòÓÒÆ«ÒÆ
-	ÁĞÅÅĞò£º
-		.col-md-push- ÏòÓÒÒÆ
-		.col-md-pull- Ïò×óÒÆ
-11¡¢ÏÂÀ­Ğ¡Èı½Ç:span.caret
-	¹Ø±Õ°´Å¥: X	<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-12¡¢.pull-left	×ó¸¡¶¯
-	.pull-right	ÓÒ¸¡¶¯
-	Çå³ı¸¡¶¯£º.clearfix
-	¸ø¸¸ÔªËØÇå³ı¸¡¶¯»òoverflow:hidden¸¸ÔªËØ¾Í×Ô¶¯»ñµÃ¸ß¶È
-13¡¢ÈÃÄÚÈİ¿é¾ÓÖĞ£º.center-block
-14¡¢ÏÔÊ¾»òÒş²Ø
+9ã€å“åº”å¼å›¾ç‰‡ã€å›¾ç‰‡å½¢çŠ¶
+	.img-responsive		(ç»“åˆæ …æ ¼)
+	.center-block 		æ°´å¹³å±…ä¸­
+	.img-rounded 		åœ†è§’å›¾ç‰‡
+	.img-circle 		åœ†å½¢å›¾ç‰‡
+	.img-thumbnail 		åœ¨å¤–è¾¹åŠ ä¸€ä¸ªåœ†è§’çš„è¾¹æ¡†ï¼Œæ–¹å½¢å›¾ç‰‡
+10ã€æ …æ ¼ç³»ç»Ÿ
+	ä¸€å®šè¦æ”¾åˆ°å®¹å™¨ä¸­ .container/container-fluid
+	.col-xs- :è¶…å°å±å¹• 	x < 768px;
+	.col-sm- :å°å±å¹•	768px <= x <= 992px;
+	.col-md- :ä¸­ç­‰å±å¹•	992px <= x < 1200px;
+	.col-lg- :å¤§å±å¹•	1200px <= x;
+	åˆ—åç§»ï¼š
+		.col-md-offset- åªèƒ½å‘å³åç§»
+	åˆ—æ’åºï¼š
+		.col-md-push- å‘å³ç§»
+		.col-md-pull- å‘å·¦ç§»
+11ã€ä¸‹æ‹‰å°ä¸‰è§’:span.caret
+	å…³é—­æŒ‰é’®: X	<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+12ã€.pull-left	å·¦æµ®åŠ¨
+	.pull-right	å³æµ®åŠ¨
+	æ¸…é™¤æµ®åŠ¨ï¼š.clearfix
+	ç»™çˆ¶å…ƒç´ æ¸…é™¤æµ®åŠ¨æˆ–overflow:hiddençˆ¶å…ƒç´ å°±è‡ªåŠ¨è·å¾—é«˜åº¦
+13ã€è®©å†…å®¹å—å±…ä¸­ï¼š.center-block
+14ã€æ˜¾ç¤ºæˆ–éšè—
 	.show
 	.hidden
-	.invisible:²»¿É¼ûµ«ÊÇÒÀÈ»Ó°ÏìÎÄµµÁ÷
-15¡¢°´Å¥
-	.btnÊÇ°´Å¥ÑùÊ½µÄ»ùÀà
+	.invisible:ä¸å¯è§ä½†æ˜¯ä¾ç„¶å½±å“æ–‡æ¡£æµ
+15ã€æŒ‰é’®
+	.btnæ˜¯æŒ‰é’®æ ·å¼çš„åŸºç±»
 	.btn-primary
 	.btn-default
 	.btn-success
 	.btn-info
 	.btn-warning
 	.btn-danger
-	.active //¼¤»îÊ±ÑùÊ½
-	.btn-lg(´ó)  sm(Ğ¡)  xs(×îĞ¡)
-	°´Å¥×é£º¸ø¼¸¸ö°´Å¥µÄ¸¸ÔªËØÌí¼Ó .btn-group
-16¡¢·ÖÒ³ £º¸øul .pagination
-17¡¢ÏÂÀ­²Ëµ¥
-	<div class="dropdown">//°´Å¥Ê½ÏÂÀ­²Ëµ¥°Ñdropdown¸ÄÎª.btn-group;ÔÚÏÂÃæµÄbuttonÌí¼Ódropdown
+	.active //æ¿€æ´»æ—¶æ ·å¼
+	.btn-lg(å¤§)  sm(å°)  xs(æœ€å°)
+	æŒ‰é’®ç»„ï¼šç»™å‡ ä¸ªæŒ‰é’®çš„çˆ¶å…ƒç´ æ·»åŠ  .btn-group
+16ã€åˆ†é¡µ ï¼šç»™ul .pagination
+17ã€ä¸‹æ‹‰èœå•
+	<div class="dropdown">//æŒ‰é’®å¼ä¸‹æ‹‰èœå•æŠŠdropdownæ”¹ä¸º.btn-group;åœ¨ä¸‹é¢çš„buttonæ·»åŠ dropdown
 		<button class="btn btn-default" data-toggle="dropdown">
-		ÏÂÀ­²Ëµ¥<span class="caret"></span>
+		ä¸‹æ‹‰èœå•<span class="caret"></span>
 		</button>
 		<ul class="dropdown-menu">
-		<li>ÍøÕ¾µ¼º½</li>
+		<li>ç½‘ç«™å¯¼èˆª</li>
 		<li><a>1</a></li>
-		<li class="divider">ÉèÖÃ·Ö¸îÏß</li>
+		<li class="divider">è®¾ç½®åˆ†å‰²çº¿</li>
 		<li><a>3</a></li>
 		</ul>
 	</div>
-		//Èç¹û°´Å¥ÔÚÍâ²¿£¬¿ÉÒÔÍ¨¹ıdata-target½øĞĞ°ó¶¨
-		btn data-target="#µÚÒ»¸ödivµÄid"
-18¡¢µ¼º½×é¼ş(ÇøÓò)
-	ul.nav .nav-tabs/nav-pills(nav-stacked´¹Ö±)(nav-justifiedµ¼º½Á½¶Ë¶ÔÆë)
-	li.active a Ê×Ò³ 
-	li a 		²úÆ·
+		//å¦‚æœæŒ‰é’®åœ¨å¤–éƒ¨ï¼Œå¯ä»¥é€šè¿‡data-targetè¿›è¡Œç»‘å®š
+		btn data-target="#ç¬¬ä¸€ä¸ªdivçš„id"
+18ã€å¯¼èˆªç»„ä»¶(åŒºåŸŸ)
+	ul.nav .nav-tabs/nav-pills(nav-stackedå‚ç›´)(nav-justifiedå¯¼èˆªä¸¤ç«¯å¯¹é½)
+	li.active a é¦–é¡µ 
+	li a 		äº§å“
 	ul
-19¡¢µ¼º½(¶¥²¿)
+19ã€å¯¼èˆª(é¡¶éƒ¨)
 	nav.navber .nav-default navbar-fixed
 		div.container
 			div.navber-header
-				a.navber-brand ±êÌâ
+				a.navber-brand æ ‡é¢˜
 			div
 			ul.nav navber-nav
 				li.active a
@@ -113,9 +113,9 @@
 			ul
 		div
 	nav
-20¡¢Â·¾¶×é¼ş
+20ã€è·¯å¾„ç»„ä»¶
 	ol.breadcrumb
-	li a Ê×Ò³
-	li a ²úÆ·ÁĞ±í
-	li.active ÏêÏ¸ĞÅÏ¢
+	li a é¦–é¡µ
+	li a äº§å“åˆ—è¡¨
+	li.active è¯¦ç»†ä¿¡æ¯
 	

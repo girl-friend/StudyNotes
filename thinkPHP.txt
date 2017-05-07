@@ -1,70 +1,70 @@
-1¡¢ÏµÍ³Ìø×ª·½·¨
-	³É¹¦£º$this->success(Ìø×ªÌáÊ¾,Ìø×ªµØÖ·,µÈ´ýÊ±¼ä);ÌáÊ¾±ØÐëÓÐ£¬Èç¹ûÃ»ÓÐµØÖ·Ôòµ÷µ½ÉÏÒ»Ò³
-	Ê§°Ü£º$this->error(Í¬ÉÏ);
-2¡¢Õ¹Ê¾(»ñÈ¡)ÊÓÍ¼
-	$this->display();Õ¹Ê¾µ±Ç°¿ØÖÆÆ÷µ±Ç°ÇëÇó·½·¨ÃûÒ»ÖÂµÄÄ£°åÎÄ¼þ
-	$this->display('Ä£°åÎÄ¼þÃû£¬²»´øºó×º');µ±Ç°¿ØÖÆÆ÷Ö¸¶¨Ä£°åÎÄ¼þ
-	$this->display('ViewÄ¿Â¼ÏÂµÄÄ¿Â¼Ãû/Ä£°åÎÄ¼þÃû¡¾²»´øºó×º¡¿');Ö¸¶¨Ä¿Â¼ÏÂµÄÄ£°å
+1ã€ç³»ç»Ÿè·³è½¬æ–¹æ³•
+	æˆåŠŸï¼š$this->success(è·³è½¬æç¤º,è·³è½¬åœ°å€,ç­‰å¾…æ—¶é—´);æç¤ºå¿…é¡»æœ‰ï¼Œå¦‚æžœæ²¡æœ‰åœ°å€åˆ™è°ƒåˆ°ä¸Šä¸€é¡µ
+	å¤±è´¥ï¼š$this->error(åŒä¸Š);
+2ã€å±•ç¤º(èŽ·å–)è§†å›¾
+	$this->display();å±•ç¤ºå½“å‰æŽ§åˆ¶å™¨å½“å‰è¯·æ±‚æ–¹æ³•åä¸€è‡´çš„æ¨¡æ¿æ–‡ä»¶
+	$this->display('æ¨¡æ¿æ–‡ä»¶åï¼Œä¸å¸¦åŽç¼€');å½“å‰æŽ§åˆ¶å™¨æŒ‡å®šæ¨¡æ¿æ–‡ä»¶
+	$this->display('Viewç›®å½•ä¸‹çš„ç›®å½•å/æ¨¡æ¿æ–‡ä»¶åã€ä¸å¸¦åŽç¼€ã€‘');æŒ‡å®šç›®å½•ä¸‹çš„æ¨¡æ¿
 	
-3¡¢±äÁ¿·ÖÅä
-	$this->assign('Ä£°åÖÐµÄ±äÁ¿Ãû',$phpÖÐµÄ±äÁ¿Ãû);
-	thinkphpÖÐÄ¬ÈÏÕ¹Ê¾»ù±¾±äÁ¿·½·¨:	{$Ä£°å±äÁ¿Ãû};
-	Êý×é£º
+3ã€å˜é‡åˆ†é…
+	$this->assign('æ¨¡æ¿ä¸­çš„å˜é‡å',$phpä¸­çš„å˜é‡å);
+	thinkphpä¸­é»˜è®¤å±•ç¤ºåŸºæœ¬å˜é‡æ–¹æ³•:	{$æ¨¡æ¿å˜é‡å};
+	æ•°ç»„ï¼š
 		{$array[key]}	{$array.key}
-	¶ÔÏó£º
-		{$¶ÔÏó->ÊôÐÔ}	{$¶ÔÏó:¶ÔÏó}
-	ÏµÍ³±äÁ¿£º
-		$Think.server	µÈ¼ÛÓÚ$_SERVER£¬»ñÈ¡·þÎñÆ÷µÄÏà¹ØÐÅÏ¢
-		$Think.get		µÈ¼ÛÓÚ$_GET£¬»ñÈ¡getÇëÇóµÄÐÅÏ¢
-		$Think.post	µÈ¼ÛÓÚ$_POST£¬»ñÈ¡postÇëÇóÖÐµÄÐÅÏ¢
-		$Think.request	µÈ¼ÛÓÚ$_REQUEST£¬»ñÈ¡getºÍpostÖÐÐÅÏ¢
-		$Think.cookie	µÈ¼ÛÓÚ$_COOKIE£¬»ñÈ¡cookieÖÐµÄÐÅÏ¢
-		$Think.session	µÈ¼ÛÓÚ$_SESSION£¬»ñÈ¡sessionÖÐµÄÐÅÏ¢
-		$Think.config	»ñÈ¡ThinkPHPÖÐËùÓÐÅäÖÃÎÄ¼þµÄÒ»¸ö×ÜºÍ£¬Èç¹ûºóÃæÖ¸¶¨ÁËÔªËØ£¬Ôò»ñÈ¡Ö¸¶¨µÄÅäÖÃ
-			{$Think.xxx.¾ßÌåµÄÔªËØÏÂ±ê}		Àý£º{$Think.get.id}
-	Ä£°å³£Á¿
-	ÔÚThinkPHPÖÐÏµÍ³Ä¬ÈÏ¸øÎÒÃÇÌá¹©ÒÔÏÂ¼¸¸ö³£ÓÃµÄÄ£°æ³£Á¿£º
-		__MODULE__£º±íÊ¾´ÓÓòÃûºóÃæ¿ªÊ¼Ò»Ö±µ½·Ö×éÃû½áÊøµÄÂ·ÓÉ
-		__CONTROLLER__£º±íÊ¾´ÓÓòÃûºóÃæ¿ªÊ¼Ò»Ö±µ½¿ØÖÆÆ÷½áÊøµÄÂ·ÓÉ
-		__ACTION__£º±íÊ¾´ÓÓòÃûºóÃæ¿ªÊ¼Ò»Ö±µ½·½·¨Ãû½áÊøµÄÂ·ÓÉ
-		__PUBLIC__£ºÕ¾µã¸ùÄ¿Â¼ÏÂµÄPublicÄ¿Â¼µÄÂ·ÓÉ
-		__SELF__£º±íÊ¾´ÓÓòÃûºóÃæ¿ªÊ¼Ò»Ö±µ½Â·ÓÉµÄ×îºó£¨Èç¹ûÃ»ÓÐ²ÎÊý£¬Ôò__SELF__ºÍ__ACTION__Ëù±í´ïµÄÄÚÈÝÊÇÒ»ÑùµÄ£©
-	º¯Êý£º
-		{$±äÁ¿|º¯ÊýÃû1|º¯ÊýÃû2=²ÎÊý1,²ÎÊý2,###...}	###´ú±í±äÁ¿±¾Éí
-		Àý£º{$time|date='Y-m-d H:i:s',###}	$timeÊÇÊ±¼ä´Á
-	Ä¬ÈÏÖµ£º
-		{$±äÁ¿Ãû|default='Ä¬ÈÏÖµ'};		±äÁ¿Îª¿Õ»ò²»´æÔÚÊ±ÎªÄ¬ÈÏÖµ
-	ÔËËã·û£º
+	å¯¹è±¡ï¼š
+		{$å¯¹è±¡->å±žæ€§}	{$å¯¹è±¡:å¯¹è±¡}
+	ç³»ç»Ÿå˜é‡ï¼š
+		$Think.server	ç­‰ä»·äºŽ$_SERVERï¼ŒèŽ·å–æœåŠ¡å™¨çš„ç›¸å…³ä¿¡æ¯
+		$Think.get		ç­‰ä»·äºŽ$_GETï¼ŒèŽ·å–getè¯·æ±‚çš„ä¿¡æ¯
+		$Think.post	ç­‰ä»·äºŽ$_POSTï¼ŒèŽ·å–postè¯·æ±‚ä¸­çš„ä¿¡æ¯
+		$Think.request	ç­‰ä»·äºŽ$_REQUESTï¼ŒèŽ·å–getå’Œpostä¸­ä¿¡æ¯
+		$Think.cookie	ç­‰ä»·äºŽ$_COOKIEï¼ŒèŽ·å–cookieä¸­çš„ä¿¡æ¯
+		$Think.session	ç­‰ä»·äºŽ$_SESSIONï¼ŒèŽ·å–sessionä¸­çš„ä¿¡æ¯
+		$Think.config	èŽ·å–ThinkPHPä¸­æ‰€æœ‰é…ç½®æ–‡ä»¶çš„ä¸€ä¸ªæ€»å’Œï¼Œå¦‚æžœåŽé¢æŒ‡å®šäº†å…ƒç´ ï¼Œåˆ™èŽ·å–æŒ‡å®šçš„é…ç½®
+			{$Think.xxx.å…·ä½“çš„å…ƒç´ ä¸‹æ ‡}		ä¾‹ï¼š{$Think.get.id}
+	æ¨¡æ¿å¸¸é‡
+	åœ¨ThinkPHPä¸­ç³»ç»Ÿé»˜è®¤ç»™æˆ‘ä»¬æä¾›ä»¥ä¸‹å‡ ä¸ªå¸¸ç”¨çš„æ¨¡ç‰ˆå¸¸é‡ï¼š
+		__MODULE__ï¼šè¡¨ç¤ºä»ŽåŸŸååŽé¢å¼€å§‹ä¸€ç›´åˆ°åˆ†ç»„åç»“æŸçš„è·¯ç”±
+		__CONTROLLER__ï¼šè¡¨ç¤ºä»ŽåŸŸååŽé¢å¼€å§‹ä¸€ç›´åˆ°æŽ§åˆ¶å™¨ç»“æŸçš„è·¯ç”±
+		__ACTION__ï¼šè¡¨ç¤ºä»ŽåŸŸååŽé¢å¼€å§‹ä¸€ç›´åˆ°æ–¹æ³•åç»“æŸçš„è·¯ç”±
+		__PUBLIC__ï¼šç«™ç‚¹æ ¹ç›®å½•ä¸‹çš„Publicç›®å½•çš„è·¯ç”±
+		__SELF__ï¼šè¡¨ç¤ºä»ŽåŸŸååŽé¢å¼€å§‹ä¸€ç›´åˆ°è·¯ç”±çš„æœ€åŽï¼ˆå¦‚æžœæ²¡æœ‰å‚æ•°ï¼Œåˆ™__SELF__å’Œ__ACTION__æ‰€è¡¨è¾¾çš„å†…å®¹æ˜¯ä¸€æ ·çš„ï¼‰
+	å‡½æ•°ï¼š
+		{$å˜é‡|å‡½æ•°å1|å‡½æ•°å2=å‚æ•°1,å‚æ•°2,###...}	###ä»£è¡¨å˜é‡æœ¬èº«
+		ä¾‹ï¼š{$time|date='Y-m-d H:i:s',###}	$timeæ˜¯æ—¶é—´æˆ³
+	é»˜è®¤å€¼ï¼š
+		{$å˜é‡å|default='é»˜è®¤å€¼'};		å˜é‡ä¸ºç©ºæˆ–ä¸å­˜åœ¨æ—¶ä¸ºé»˜è®¤å€¼
+	è¿ç®—ç¬¦ï¼š
 		{$a+$b}	+ - * / % ++ --
-	Ñ­»·Êä³ö£º
-		volist ºÍ foreach ±êÇ©
-4¡¢Ä£°å×¢ÊÍ
-	{//µ¥ÐÐ×¢ÊÍ}
-	{/*¶àÐÐ×¢ÊÍ*/}	Ä£°å×¢ÊÍÊÇ·þÎñ¶ËµÄ×¢ÊÍ£¬²»±»¼ÓÔØµ½Ô´´úÂëÖÐ
-5¡¢ÔØÈëÄ£°åÎÄ¼þ
-	<include file='ÐèÒªÒýÈëµÄÎÄ¼þ'/>	Ïà¶ÔÈë¿ÚÎÄ¼þÂ·¾¶/Ò²¿ÉÒÔ¾ø¶ÔÂ·¾¶
-	¼òÐ´£º<include file='View Ä¿Â¼Ãû/Ä£°åÎÄ¼þÃû'/>
-	´«²Î£º<include file='ÐèÒªÒýÈëµÄÎÄ¼þ' ²ÎÊýÃû='²ÎÊýÖµ'/>
-6¡¢µ÷ÊÔ
-	ÏÔÊ¾¸ú×ÙÐÅÏ¢
-		ÔÚÅäÖÃÎÄ¼þÖÐÌí¼Ó£º'SHOW_PAGE_TRACE' =>true,
-	sqlµ÷ÊÔ£º
-		$¶ÔÏó->getLastSql()»ò$¶ÔÏó->_sql();»ñÈ¡×îºóÖ´ÐÐ³É¹¦µÄsqlÐÅÏ¢
-		$¶ÔÏó->fetchSql(true);	²»Ö´ÐÐsqlÓï¾ä£¬·µ»ØsqlÓï¾ä£¨ÔÚÁ¬¹á²Ù×÷ÖÐ£©
-7¡¢ÅÐ¶ÏÊÇ·ñÓÐÇëÇóÊý¾Ý
-	IS_POST		Èç¹ûÊÇÓÐpostÇëÇóÔòIS_POSTµÄÖµÊÇtrue
+	å¾ªçŽ¯è¾“å‡ºï¼š
+		volist å’Œ foreach æ ‡ç­¾
+4ã€æ¨¡æ¿æ³¨é‡Š
+	{//å•è¡Œæ³¨é‡Š}
+	{/*å¤šè¡Œæ³¨é‡Š*/}	æ¨¡æ¿æ³¨é‡Šæ˜¯æœåŠ¡ç«¯çš„æ³¨é‡Šï¼Œä¸è¢«åŠ è½½åˆ°æºä»£ç ä¸­
+5ã€è½½å…¥æ¨¡æ¿æ–‡ä»¶
+	<include file='éœ€è¦å¼•å…¥çš„æ–‡ä»¶'/>	ç›¸å¯¹å…¥å£æ–‡ä»¶è·¯å¾„/ä¹Ÿå¯ä»¥ç»å¯¹è·¯å¾„
+	ç®€å†™ï¼š<include file='View ç›®å½•å/æ¨¡æ¿æ–‡ä»¶å'/>
+	ä¼ å‚ï¼š<include file='éœ€è¦å¼•å…¥çš„æ–‡ä»¶' å‚æ•°å='å‚æ•°å€¼'/>
+6ã€è°ƒè¯•
+	æ˜¾ç¤ºè·Ÿè¸ªä¿¡æ¯
+		åœ¨é…ç½®æ–‡ä»¶ä¸­æ·»åŠ ï¼š'SHOW_PAGE_TRACE' =>true,
+	sqlè°ƒè¯•ï¼š
+		$å¯¹è±¡->getLastSql()æˆ–$å¯¹è±¡->_sql();èŽ·å–æœ€åŽæ‰§è¡ŒæˆåŠŸçš„sqlä¿¡æ¯
+		$å¯¹è±¡->fetchSql(true);	ä¸æ‰§è¡Œsqlè¯­å¥ï¼Œè¿”å›žsqlè¯­å¥ï¼ˆåœ¨è¿žè´¯æ“ä½œä¸­ï¼‰
+7ã€åˆ¤æ–­æ˜¯å¦æœ‰è¯·æ±‚æ•°æ®
+	IS_POST		å¦‚æžœæ˜¯æœ‰postè¯·æ±‚åˆ™IS_POSTçš„å€¼æ˜¯true
 	IS_GET
 	IS_AJAX	...
-8¡¢½ÓÊÕÊý¾Ý
-	I·½·¨	¿ÉÒÔ½ÓÊÕÈÎºÎÊý¾Ý£¬²¢ÇÒ×Ô´ø·ÀÖ¹sql×¢Èë
-	I('get.')±íÊ¾½ÓÊÕËùÓÐµÄgetÊý¾Ý
-	´´½¨Êý¾Ý¶ÔÏó£º
-		$data=$model->create();//²»´«²ÎÔò½ÓÊÕpostÊý¾Ý£¬¿ÉÒÔÓÃdata½ÓÊÕÒ²¿ÉÒÔ²»½ÓÊÕ
-		$result=$model->add();//Ìí¼Ó
-9¡¢session
-	session(¡®name¡¯,¡¯value¡¯)	 ´´½¨Ò»¸öÃûÎªnameµÄsessionÖµ£¬ÖµÊÇvalue
-	$value = session(¡®name¡¯)	 ¶ÁÈ¡sessionÖÐµÄnameÔªËØÖµ£¬Öµ¸³¸øvalue
-	session(¡®name¡¯,null)		É¾³ýÃûÎªnameÔªËØµÄÖµ
-	session(null)			É¾³ýÈ«²¿µÄsessionÔªËØ
-	session()				¶ÁÈ¡È«²¿µÄsessionÐÅÏ¢
-	session(¡®?name¡¯)		ÅÐ¶ÏÃûÎªnameµÄsessionÔªËØÊÇ·ñ´æÔÚ£¬Èç¹û´æÔÚÔò·µ»Øtrue
+8ã€æŽ¥æ”¶æ•°æ®
+	Iæ–¹æ³•	å¯ä»¥æŽ¥æ”¶ä»»ä½•æ•°æ®ï¼Œå¹¶ä¸”è‡ªå¸¦é˜²æ­¢sqlæ³¨å…¥
+	I('get.')è¡¨ç¤ºæŽ¥æ”¶æ‰€æœ‰çš„getæ•°æ®
+	åˆ›å»ºæ•°æ®å¯¹è±¡ï¼š
+		$data=$model->create();//ä¸ä¼ å‚åˆ™æŽ¥æ”¶postæ•°æ®ï¼Œå¯ä»¥ç”¨dataæŽ¥æ”¶ä¹Ÿå¯ä»¥ä¸æŽ¥æ”¶
+		$result=$model->add();//æ·»åŠ 
+9ã€session
+	session(â€˜nameâ€™,â€™valueâ€™)	 åˆ›å»ºä¸€ä¸ªåä¸ºnameçš„sessionå€¼ï¼Œå€¼æ˜¯value
+	$value = session(â€˜nameâ€™)	 è¯»å–sessionä¸­çš„nameå…ƒç´ å€¼ï¼Œå€¼èµ‹ç»™value
+	session(â€˜nameâ€™,null)		åˆ é™¤åä¸ºnameå…ƒç´ çš„å€¼
+	session(null)			åˆ é™¤å…¨éƒ¨çš„sessionå…ƒç´ 
+	session()				è¯»å–å…¨éƒ¨çš„sessionä¿¡æ¯
+	session(â€˜?nameâ€™)		åˆ¤æ–­åä¸ºnameçš„sessionå…ƒç´ æ˜¯å¦å­˜åœ¨ï¼Œå¦‚æžœå­˜åœ¨åˆ™è¿”å›žtrue

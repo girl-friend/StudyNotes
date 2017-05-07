@@ -1,32 +1,32 @@
-Ò»¡£1.´´½¨Êı¾İ¿â:create datebase Ãû;
-2.²é¿´ÒÑ´æÔÚÊı¾İ¿â£ºshow datebase;
-3.É¾³ıÊı¾İ¿â£ºdrop database Ãû;
-4.´´½¨±í£º
-create table Ãû(×Ö¶Î Êı¾İÀàĞÍ()
+ä¸€ã€‚1.åˆ›å»ºæ•°æ®åº“:create datebase å;
+2.æŸ¥çœ‹å·²å­˜åœ¨æ•°æ®åº“ï¼šshow datebase;
+3.åˆ é™¤æ•°æ®åº“ï¼šdrop database å;
+4.åˆ›å»ºè¡¨ï¼š
+create table å(å­—æ®µ æ•°æ®ç±»å‹()
 );
-5.²é¿´±íµÄ×Ö¶ÎĞÅÏ¢£ºdesc Ãû£»
-6.ĞŞ¸Ä±íÃû£ºalter table ¾É±í rename ĞÂ±í;
-7.ĞŞ¸Ä×Ö¶ÎÃû£ºalter table ±í change ¾É×Ö¶Î ĞÂ ĞÂÀàĞÍ;
-8.ĞŞ¸Ä×Ö¶ÎÊı¾İÀàĞÍ£ºalter table ±í modify ×Ö¶Î ÀàĞÍ;
-9.Ìí¼Ó×Ö¶Î£ºalter table ±í add ĞÂ×Ö¶Î ÀàĞÍ(Ô¼Êø)  (first|after...);
-10.É¾³ı×Ö¶Î£ºalter table ±í drop ×Ö¶Î;
-11.É¾³ı±í£ºdrop table Ãû£»
-12.(primary keyÖ÷¼ü);(forign keyÍâ¼ü)£»(not null·Ç¿Õ)
-  (uniqueÎ¨Ò»)(defaultÄ¬ÈÏ);(auto_increment×Ô¶¯Ôö¼Ó)
-¶ş.1.Ìí¼ÓÊı¾İ insert£¨replace£© into ±í(×Ö¶Î,..) values(Öµ1,..),(Öµ..);
-2.¸üĞÂÊı¾İupdate ±í set ×Ö¶Î=Öµ,.. where ;
-3.É¾³ıÊı¾İºÍÊÓÍ¼:delete  from ±í where ;
-Èı.1.where ×Ö¶Î (not)in(1,2);between 1 and 2;is (not) null;like % _;
-2.select (distinct) *|×Ö¶Î1,2.. from ±í where...and.or. 
-group by ×Ö¶Î having Ìõ¼ş
-order by ×Ö¶Î(asc|desc)
-limit (offset)¼ÇÂ¼Êı£»
-3.count(¼ÇÂ¼ÌõÊı),(sumÇóºÍ)(avgÆ½¾ùÖµ)(max×î´óÖµmin);
-select sum(×Ö¶Î) from ±í;
-ËÄ.1.Ìí¼ÓÍâ¼ü:alter table ±í add constraint FK_ID freign key(Íâ¼ü×Ö¶ÎÃû) references Íâ±í±íÃû(Ö÷¼ü×Ö¶ÎÃû);
-2.É¾³ıÍâ¼ü:alter table ±í drop foreign key Íâ¼üÃû;
-3.ÄÚÍâÁ¬½Ó:select ²éÑ¯×Ö¶Î from ±í1 (left|right) join ±í2 on ±í1.¹ØÏµ×Ö¶Î=±í2.×Ö£»
-4.×Ó²éÑ¯:in,exists,any,all;
-Îå¡£1.create (or replace) view Ãû() as select ...from..where..;
-2.¸üĞÂÊÓÍ¼update Ãû set ×Ö¶Î=1;insert into Ãû values(..);
-3.É¾³ıÊÓÍ¼:drop (if exists) Ãû1,2;
+5.æŸ¥çœ‹è¡¨çš„å­—æ®µä¿¡æ¯ï¼šdesc åï¼›
+6.ä¿®æ”¹è¡¨åï¼šalter table æ—§è¡¨ rename æ–°è¡¨;
+7.ä¿®æ”¹å­—æ®µåï¼šalter table è¡¨ change æ—§å­—æ®µ æ–° æ–°ç±»å‹;
+8.ä¿®æ”¹å­—æ®µæ•°æ®ç±»å‹ï¼šalter table è¡¨ modify å­—æ®µ ç±»å‹;
+9.æ·»åŠ å­—æ®µï¼šalter table è¡¨ add æ–°å­—æ®µ ç±»å‹(çº¦æŸ)  (first|after...);
+10.åˆ é™¤å­—æ®µï¼šalter table è¡¨ drop å­—æ®µ;
+11.åˆ é™¤è¡¨ï¼šdrop table åï¼›
+12.(primary keyä¸»é”®);(forign keyå¤–é”®)ï¼›(not nulléç©º)
+  (uniqueå”¯ä¸€)(defaulté»˜è®¤);(auto_incrementè‡ªåŠ¨å¢åŠ )
+äºŒ.1.æ·»åŠ æ•°æ® insertï¼ˆreplaceï¼‰ into è¡¨(å­—æ®µ,..) values(å€¼1,..),(å€¼..);
+2.æ›´æ–°æ•°æ®update è¡¨ set å­—æ®µ=å€¼,.. where ;
+3.åˆ é™¤æ•°æ®å’Œè§†å›¾:delete  from è¡¨ where ;
+ä¸‰.1.where å­—æ®µ (not)in(1,2);between 1 and 2;is (not) null;like % _;
+2.select (distinct) *|å­—æ®µ1,2.. from è¡¨ where...and.or. 
+group by å­—æ®µ having æ¡ä»¶
+order by å­—æ®µ(asc|desc)
+limit (offset)è®°å½•æ•°ï¼›
+3.count(è®°å½•æ¡æ•°),(sumæ±‚å’Œ)(avgå¹³å‡å€¼)(maxæœ€å¤§å€¼min);
+select sum(å­—æ®µ) from è¡¨;
+å››.1.æ·»åŠ å¤–é”®:alter table è¡¨ add constraint FK_ID freign key(å¤–é”®å­—æ®µå) references å¤–è¡¨è¡¨å(ä¸»é”®å­—æ®µå);
+2.åˆ é™¤å¤–é”®:alter table è¡¨ drop foreign key å¤–é”®å;
+3.å†…å¤–è¿æ¥:select æŸ¥è¯¢å­—æ®µ from è¡¨1 (left|right) join è¡¨2 on è¡¨1.å…³ç³»å­—æ®µ=è¡¨2.å­—ï¼›
+4.å­æŸ¥è¯¢:in,exists,any,all;
+äº”ã€‚1.create (or replace) view å() as select ...from..where..;
+2.æ›´æ–°è§†å›¾update å set å­—æ®µ=1;insert into å values(..);
+3.åˆ é™¤è§†å›¾:drop (if exists) å1,2;

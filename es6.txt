@@ -1,32 +1,32 @@
-1¡¢let a=2;¶¨Òå±äÁ¿£¬ÓĞ¿é¼¶×÷ÓÃÓò
-2¡¢const;¶¨Òå³£Á¿£¬±ØĞë¸³Öµ
-3¡¢var str=`×Ö·û´®`;//aa${str}aaa;
-4¡¢var [a,b,c]=[1,2,3];//½â¹¹¸³Öµ
+1ã€let a=2;å®šä¹‰å˜é‡ï¼Œæœ‰å—çº§ä½œç”¨åŸŸ
+2ã€const;å®šä¹‰å¸¸é‡ï¼Œå¿…é¡»èµ‹å€¼
+3ã€var str=`å­—ç¬¦ä¸²`;//aa${str}aaa;
+4ã€var [a,b,c]=[1,2,3];//è§£æ„èµ‹å€¼
    var [a,[b,c],d]=[1,[2,3],4];
-   var [{a,e},[b,c],d]={{e:1,a:2},[3,4],5};//jsonºÍË³ĞòÎŞ¹Ø
-5¡¢¸´ÖÆÊı×é
+   var [{a,e},[b,c],d]={{e:1,a:2},[3,4],5};//jsonå’Œé¡ºåºæ— å…³
+5ã€å¤åˆ¶æ•°ç»„
    var arr=[1,2,3];
    1.var arr2=Array.from(arr);  2.var arr2=[...arr];
-6¡¢for of; ¿ÉÒÔÑ­»·Êı×é£¬²»ÄÜÑ­»·json£¬Ö÷ÒªÓÃÓÚÅäºÏMap
+6ã€for of; å¯ä»¥å¾ªç¯æ•°ç»„ï¼Œä¸èƒ½å¾ªç¯jsonï¼Œä¸»è¦ç”¨äºé…åˆMap
    for(var name of map){name//key,value};
    for(var [key,value] of map){};
-   for(var key of map.keys()){}//Ö»Ñ­»·key;
-   for(var val of map.values()){}//Ö»Ñ­»·value
-  forÑ­»·Êı×é£º
-   Ö»Ñ­»·Öµ£º  for(var value of arr){}
-   Ö»Ñ­»·Ë÷Òı£ºfor(var key of arr.keys()){}
-   ¶¼Ñ­»·£º    for(var some of arr.entries()){}
-7¡¢Map: var map = new Map();
-   ÉèÖÃ£ºmap.set(name,value);
-   »ñÈ¡£ºmap.get(name);
-   É¾³ı£ºmap.delet(name);
-8¡¢¼ıÍ·º¯Êı£º
+   for(var key of map.keys()){}//åªå¾ªç¯key;
+   for(var val of map.values()){}//åªå¾ªç¯value
+  forå¾ªç¯æ•°ç»„ï¼š
+   åªå¾ªç¯å€¼ï¼š  for(var value of arr){}
+   åªå¾ªç¯ç´¢å¼•ï¼šfor(var key of arr.keys()){}
+   éƒ½å¾ªç¯ï¼š    for(var some of arr.entries()){}
+7ã€Map: var map = new Map();
+   è®¾ç½®ï¼šmap.set(name,value);
+   è·å–ï¼šmap.get(name);
+   åˆ é™¤ï¼šmap.delet(name);
+8ã€ç®­å¤´å‡½æ•°ï¼š
   var fn=(a,b)=>a+b;   function fn(a,b){return a+b}
   var fn=()=>{};       function fn(){};
-  ×¢Òâ£º
-    this:Ö¸ÏòÁËwindow
-	arguments:²»ÄÜÊ¹ÓÃÁË
-9¡¢ÃæÏò¶ÔÏó£º
+  æ³¨æ„ï¼š
+    this:æŒ‡å‘äº†window
+	arguments:ä¸èƒ½ä½¿ç”¨äº†
+9ã€é¢å‘å¯¹è±¡ï¼š
 	class Person{
 		constructor(name,age=0){
 			this.name=name;
@@ -40,14 +40,14 @@
 		}
 	}
 	var p1=new Person('aa',18);
-	¼Ì³Ğ£ºcalss Woker extends Person{
+	ç»§æ‰¿ï¼šcalss Woker extends Person{
 		constructor(){
-			super(name,age);//µ÷ÓÃ¸¸¼¶µÄ¹¹Ôìº¯Êı
+			super(name,age);//è°ƒç”¨çˆ¶çº§çš„æ„é€ å‡½æ•°
 		}
 	}
 		var w1=new Worker('mmm',20);
-10¡¢Ä£¿é»¯£º
+10ã€æ¨¡å—åŒ–ï¼š
 	import a from './a.js';
-	import b from './b.js';//µ¼Èë
+	import b from './b.js';//å¯¼å…¥
 	export default {a,b}
-	export default function sum(){return a+b};//µ¼³ö
+	export default function sum(){return a+b};//å¯¼å‡º

@@ -1,13 +1,13 @@
-file://ÃÀµÛÁ¼ĞÄÏë/¶¯Âş
+file://ç¾å¸è‰¯å¿ƒæƒ³/åŠ¨æ¼«
 localhost:8090/
 localhost:8090/01/1.php
-php±àÂë    header("Content-Type: text/html;charset=utf-8");
+phpç¼–ç     header("Content-Type: text/html;charset=utf-8");
 http://localhost:8090/01php/
 product_list.php
 localhost:8090/01/product_add.php
-services.msc   ÔËĞĞ--·şÎñ
-session.auto_start = 1 ²»ÄÜ½øÊı¾İ¿â
-<a href="select_do2.php?">²éÑ¯</a></td>
+services.msc   è¿è¡Œ--æœåŠ¡
+session.auto_start = 1 ä¸èƒ½è¿›æ•°æ®åº“
+<a href="select_do2.php?">æŸ¥è¯¢</a></td>
 http://pan.baidu.com/share/home?uk=1040300808&view=share#category/type=0C:\Windows\System32\drivers\etc
 
 

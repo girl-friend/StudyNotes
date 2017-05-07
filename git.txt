@@ -1,10 +1,10 @@
-1¡¢git config --global user.name "zmz"
-2¡¢git config --global user.email "719462227@qq.com"
-3¡¢git config --list	²é¿´
-4¡¢git init		ÔÚÏîÄ¿ÖĞ³õÊ¼»¯
-5¡¢git add ÎÄ¼şÃû	Ìí¼Óµ½Ôİ´æÇøÓò
-6¡¢git commit -m "ËµÃ÷£¬×öÁËÊ²Ã´"
-7¡¢git status	²é¿´µ±Ç°×´Ì¬
-8¡¢git reset HEAD	°ÑÌí¼Óµ½Ôİ´æÇøÓòµÄÎÄ¼ş»Ö¸´»ØÈ¥
-	git reset HEAD~10	°Ñ10´ÎÖ®Ç°µÄ¿ìÕÕ·Å»Øµ½Ôİ´æÇøÓò
-9¡¢git checkout -- ÎÄ¼şÃû		Ôİ´æÇøÓòµÄÎÄ¼ş¸²¸Ç»ØÒÑ¾­±»ĞŞ¸ÄµÄÎÄ¼ş(Î£ÏÕ)
+1ã€git config --global user.name "zmz"
+2ã€git config --global user.email "719462227@qq.com"
+3ã€git config --list	æŸ¥çœ‹
+4ã€git init		åœ¨é¡¹ç›®ä¸­åˆå§‹åŒ–
+5ã€git add æ–‡ä»¶å	æ·»åŠ åˆ°æš‚å­˜åŒºåŸŸ
+6ã€git commit -m "è¯´æ˜ï¼Œåšäº†ä»€ä¹ˆ"
+7ã€git status	æŸ¥çœ‹å½“å‰çŠ¶æ€
+8ã€git reset HEAD	æŠŠæ·»åŠ åˆ°æš‚å­˜åŒºåŸŸçš„æ–‡ä»¶æ¢å¤å›å»
+	git reset HEAD~10	æŠŠ10æ¬¡ä¹‹å‰çš„å¿«ç…§æ”¾å›åˆ°æš‚å­˜åŒºåŸŸ
+9ã€git checkout -- æ–‡ä»¶å		æš‚å­˜åŒºåŸŸçš„æ–‡ä»¶è¦†ç›–å›å·²ç»è¢«ä¿®æ”¹çš„æ–‡ä»¶(å±é™©)

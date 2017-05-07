@@ -1,114 +1,114 @@
-1.console.log();¿ØÖÆÌ¨Êä³ö
-2.parseInt();È¡Õû
-3.txt.focus();×Ô¶¯»ñµÃ½¹µã£¨·½·¨£©
-4.this.select();£¨Êó±ê¾­¹ı£©Ñ¡Ôñ
-5.getElementsByTagName();»ñµÃÄ³Àà±êÇ©¶ÔÏó£¨µÃµ½µÄÊÇÒ»¸öÎ±Êı×é£©
-6.oninput:ÅĞ¶ÏÓÃ»§ÊäÈëÊÂ¼ş
-7.join();°ÑÊı×é×ªÎª×Ö·û
-8.split();×Ö·û´®×ªÎªÊı×é
-9.parentNode ¸¸½Úµã
-10.nextSibling     ÏÂÒ»¸öÇ×ĞÖµÜ (ie678)   
-   nextElementSibling  ÆäËûä¯ÀÀÆ÷  
-11.previousSibling  ÉÏÒ»¸öÇ×ĞÖµÜ  Í¬ÉÏ
+1.console.log();æ§åˆ¶å°è¾“å‡º
+2.parseInt();å–æ•´
+3.txt.focus();è‡ªåŠ¨è·å¾—ç„¦ç‚¹ï¼ˆæ–¹æ³•ï¼‰
+4.this.select();ï¼ˆé¼ æ ‡ç»è¿‡ï¼‰é€‰æ‹©
+5.getElementsByTagName();è·å¾—æŸç±»æ ‡ç­¾å¯¹è±¡ï¼ˆå¾—åˆ°çš„æ˜¯ä¸€ä¸ªä¼ªæ•°ç»„ï¼‰
+6.oninput:åˆ¤æ–­ç”¨æˆ·è¾“å…¥äº‹ä»¶
+7.join();æŠŠæ•°ç»„è½¬ä¸ºå­—ç¬¦
+8.split();å­—ç¬¦ä¸²è½¬ä¸ºæ•°ç»„
+9.parentNode çˆ¶èŠ‚ç‚¹
+10.nextSibling     ä¸‹ä¸€ä¸ªäº²å…„å¼Ÿ (ie678)   
+   nextElementSibling  å…¶ä»–æµè§ˆå™¨  
+11.previousSibling  ä¸Šä¸€ä¸ªäº²å…„å¼Ÿ  åŒä¸Š
    previousElementSibling
-12.children  ËùÓĞµÄº¢×Ó½Úµã(Ö»ÓĞÔªËØ½Úµã,°üº¬×¢ÊÍ½Úµã£¬Êü³ö)
-13.var firstDiv = document.creatElement("div");´´½¨½Úµã
-   demo.appendChild(firstDiv);²åÈë½Úµãµ½×îºóÃæ
+12.children  æ‰€æœ‰çš„å­©å­èŠ‚ç‚¹(åªæœ‰å…ƒç´ èŠ‚ç‚¹,åŒ…å«æ³¨é‡ŠèŠ‚ç‚¹ï¼Œåº¶å‡º)
+13.var firstDiv = document.creatElement("div");åˆ›å»ºèŠ‚ç‚¹
+   demo.appendChild(firstDiv);æ’å…¥èŠ‚ç‚¹åˆ°æœ€åé¢
    var childrens=demo.children;
-   demo.insertBefore(firstDiv,childrens[0]);Ìí¼Ó×Ó½Úµãµ½×îÇ°Ãæ£»
-14.demo.getAttribute("class"),»ñµÃÊôĞÔÖµ
-   demo.setAttribute("ÊôĞÔ","Öµ")ÉèÖÃÊôĞÔÖµ
-   removeAttribute("ÊôĞÔ");É¾³ıÊôĞÔ
+   demo.insertBefore(firstDiv,childrens[0]);æ·»åŠ å­èŠ‚ç‚¹åˆ°æœ€å‰é¢ï¼›
+14.demo.getAttribute("class"),è·å¾—å±æ€§å€¼
+   demo.setAttribute("å±æ€§","å€¼")è®¾ç½®å±æ€§å€¼
+   removeAttribute("å±æ€§");åˆ é™¤å±æ€§
 15.date.getTime();
-   date.valueOf();µÃµ½ºÁÃëÊı
-16.£¨window.£©setInterval("Ö´ĞĞµÄº¯Êı"£¬¼ä¸ôÊ±¼ä)
-17.var endTime=new Date("2017/12/12 17:30:00");Èç¹ûdateÀ¨ºÅÀïÃæĞ´ÈÕÆÚ¾ÍÊÇ×Ô¼º¶¨ÒåµÄÊ±¼ä£¬Èç¹û²»Ğ´¾ÍÊÇµ±Ç°Ê±¼ä
-18.disabled="disabled" || "true" ±íµ¥²»¿ÉÓÃ
-19.clearInterval(¶¨Ê±Æ÷Ãû³Æ)£»Çå³ı¶¨Ê±Æ÷
-setTimeout(fn,1000);1ÃëºóÖ´ĞĞfn,Ö»Ö´ĞĞÒ»´Î
-20.charAt(Ë÷Òı)£»¸ù¾İÎ»ÖÃ·µ»Ø×Ö·û
-21.£¨last£©indexOf("×Ö·û")£»¸ù¾İ×Ö·û·µ»ØË÷Òı´ÓÇ°Ãæ¿ªÊ¼£¨ºóÃæ£©Êı
-22.concat();Á¬½Ó×Ö·û´®£¬a.concat(b);
-23.slice(È¡×Ö·û´®µÄÆğÊ¼Î»ÖÃ,[½áÊøÎ»ÖÃ]);[] ¿ÉÑ¡µÄ£¬²»°üº¬½áÊøÎ»ÖÃ£¬ÆğÊ¼Î»ÖÃ¿ÉÒÔÊÇ¸ºÊı£¬´ÓÓÒ±ß¿ªÊ¼Êı
-24.substr(ÆğÊ¼Î»ÖÃ,[È¡µÃ¸öÊı])
-25.str.toFixed(2);±£ÁôÁ½Î»Ğ¡Êı
-26.str.toUpperCase();×ªÎª´óĞ´
-27.»º¶¯¶¯»­:leader = leader + (target - leader) / 10
-28.offsetWidth offsetHeight  µÃµ½¶ÔÏóµÄ¿í¶ÈºÍ¸ß¶È£¬
+   date.valueOf();å¾—åˆ°æ¯«ç§’æ•°
+16.ï¼ˆwindow.ï¼‰setInterval("æ‰§è¡Œçš„å‡½æ•°"ï¼Œé—´éš”æ—¶é—´)
+17.var endTime=new Date("2017/12/12 17:30:00");å¦‚æœdateæ‹¬å·é‡Œé¢å†™æ—¥æœŸå°±æ˜¯è‡ªå·±å®šä¹‰çš„æ—¶é—´ï¼Œå¦‚æœä¸å†™å°±æ˜¯å½“å‰æ—¶é—´
+18.disabled="disabled" || "true" è¡¨å•ä¸å¯ç”¨
+19.clearInterval(å®šæ—¶å™¨åç§°)ï¼›æ¸…é™¤å®šæ—¶å™¨
+setTimeout(fn,1000);1ç§’åæ‰§è¡Œfn,åªæ‰§è¡Œä¸€æ¬¡
+20.charAt(ç´¢å¼•)ï¼›æ ¹æ®ä½ç½®è¿”å›å­—ç¬¦
+21.ï¼ˆlastï¼‰indexOf("å­—ç¬¦")ï¼›æ ¹æ®å­—ç¬¦è¿”å›ç´¢å¼•ä»å‰é¢å¼€å§‹ï¼ˆåé¢ï¼‰æ•°
+22.concat();è¿æ¥å­—ç¬¦ä¸²ï¼Œa.concat(b);
+23.slice(å–å­—ç¬¦ä¸²çš„èµ·å§‹ä½ç½®,[ç»“æŸä½ç½®]);[] å¯é€‰çš„ï¼Œä¸åŒ…å«ç»“æŸä½ç½®ï¼Œèµ·å§‹ä½ç½®å¯ä»¥æ˜¯è´Ÿæ•°ï¼Œä»å³è¾¹å¼€å§‹æ•°
+24.substr(èµ·å§‹ä½ç½®,[å–å¾—ä¸ªæ•°])
+25.str.toFixed(2);ä¿ç•™ä¸¤ä½å°æ•°
+26.str.toUpperCase();è½¬ä¸ºå¤§å†™
+27.ç¼“åŠ¨åŠ¨ç”»:leader = leader + (target - leader) / 10
+28.offsetWidth offsetHeight  å¾—åˆ°å¯¹è±¡çš„å®½åº¦å’Œé«˜åº¦ï¼Œ
     offsetWidth = width + border + padding
-    clientWidth  ²»¼Ó±ß¿í
-    scrollWidth  ´óĞ¡ÊÇÄÚÈİµÄ´óĞ¡
-29.offsetLeft   offsetTop  ºĞ×Óµ½¶¨Î»µÄ¸¸ºĞ×Ó±ß¿òµ½±ß¿òµÄ¾àÀë
-    ´Ó¸¸¼¶µÄpadding¿ªÊ¼Ëã£¬¸¸Ç×µÄborder²»Ëã
-30.offsetParent  ·µ»Ø¸Ã¶ÔÏóµÄ¸¸¼¶£¨´øÓĞ¶¨Î»£¬²»Ò»¶¨ÊÇÇ×µÄ£©
-   parentNode  ·µ»Ø¸¸Ç×£¨Ç×µÄ£©
-31.event.pageX  pageY   ÒÔÎÄµµµÄ»ù×¼µã¶ÔÆë£¨¾ø¶Ô¶¨Î»£©
-    clientX   clentY   ÒÔ¿ÉÊÓÇøÎª»ù×¼µã£¨¹Ì¶¨¶¨Î»£©
-    screenX        ÒÔÆÁÄ»Îª»ù×¼µã
-32.  window.getSelection ? window.getSelection().removeAllRanges() : document.selection.empty();   // ·ÀÖ¹ÍÏ¶¯»¬¿éµÄÊ±ºò£¬ Ñ¡ÖĞÎÄ×Ö
-33.scrollTop  scrollLeft   ±»¾íÈ¥µÄÍ·²¿ºÍ×ó²¿
-   ¹È¸èºÍÃ»ÓĞÉùÃ÷DTD:document.body.scrollTop;
-   ÆäËûä¯ÀÀÆ÷:document.documentElement.scrollTop;
-   ×îĞÂä¯ÀÀÆ÷:window.pageX(Y)offset;
-34.window.scrollTo(x,y)  ¿ÉÒÔ°ÑÄÚÈİ¹ö¶¯µ½Ö¸¶¨µÄ×ø±ê
-35.×èÖ¹Ã°Åİ  event.stopPropagation();
+    clientWidth  ä¸åŠ è¾¹å®½
+    scrollWidth  å¤§å°æ˜¯å†…å®¹çš„å¤§å°
+29.offsetLeft   offsetTop  ç›’å­åˆ°å®šä½çš„çˆ¶ç›’å­è¾¹æ¡†åˆ°è¾¹æ¡†çš„è·ç¦»
+    ä»çˆ¶çº§çš„paddingå¼€å§‹ç®—ï¼Œçˆ¶äº²çš„borderä¸ç®—
+30.offsetParent  è¿”å›è¯¥å¯¹è±¡çš„çˆ¶çº§ï¼ˆå¸¦æœ‰å®šä½ï¼Œä¸ä¸€å®šæ˜¯äº²çš„ï¼‰
+   parentNode  è¿”å›çˆ¶äº²ï¼ˆäº²çš„ï¼‰
+31.event.pageX  pageY   ä»¥æ–‡æ¡£çš„åŸºå‡†ç‚¹å¯¹é½ï¼ˆç»å¯¹å®šä½ï¼‰
+    clientX   clentY   ä»¥å¯è§†åŒºä¸ºåŸºå‡†ç‚¹ï¼ˆå›ºå®šå®šä½ï¼‰
+    screenX        ä»¥å±å¹•ä¸ºåŸºå‡†ç‚¹
+32.  window.getSelection ? window.getSelection().removeAllRanges() : document.selection.empty();   // é˜²æ­¢æ‹–åŠ¨æ»‘å—çš„æ—¶å€™ï¼Œ é€‰ä¸­æ–‡å­—
+33.scrollTop  scrollLeft   è¢«å·å»çš„å¤´éƒ¨å’Œå·¦éƒ¨
+   è°·æ­Œå’Œæ²¡æœ‰å£°æ˜DTD:document.body.scrollTop;
+   å…¶ä»–æµè§ˆå™¨:document.documentElement.scrollTop;
+   æœ€æ–°æµè§ˆå™¨:window.pageX(Y)offset;
+34.window.scrollTo(x,y)  å¯ä»¥æŠŠå†…å®¹æ»šåŠ¨åˆ°æŒ‡å®šçš„åæ ‡
+35.é˜»æ­¢å†’æ³¡  event.stopPropagation();
     event.cancelBuble = true; //ie 
 
-   e.preventDefault();//×èÖ¹Ä¬ÈÏÊÂ¼ş,±ê×¼
+   e.preventDefault();//é˜»æ­¢é»˜è®¤äº‹ä»¶,æ ‡å‡†
    event.returnValue = false;//IE
-36   css   opacity:0.4   °ëÍ¸Ã÷
-37.event.target.id  µ±Ç°¶ÔÏóid
+36   css   opacity:0.4   åŠé€æ˜
+37.event.target.id  å½“å‰å¯¹è±¡id
    event.srcElement.id  ie 678
-38.  »ñµÃÓÃ»§Ñ¡ÔñµÄÄÚÈİ  window.getSelection(); 
+38.  è·å¾—ç”¨æˆ·é€‰æ‹©çš„å†…å®¹  window.getSelection(); 
                         document.selection.createRange().text;  ie
-39.Math.abs()  È¡¾ø¶ÔÖµº¯Êı
-40.Math.ceil()  ÏòÉÏÈ¡Õû
-   Math.floor()  ÏòÏÂÈ¡Õû
-   Math.round()  ËÄÉáÎåÈëº¯Êı
-41.»ñµÃÄÚºÍÍâ²¿µÄÑùÊ½
+39.Math.abs()  å–ç»å¯¹å€¼å‡½æ•°
+40.Math.ceil()  å‘ä¸Šå–æ•´
+   Math.floor()  å‘ä¸‹å–æ•´
+   Math.round()  å››èˆäº”å…¥å‡½æ•°
+41.è·å¾—å†…å’Œå¤–éƒ¨çš„æ ·å¼
 	obj.currentStyle[key]  ie
-    window.getComputedStyle("ÔªËØ","Î±Àà")[key]  Ã»ÓĞÎ±ÀàÓÃnull´úÌæ
-42¡¢btn.addEventListener('click',function(){});//Ìí¼ÓÊÂ¼ş£¬²»»á±»ÖØÖÃ
-43¡¢window.location.search.split('=')[1]; //»ñµÃµØÖ·À¸µÄÊı¾İ£»
-    decodeURL(Êı¾İ);´ÓURL±àÂë×ª»»µ½Ö®Ç°µÄ×´Ì¬£»
-44¡¢eval("js´úÂë"); //Ö´ĞĞ´úÂë£»
-45¡¢toString.call('Êı¾İ');//·µ»Ø½á¹û:[object String];typeofÓĞÈ±µã
-46¡¢return false Ê±Êµ¼ÊÖ´ĞĞÁË£º
-	1¡¢event.preventDefault()	//×èÖ¹Ä¬ÈÏÊÂ¼ş
-	2¡¢event.stopPropagation()	//×èÖ¹ÊÂ¼şÃ°Åİ
-	3¡¢ÖÕÖ¹º¯Êı²¢Á¢¼´·µ»Ø
+    window.getComputedStyle("å…ƒç´ ","ä¼ªç±»")[key]  æ²¡æœ‰ä¼ªç±»ç”¨nullä»£æ›¿
+42ã€btn.addEventListener('click',function(){});//æ·»åŠ äº‹ä»¶ï¼Œä¸ä¼šè¢«é‡ç½®
+43ã€window.location.search.split('=')[1]; //è·å¾—åœ°å€æ çš„æ•°æ®ï¼›
+    decodeURL(æ•°æ®);ä»URLç¼–ç è½¬æ¢åˆ°ä¹‹å‰çš„çŠ¶æ€ï¼›
+44ã€eval("jsä»£ç "); //æ‰§è¡Œä»£ç ï¼›
+45ã€toString.call('æ•°æ®');//è¿”å›ç»“æœ:[object String];typeofæœ‰ç¼ºç‚¹
+46ã€return false æ—¶å®é™…æ‰§è¡Œäº†ï¼š
+	1ã€event.preventDefault()	//é˜»æ­¢é»˜è®¤äº‹ä»¶
+	2ã€event.stopPropagation()	//é˜»æ­¢äº‹ä»¶å†’æ³¡
+	3ã€ç»ˆæ­¢å‡½æ•°å¹¶ç«‹å³è¿”å›
 
 
 
-ÃæÏò¶ÔÏó£º
-1¡¢ÊµÀı.constructor;//¼ì²âÄ³¸öÊµÀıµÄ¹¹Ôìº¯ÊıÊÇÄÄ¸ö
-2¡¢Èç¹ûÔ­ĞÍºÍ¹¹Ôìº¯ÊıÖĞÓĞÏàÍ¬ÊôĞÔ£¬Èç¹ûÏë·ÃÎÊÔ­ĞÍÖĞ±»ÆÁ±ÎµÄÊôĞÔ£º
-    1.delete ¶ÔÏó.ÊôĞÔ/·½·¨
-    2.¶ÔÏó.prototype.ÊôĞÔ/·½·¨
-3¡¢arguments.length  //º¯ÊıÀïÃæÒÔÎ±Êı×é±£´æÊµ²Î
-	º¯Êı.length		//º¯ÊıÄÚ²¿»ñµÃº¯ÊıµÄĞÎ²Î¸öÊı
-	arguments.callee;	´ú±íº¯Êı±¾Éí
-4¡¢call---myclass.getAllStudentsNumber.call(student,10,200);//myclass¶ÔÏóµÄgetAllStudentsNumber·½·¨½è¸østudentÓÃ£¬ºóÃæ¸ú²ÎÊı
-   ·½·¨ÖĞµÄthisÖ¸Ïòstudent¶ÔÏó
+é¢å‘å¯¹è±¡ï¼š
+1ã€å®ä¾‹.constructor;//æ£€æµ‹æŸä¸ªå®ä¾‹çš„æ„é€ å‡½æ•°æ˜¯å“ªä¸ª
+2ã€å¦‚æœåŸå‹å’Œæ„é€ å‡½æ•°ä¸­æœ‰ç›¸åŒå±æ€§ï¼Œå¦‚æœæƒ³è®¿é—®åŸå‹ä¸­è¢«å±è”½çš„å±æ€§ï¼š
+    1.delete å¯¹è±¡.å±æ€§/æ–¹æ³•
+    2.å¯¹è±¡.prototype.å±æ€§/æ–¹æ³•
+3ã€arguments.length  //å‡½æ•°é‡Œé¢ä»¥ä¼ªæ•°ç»„ä¿å­˜å®å‚
+	å‡½æ•°.length		//å‡½æ•°å†…éƒ¨è·å¾—å‡½æ•°çš„å½¢å‚ä¸ªæ•°
+	arguments.callee;	ä»£è¡¨å‡½æ•°æœ¬èº«
+4ã€call---myclass.getAllStudentsNumber.call(student,10,200);//myclasså¯¹è±¡çš„getAllStudentsNumberæ–¹æ³•å€Ÿç»™studentç”¨ï¼Œåé¢è·Ÿå‚æ•°
+   æ–¹æ³•ä¸­çš„thisæŒ‡å‘studentå¯¹è±¡
    apply---myclass.getAllStudentsNumber.apply(student,[10,200])
-5¡¢Î±Êı×é
-	arguments¡¢documentÖĞ»ñµÃµÄ¼¯ºÏ¶¼ÊÇÎ±Êı×é--jQuery¿ò¼Ü¾ÍÊÇÒ»¸öÎ±Êı×é
-	demNodes = Array.prototype.slice.call(divs);//°ÑÎ±Êı×é×ªÎªÕæÊı×é
-6¡¢Array.prototype.push.apply(arr1,arr2);//ºÏ²¢Êı×é
-7¡¢student.prototype = new Base();//Ô­ĞÍ¼Ì³Ğ£¬ÓĞÈ±µã£¬²»ÄÜ´«²Î£»ÓÃcall¼Ì³Ğ
-8¡¢±Õ°ü£ºÒ»¸öº¯Êı¿ÉÒÔ·ÃÎÊÁíÒ»¸öº¯Êı×÷ÓÃÓòµÄ±äÁ¿
-	¾ßÓĞ·â±ÕĞÔ£ºÆğµ½Ò»¸ö±£»¤±äÁ¿µÄ×÷ÓÃ
+5ã€ä¼ªæ•°ç»„
+	argumentsã€documentä¸­è·å¾—çš„é›†åˆéƒ½æ˜¯ä¼ªæ•°ç»„--jQueryæ¡†æ¶å°±æ˜¯ä¸€ä¸ªä¼ªæ•°ç»„
+	demNodes = Array.prototype.slice.call(divs);//æŠŠä¼ªæ•°ç»„è½¬ä¸ºçœŸæ•°ç»„
+6ã€Array.prototype.push.apply(arr1,arr2);//åˆå¹¶æ•°ç»„
+7ã€student.prototype = new Base();//åŸå‹ç»§æ‰¿ï¼Œæœ‰ç¼ºç‚¹ï¼Œä¸èƒ½ä¼ å‚ï¼›ç”¨callç»§æ‰¿
+8ã€é—­åŒ…ï¼šä¸€ä¸ªå‡½æ•°å¯ä»¥è®¿é—®å¦ä¸€ä¸ªå‡½æ•°ä½œç”¨åŸŸçš„å˜é‡
+	å…·æœ‰å°é—­æ€§ï¼šèµ·åˆ°ä¸€ä¸ªä¿æŠ¤å˜é‡çš„ä½œç”¨
 
 
 
-HTML5ÖĞµÄJavaScript
-1¡¢document.querySelector('Ñ¡ÔñÆ÷'); //·µ»ØµÚÒ»¸öÂú×ãµÄ
-   var lis=document.querySelectorAll('Ñ¡ÔñÆ÷'); // ·µ»ØËùÓĞÂú×ãµÄÔªËØ£¬Ò»¸öÔªËØÊÇdomÀàĞÍµÄÊı×é
-   lis[0].addEventListener('click',function(e){});//removeEventListener,Ìí¼Ó»òÒÆ³ıÊÂ¼ş
-2¡¢ÔªËØ¶ÔÏó.classList.remove('ÀàÃû');classList.add('ÀàÃû')£»//ÒÆ³ıºÍÌí¼ÓÀàÃû  
-   ÔªËØ¶ÔÏó.classList.toggle('ÀàÃû'¡¾,bool¡¿);É¾³ı»òÌí¼ÓÀàÃû,tureÎªÌí¼Ó£¬falseÎªÉ¾³ı£»
-   element.classList.contains('ÀàÃû');ÅĞ¶ÏÔªËØÊÇ·ñ°üº¬ÓĞÀàÃû£»
-3¡¢history.pushState('Êı¾İ','ÉèÖÃÀúÊ·×´Ì¬ÏÔÊ¾µÄ±êÌâ£¬Ä¿Ç°²»Ö§³Ö','?demo='+new Date().toLocaleTimeString());
-   //new Date()»ñµÃµÄÊÂÊ±¼ä¶ÔÏó;toLocaleTimeString×ª³ÉÎÒÃÇÈÏÊ¶µÄÊ±¼ä×Ö·û´®£»
-   //toLocaleDateString×ª³ÉÎÒÃÇÈÏÊ¶µÄÈÕÆÚ×Ö·û´®£»
-  window.addEventListener('popstate',function(e){ //Ç°½ø»òºóÍËÊÂ¼şconsole.log('111'+e.state); });
+HTML5ä¸­çš„JavaScript
+1ã€document.querySelector('é€‰æ‹©å™¨'); //è¿”å›ç¬¬ä¸€ä¸ªæ»¡è¶³çš„
+   var lis=document.querySelectorAll('é€‰æ‹©å™¨'); // è¿”å›æ‰€æœ‰æ»¡è¶³çš„å…ƒç´ ï¼Œä¸€ä¸ªå…ƒç´ æ˜¯domç±»å‹çš„æ•°ç»„
+   lis[0].addEventListener('click',function(e){});//removeEventListener,æ·»åŠ æˆ–ç§»é™¤äº‹ä»¶
+2ã€å…ƒç´ å¯¹è±¡.classList.remove('ç±»å');classList.add('ç±»å')ï¼›//ç§»é™¤å’Œæ·»åŠ ç±»å  
+   å…ƒç´ å¯¹è±¡.classList.toggle('ç±»å'ã€,boolã€‘);åˆ é™¤æˆ–æ·»åŠ ç±»å,tureä¸ºæ·»åŠ ï¼Œfalseä¸ºåˆ é™¤ï¼›
+   element.classList.contains('ç±»å');åˆ¤æ–­å…ƒç´ æ˜¯å¦åŒ…å«æœ‰ç±»åï¼›
+3ã€history.pushState('æ•°æ®','è®¾ç½®å†å²çŠ¶æ€æ˜¾ç¤ºçš„æ ‡é¢˜ï¼Œç›®å‰ä¸æ”¯æŒ','?demo='+new Date().toLocaleTimeString());
+   //new Date()è·å¾—çš„äº‹æ—¶é—´å¯¹è±¡;toLocaleTimeStringè½¬æˆæˆ‘ä»¬è®¤è¯†çš„æ—¶é—´å­—ç¬¦ä¸²ï¼›
+   //toLocaleDateStringè½¬æˆæˆ‘ä»¬è®¤è¯†çš„æ—¥æœŸå­—ç¬¦ä¸²ï¼›
+  window.addEventListener('popstate',function(e){ //å‰è¿›æˆ–åé€€äº‹ä»¶console.log('111'+e.state); });

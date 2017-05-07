@@ -1,80 +1,80 @@
-1.Êý¾Ý¿âµÄ±¸·ÝºÍ»Ö¸´
-  ±¸·Ý£ºmysqldump -h·þÎñÆ÷µØÖ· -uµÇÂ¼Ãû -p Êý¾Ý¿âÃû > ÎÄ¼þÃû  £¨Îª¹ÜÀíÔ±Éí·Ý£©
-  »Ö¸´£ºmysql -h·þÎñÆ÷µØÖ· -uµÇÂ¼Ãû -P¶Ë¿ÚºÅ -pÊý¾Ý¿âÃû < ÎÄ¼þÃû
-  ÔÚÃ»ÓÐµÇÂ¼Ê±ÓÃ
-  source ÍêÕûÂ·¾¶  ÔÚµÇÂ¼Ê±Ê¹ÓÃ
-2.×Ö¶ÎÊôÐÔ
-   auto_increment; ×ÔÔö³¤
-   primary key;Ö÷¼ü
-   unique key; Î¨Ò»
-   not null;   ×Ö¶Î²»ÄÜÎª¿Õ
-   default  XXÖµ£»  Ä¬ÈÏÖµ£¬insertÃ»ÓÐ¸øÖµÊ±¾ÍÊ¹ÓÃÄ¬ÈÏÖµ
-   comment '×Ö¶ÎËµÃ÷ÎÄ×Ö';
-3.Ë÷ÒýÀàÐÍ  
-   ÆÕÍ¨Ë÷Òý£ºkey(×Ö¶ÎÃû)
-   Î¨Ò»Ë÷Òý£¨Ô¼Êø£©£ºunique key()
-   Ö÷¼üË÷Òý£¨Ô¼Êø£©£ºprimary key()
-   È«ÎÄË÷Òý£ºfulltext()
-   Íâ¼üË÷Òý£¨Ô¼Êø£©£ºforeign key(×Ö¶ÎÃû) references ÆäËû±í£¨¶ÔÓ¦ÆäËû±íµÄ×Ö¶ÎÃû£©
-4¡¢±íÑ¡ÏîÁÐ±í£º
-   charset = ÒªÊ¹ÓÃµÄ×Ö·û±àÂë
-   engine = ÒªÊ¹ÓÃµÄ´æ´¢ÒýÇæ£¨Ò²½Ð±íÀàÐÍ£©InnoDB,MyIsam,archive,Memory
-   auto_increment = Éè¶¨×ÔÔö³¤µÄ³õÊ¼Öµ£¬Ä¬ÈÏÊÇ1
-   comment = ¡®¸Ã±íµÄÒ»Ð©ËµÃ÷ÎÄ×Ö¡¯
-5¡¢×Ö¶ÎÀàÐÍ
-    ×Ö·ûÀàÐÍ£º
-     varchar:±ä³¤×Ö·û£¬Êµ¼Ê×î´ó65533
-     char:  ¶¨³¤×Ö·û
-     enum:  ÊÊÓÃ´æ´¢µ¥Ñ¡  enum('µ¥Ñ¡1','2'...),¶ÔÓ¦1.2.3.4..
-     set:   ´æ´¢¶àÑ¡Êý¾Ý   set('Ñ¡Ïî1','2'...),¶ÔÓ¦1.2.4.8.16....
-     text£º  ²»Õ¼ÐÐ¿Õ¼ä
-    Ê±¼äÀàÐÍ£º
+1.æ•°æ®åº“çš„å¤‡ä»½å’Œæ¢å¤
+  å¤‡ä»½ï¼šmysqldump -hæœåŠ¡å™¨åœ°å€ -uç™»å½•å -p æ•°æ®åº“å > æ–‡ä»¶å  ï¼ˆä¸ºç®¡ç†å‘˜èº«ä»½ï¼‰
+  æ¢å¤ï¼šmysql -hæœåŠ¡å™¨åœ°å€ -uç™»å½•å -Pç«¯å£å· -pæ•°æ®åº“å < æ–‡ä»¶å
+  åœ¨æ²¡æœ‰ç™»å½•æ—¶ç”¨
+  source å®Œæ•´è·¯å¾„  åœ¨ç™»å½•æ—¶ä½¿ç”¨
+2.å­—æ®µå±žæ€§
+   auto_increment; è‡ªå¢žé•¿
+   primary key;ä¸»é”®
+   unique key; å”¯ä¸€
+   not null;   å­—æ®µä¸èƒ½ä¸ºç©º
+   default  XXå€¼ï¼›  é»˜è®¤å€¼ï¼Œinsertæ²¡æœ‰ç»™å€¼æ—¶å°±ä½¿ç”¨é»˜è®¤å€¼
+   comment 'å­—æ®µè¯´æ˜Žæ–‡å­—';
+3.ç´¢å¼•ç±»åž‹  
+   æ™®é€šç´¢å¼•ï¼škey(å­—æ®µå)
+   å”¯ä¸€ç´¢å¼•ï¼ˆçº¦æŸï¼‰ï¼šunique key()
+   ä¸»é”®ç´¢å¼•ï¼ˆçº¦æŸï¼‰ï¼šprimary key()
+   å…¨æ–‡ç´¢å¼•ï¼šfulltext()
+   å¤–é”®ç´¢å¼•ï¼ˆçº¦æŸï¼‰ï¼šforeign key(å­—æ®µå) references å…¶ä»–è¡¨ï¼ˆå¯¹åº”å…¶ä»–è¡¨çš„å­—æ®µåï¼‰
+4ã€è¡¨é€‰é¡¹åˆ—è¡¨ï¼š
+   charset = è¦ä½¿ç”¨çš„å­—ç¬¦ç¼–ç 
+   engine = è¦ä½¿ç”¨çš„å­˜å‚¨å¼•æ“Žï¼ˆä¹Ÿå«è¡¨ç±»åž‹ï¼‰InnoDB,MyIsam,archive,Memory
+   auto_increment = è®¾å®šè‡ªå¢žé•¿çš„åˆå§‹å€¼ï¼Œé»˜è®¤æ˜¯1
+   comment = â€˜è¯¥è¡¨çš„ä¸€äº›è¯´æ˜Žæ–‡å­—â€™
+5ã€å­—æ®µç±»åž‹
+    å­—ç¬¦ç±»åž‹ï¼š
+     varchar:å˜é•¿å­—ç¬¦ï¼Œå®žé™…æœ€å¤§65533
+     char:  å®šé•¿å­—ç¬¦
+     enum:  é€‚ç”¨å­˜å‚¨å•é€‰  enum('å•é€‰1','2'...),å¯¹åº”1.2.3.4..
+     set:   å­˜å‚¨å¤šé€‰æ•°æ®   set('é€‰é¡¹1','2'...),å¯¹åº”1.2.4.8.16....
+     textï¼š  ä¸å è¡Œç©ºé—´
+    æ—¶é—´ç±»åž‹ï¼š
      datetime,date,time,year,
-     timestamp:ÊÊÓÃÓÚÊý¾ÝÐèÒª×Ô¶¯»ñÈ¡µ±Ç°Ê±¼ä
-6¡¢±í¶¨ÒåÓï¾ä
-   create table ±íÃû £¨×Ö¶Î1£¬×Ö¶Î2,...[Ë÷Òý»òÔ¼Êø1,2...]£©[±íÑ¡Ïî1,2...];
-   ×Ö¶ÎÉè¶¨ÐÎÊ½:×Ö¶ÎÃû ×Ö¶ÎÀàÐÍ ¡¾×Ö¶ÎÊôÐÔÁÐ±í¡¿
-7¡¢É¾³ýÊý¾Ý
-   delete form ±íÃû ¡¾whereÌõ¼þ¡¿¡¾order by ÅÅÐò×Ö¶Î¡¿¡¾limit ÏÞ¶¨ÐÐÊý¡¿£»
-8¡¢²éÑ¯»ù±¾Óï·¨
-   select [all|distinct] ×Ö¶Î»ò±í´ïÊ½ÁÐ±í [from×Ó¾ä] [where×Ó¾ä] [group by×Ó¾ä] [having×Ó¾ä] [order by×Ó¾ä]   [limit×Ó¾ä]; 
-9¡¢insert into ±íÃû (×Ö¶Î1£¬×Ö¶Î2...) values(Öµa1,a2..),(Öµb1,b2...)..;
-   replace into...(Ö÷¼üÏàÍ¬Ê±Ìæ»»)
-   insert into ±í set ×Ö¶Î1=a1,×Ö¶Î2=a2...;
-   insert into ±íÃû (×Ö¶Î1£¬×Ö¶Î2...) select ×Ö¶Î1£¬×Ö¶Î2...form ±í2;
-   load data(ÔØÈëÊý¾Ý)
-10¡¢ÄÚÁ¬½Ó
-   select * from ±í1 ¡¾inner¡¿ join ±í2 on Á¬½ÓÌõ¼þ;
-    ×óÁ¬½Ó
-   select * from ±í1 left¡¾outer¡¿ join ±í2 on Á¬½ÓÌõ¼þ;
-    ÓÒÁ¬½Ó
-   select * from ±í1 right join ±í2 on Á¬½ÓÌõ¼þ;
-11¡¢where exists£¨×Ó²éÑ¯£©£¬Ö÷²éÑ¯µÄÊý¾Ý×÷Îª×Ó²éÑ¯µÄÅÐ¶ÏÌõ¼þ
-12¡¢ÁªºÏ²éÑ¯£º
-   select Óï¾ä1
-   union ¡¾disctinct|all¡¿
-   select Óï¾ä2;
-13¡¢grant È¨ÏÞÁÐ±í on Ä³¿â.Ä³¸ö¶ÔÏó to 'ÓÃ»§Ãû'@'ÔÊÐíµÇÂ¼Î»ÖÃ'¡¾identified by 'ÃÜÂë'¡¿;  ÊÚÓèÈ¨ÏÞ»ò´´½¨ÓÃ»§»òÐÞ¸ÄÃÜÂë
-14¡¢revoke È¨ÏÞÁÐ±í on Ä³¿â.Ä³¸ö¶ÔÏó from 'ÓÃ»§Ãû'@'ÔÊÐíµÇÂ¼Î»ÖÃ'; °þ¶áÈ¨ÏÞ
+     timestamp:é€‚ç”¨äºŽæ•°æ®éœ€è¦è‡ªåŠ¨èŽ·å–å½“å‰æ—¶é—´
+6ã€è¡¨å®šä¹‰è¯­å¥
+   create table è¡¨å ï¼ˆå­—æ®µ1ï¼Œå­—æ®µ2,...[ç´¢å¼•æˆ–çº¦æŸ1,2...]ï¼‰[è¡¨é€‰é¡¹1,2...];
+   å­—æ®µè®¾å®šå½¢å¼:å­—æ®µå å­—æ®µç±»åž‹ ã€å­—æ®µå±žæ€§åˆ—è¡¨ã€‘
+7ã€åˆ é™¤æ•°æ®
+   delete form è¡¨å ã€whereæ¡ä»¶ã€‘ã€order by æŽ’åºå­—æ®µã€‘ã€limit é™å®šè¡Œæ•°ã€‘ï¼›
+8ã€æŸ¥è¯¢åŸºæœ¬è¯­æ³•
+   select [all|distinct] å­—æ®µæˆ–è¡¨è¾¾å¼åˆ—è¡¨ [fromå­å¥] [whereå­å¥] [group byå­å¥] [havingå­å¥] [order byå­å¥]   [limitå­å¥]; 
+9ã€insert into è¡¨å (å­—æ®µ1ï¼Œå­—æ®µ2...) values(å€¼a1,a2..),(å€¼b1,b2...)..;
+   replace into...(ä¸»é”®ç›¸åŒæ—¶æ›¿æ¢)
+   insert into è¡¨ set å­—æ®µ1=a1,å­—æ®µ2=a2...;
+   insert into è¡¨å (å­—æ®µ1ï¼Œå­—æ®µ2...) select å­—æ®µ1ï¼Œå­—æ®µ2...form è¡¨2;
+   load data(è½½å…¥æ•°æ®)
+10ã€å†…è¿žæŽ¥
+   select * from è¡¨1 ã€innerã€‘ join è¡¨2 on è¿žæŽ¥æ¡ä»¶;
+    å·¦è¿žæŽ¥
+   select * from è¡¨1 leftã€outerã€‘ join è¡¨2 on è¿žæŽ¥æ¡ä»¶;
+    å³è¿žæŽ¥
+   select * from è¡¨1 right join è¡¨2 on è¿žæŽ¥æ¡ä»¶;
+11ã€where existsï¼ˆå­æŸ¥è¯¢ï¼‰ï¼Œä¸»æŸ¥è¯¢çš„æ•°æ®ä½œä¸ºå­æŸ¥è¯¢çš„åˆ¤æ–­æ¡ä»¶
+12ã€è”åˆæŸ¥è¯¢ï¼š
+   select è¯­å¥1
+   union ã€disctinct|allã€‘
+   select è¯­å¥2;
+13ã€grant æƒé™åˆ—è¡¨ on æŸåº“.æŸä¸ªå¯¹è±¡ to 'ç”¨æˆ·å'@'å…è®¸ç™»å½•ä½ç½®'ã€identified by 'å¯†ç 'ã€‘;  æŽˆäºˆæƒé™æˆ–åˆ›å»ºç”¨æˆ·æˆ–ä¿®æ”¹å¯†ç 
+14ã€revoke æƒé™åˆ—è¡¨ on æŸåº“.æŸä¸ªå¯¹è±¡ from 'ç”¨æˆ·å'@'å…è®¸ç™»å½•ä½ç½®'; å‰¥å¤ºæƒé™
    
-15¡¢ÊÂÎñÁ÷³Ì
-   1¡¢start transaction;   »òbegin;  //¿ªÆôÊÂÎñ
-   2¡¢Ö´ÐÐ¶àÌõÔöÉ¾¸ÄÓï¾ä;
-   3¡¢commit;  //Ìá½»ÊÂÎñ£»´ËÊ±¾ÍÊÇÒ»´ÎÐÔÍê³É
-      rollback;//»Ø¹öÊÂÎñ£»´ËÊ±¾ÍÊÇ¶¼Ã»ÓÐ×ö
-16¡¢ÆÕÍ¨±äÁ¿
-     declare ±äÁ¿Ãû ¡¾default Ä¬ÈÏÖµ¡¿; ÏÈ¶¨Òå
-     set ±äÁ¿Ãû = Öµ£» //¸³Öµ
-     Ö»ÄÜÔÚ±à³Ì»·¾³ÖÐÊ¹ÓÃ
-    »á»°±äÁ¿£º´ø @ ·ûºÅ
-      ¶¨ÒåÐÎÊ½£¨Ò²ÊÇ¸³Öµ£©£º
-      set @±äÁ¿Ãû = Öµ;
-17¡¢¸Ä±ä½áÊø·û
+15ã€äº‹åŠ¡æµç¨‹
+   1ã€start transaction;   æˆ–begin;  //å¼€å¯äº‹åŠ¡
+   2ã€æ‰§è¡Œå¤šæ¡å¢žåˆ æ”¹è¯­å¥;
+   3ã€commit;  //æäº¤äº‹åŠ¡ï¼›æ­¤æ—¶å°±æ˜¯ä¸€æ¬¡æ€§å®Œæˆ
+      rollback;//å›žæ»šäº‹åŠ¡ï¼›æ­¤æ—¶å°±æ˜¯éƒ½æ²¡æœ‰åš
+16ã€æ™®é€šå˜é‡
+     declare å˜é‡å ã€default é»˜è®¤å€¼ã€‘; å…ˆå®šä¹‰
+     set å˜é‡å = å€¼ï¼› //èµ‹å€¼
+     åªèƒ½åœ¨ç¼–ç¨‹çŽ¯å¢ƒä¸­ä½¿ç”¨
+    ä¼šè¯å˜é‡ï¼šå¸¦ @ ç¬¦å·
+      å®šä¹‰å½¢å¼ï¼ˆä¹Ÿæ˜¯èµ‹å€¼ï¼‰ï¼š
+      set @å˜é‡å = å€¼;
+17ã€æ”¹å˜ç»“æŸç¬¦
       delimiter ///
-18¡¢´æ´¢º¯Êý
-    creat function º¯ÊýÃû£¨ÐÎ²Î1 ÀàÐÍ1£¬...£©
-     return ·µ»ØÀàÐÍ
+18ã€å­˜å‚¨å‡½æ•°
+    creat function å‡½æ•°åï¼ˆå½¢å‚1 ç±»åž‹1ï¼Œ...ï¼‰
+     return è¿”å›žç±»åž‹
     begin
-     #ÕâÀïÊÇÍêÕûµÄº¯ÊýÓï¾ä
-      return xxÖµ;
+     #è¿™é‡Œæ˜¯å®Œæ•´çš„å‡½æ•°è¯­å¥
+      return xxå€¼;
     end

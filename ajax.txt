@@ -1,67 +1,67 @@
-1¡¢var data = JSON.parse(str);//°Ñ×Ö·û´®×ªÎªjson¶ÔÏó
-	eval½âÎöÈÎºÎjs£¬²»°²È«
-   var str = JSON.stringify(data);//°Ñjson¶ÔÏó×ªÎª×Ö·û´®
-2¡¢	¢Ù´¦Àí»º´æ£º"&_t="+new Data().getTime();//µ±Ç°Ê±¼ä´Á
-	¢ÚÔÚphpÉèÖÃheaderÍ·£¬½ûÖ¹ä¯ÀÀÆ÷»º´æ´ËÒ³Ãæ
+1ã€var data = JSON.parse(str);//æŠŠå­—ç¬¦ä¸²è½¬ä¸ºjsonå¯¹è±¡
+	evalè§£æä»»ä½•jsï¼Œä¸å®‰å…¨
+   var str = JSON.stringify(data);//æŠŠjsonå¯¹è±¡è½¬ä¸ºå­—ç¬¦ä¸²
+2ã€	â‘ å¤„ç†ç¼“å­˜ï¼š"&_t="+new Data().getTime();//å½“å‰æ—¶é—´æˆ³
+	â‘¡åœ¨phpè®¾ç½®headerå¤´ï¼Œç¦æ­¢æµè§ˆå™¨ç¼“å­˜æ­¤é¡µé¢
 	header("Cache-Control:no-cache");
 	header("Pragma:no-cache");
 	header("Expires:-1");
-3¡¢²½Öè
+3ã€æ­¥éª¤
 	var xhr = new XMLHttpRequest();
     xhr.open("post","./02post.php",true);
-	//postÇëÇóÊ±ÉèÖÃÇëÇóÍ·
+	//postè¯·æ±‚æ—¶è®¾ç½®è¯·æ±‚å¤´
     xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
     xhr.send("use="+val);
 	xhr.onreadystatechange=function(){
 		if(xhr.readyState==4){
 			if(this.status==200){
 				var data = this.responseText;
-				//xmlÊ¹ÓÃresponseXMLÊôĞÔÀ´´¦Àí
+				//xmlä½¿ç”¨responseXMLå±æ€§æ¥å¤„ç†
 			}
 		}
 	}
-	onreadystatechangeÔÚh5ÖĞ²»ÍÆ¼öÊ¹ÓÃ¿ÉÒÔÊ¹ÓÃonload(ÇëÇóÍê³É²¢·µ»ØÕıÈ·)´úÌæ
-4¡¢	get:ÖĞÎÄ/ÌØÊâ·ûºÅĞèÒª±àÂë
-	post:ÖĞÎÄ²»ĞèÒª±àÂë,µ«ÌØÊâ·ûºÅĞèÒª
-	js:var val=encodeURIComponent(str);//jsÖĞ°ÑÓĞÌØÊâ×Ö·ûµÄ²ÎÊı½øĞĞ±àÂë
-	php:urlencode(str);±àÂë
-		urldecode(str);·´±àÂë
-5¡¢	phpÉú³Éjson£º
-	json_encode(Êı×é/¶ÔÏó);
-	php´¦Àíjson£º
-	json_decode(jsonĞÅÏ¢(×Ö·û´®),boolean);trueÊ±ÎªÊı×é£¬falseÊ±Îª¶ÔÏó
-6¡¢×èÖ¹from±íµ¥Ìá½»
+	onreadystatechangeåœ¨h5ä¸­ä¸æ¨èä½¿ç”¨å¯ä»¥ä½¿ç”¨onload(è¯·æ±‚å®Œæˆå¹¶è¿”å›æ­£ç¡®)ä»£æ›¿
+4ã€	get:ä¸­æ–‡/ç‰¹æ®Šç¬¦å·éœ€è¦ç¼–ç 
+	post:ä¸­æ–‡ä¸éœ€è¦ç¼–ç ,ä½†ç‰¹æ®Šç¬¦å·éœ€è¦
+	js:var val=encodeURIComponent(str);//jsä¸­æŠŠæœ‰ç‰¹æ®Šå­—ç¬¦çš„å‚æ•°è¿›è¡Œç¼–ç 
+	php:urlencode(str);ç¼–ç 
+		urldecode(str);åç¼–ç 
+5ã€	phpç”Ÿæˆjsonï¼š
+	json_encode(æ•°ç»„/å¯¹è±¡);
+	phpå¤„ç†jsonï¼š
+	json_decode(jsonä¿¡æ¯(å­—ç¬¦ä¸²),boolean);trueæ—¶ä¸ºæ•°ç»„ï¼Œfalseæ—¶ä¸ºå¯¹è±¡
+6ã€é˜»æ­¢fromè¡¨å•æäº¤
 	from.onsubmit = function(e){
-		e.preventDefault();//Í¨¹ıÊÂ¼ş¶ÔÏó×èÖ¹ä¯ÀÀÆ÷Ä¬ÈÏ¶¯×÷
-		return false;//×èÖ¹ä¯ÀÀÆ÷from±íµ¥Ìá½»
+		e.preventDefault();//é€šè¿‡äº‹ä»¶å¯¹è±¡é˜»æ­¢æµè§ˆå™¨é»˜è®¤åŠ¨ä½œ
+		return false;//é˜»æ­¢æµè§ˆå™¨fromè¡¨å•æäº¤
 	}
-7¡¢FormData½ÓÊÕfrom±íµ¥ĞÅÏ¢(html5)
-	±íµ¥ÄÚÈİ±ØĞëÓĞnameÊôĞÔ
-	ÌØÊâ·ûºÅ²»ÓÃ±àÂë
-	var f = new FormData(from¶ÔÏó);
-	post·½Ê½Ìá½»ajaxÊ±²»ÓÃÉèÖÃÇëÇóÍ·
+7ã€FormDataæ¥æ”¶fromè¡¨å•ä¿¡æ¯(html5)
+	è¡¨å•å†…å®¹å¿…é¡»æœ‰nameå±æ€§
+	ç‰¹æ®Šç¬¦å·ä¸ç”¨ç¼–ç 
+	var f = new FormData(fromå¯¹è±¡);
+	postæ–¹å¼æäº¤ajaxæ—¶ä¸ç”¨è®¾ç½®è¯·æ±‚å¤´
 	xhr.send(f);
-8¡¢ÎÄ¼şÉÏ´«½ø¶ÈÌõ
-	xhr.upload.onprogress = function(e){ //ÎÄ¼şÉÏ´«Ê±Ã¿¸ô100ms×óÓÒÖ´ĞĞÒ»´Î
+8ã€æ–‡ä»¶ä¸Šä¼ è¿›åº¦æ¡
+	xhr.upload.onprogress = function(e){ //æ–‡ä»¶ä¸Šä¼ æ—¶æ¯éš”100mså·¦å³æ‰§è¡Œä¸€æ¬¡
 		var loaded = e.loaded;
 		var roral = e.total;
 		var per = Math.floor((loaded/total)*100)+"%";
 		document.getElementById('son').style.width=per;
 	}
-9¡¢ajax¿çÓò
-	1¡¢
-		ajaxÇëÇó±¾Óò´úÀí£¬php:
-		$url = "½Ó¿Ú";
+9ã€ajaxè·¨åŸŸ
+	1ã€
+		ajaxè¯·æ±‚æœ¬åŸŸä»£ç†ï¼Œphp:
+		$url = "æ¥å£";
 		$cont = file_get_contents($url);
 		echo $cont;
-	2¡¢
-		ÔÚ¿çÓòµÄphpÖĞÔÊĞí±¾Óò·ÃÎÊ(·şÎñ¶Ë)
-		header('Access-Control-Allow-Origin:http://www.a.com');//¿ÉÒÔ°ÑÓòÃû¸ÄÎª*ÔÊĞíËùÓĞ·ÃÎÊ
-	3¡¢js
+	2ã€
+		åœ¨è·¨åŸŸçš„phpä¸­å…è®¸æœ¬åŸŸè®¿é—®(æœåŠ¡ç«¯)
+		header('Access-Control-Allow-Origin:http://www.a.com');//å¯ä»¥æŠŠåŸŸåæ”¹ä¸º*å…è®¸æ‰€æœ‰è®¿é—®
+	3ã€js
 		var url='';
 		var script = document.creatElement('script');
 		script.src = url;
 		document.body.appendChild(script);
-		»ñµÃµÄÒ»¸öº¯Êıµ÷ÓÃÈç£ºweather(...);(ÔÚurlºóÓĞ_jsonp=º¯ÊıÃû,¿É×Ô¶¨Òå)ËùÒÔÔÚÖ®Ç°Òª¶¨ÒåÒ»¸öº¯ÊıÀ´»ñÈ¡Êı¾İ
-		function(data){//´¦ÀíÊı¾İ}
+		è·å¾—çš„ä¸€ä¸ªå‡½æ•°è°ƒç”¨å¦‚ï¼šweather(...);(åœ¨urlåæœ‰_jsonp=å‡½æ•°å,å¯è‡ªå®šä¹‰)æ‰€ä»¥åœ¨ä¹‹å‰è¦å®šä¹‰ä¸€ä¸ªå‡½æ•°æ¥è·å–æ•°æ®
+		function(data){//å¤„ç†æ•°æ®}
 	
