@@ -1,0 +1,7 @@
+1、live-server
+	开启一个服务器，文件更改时浏览器自动更新
+2、vue-cli初始化
+	vue init webpack vuecliTest
+	npm install		//加载依赖
+	npm run dev		//模拟运行,开启一个服务器
+	npm run build	//打包生成项目文件

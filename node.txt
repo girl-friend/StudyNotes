@@ -1,0 +1,4 @@
+cmd中：
+ cls;  清空控制台
+ nvm ls;查看有什么版本的node;
+ nvm use 6.7.0;使用node版本；

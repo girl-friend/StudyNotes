@@ -1,0 +1,32 @@
+一。1.创建数据库:create datebase 名;
+2.查看已存在数据库：show datebase;
+3.删除数据库：drop database 名;
+4.创建表：
+create table 名(字段 数据类型()
+);
+5.查看表的字段信息：desc 名；
+6.修改表名：alter table 旧表 rename 新表;
+7.修改字段名：alter table 表 change 旧字段 新 新类型;
+8.修改字段数据类型：alter table 表 modify 字段 类型;
+9.添加字段：alter table 表 add 新字段 类型(约束)  (first|after...);
+10.删除字段：alter table 表 drop 字段;
+11.删除表：drop table 名；
+12.(primary key主键);(forign key外键)；(not null非空)
+  (unique唯一)(default默认);(auto_increment自动增加)
+二.1.添加数据 insert（replace） into 表(字段,..) values(值1,..),(值..);
+2.更新数据update 表 set 字段=值,.. where ;
+3.删除数据和视图:delete  from 表 where ;
+三.1.where 字段 (not)in(1,2);between 1 and 2;is (not) null;like % _;
+2.select (distinct) *|字段1,2.. from 表 where...and.or. 
+group by 字段 having 条件
+order by 字段(asc|desc)
+limit (offset)记录数；
+3.count(记录条数),(sum求和)(avg平均值)(max最大值min);
+select sum(字段) from 表;
+四.1.添加外键:alter table 表 add constraint FK_ID freign key(外键字段名) references 外表表名(主键字段名);
+2.删除外键:alter table 表 drop foreign key 外键名;
+3.内外连接:select 查询字段 from 表1 (left|right) join 表2 on 表1.关系字段=表2.字；
+4.子查询:in,exists,any,all;
+五。1.create (or replace) view 名() as select ...from..where..;
+2.更新视图update 名 set 字段=1;insert into 名 values(..);
+3.删除视图:drop (if exists) 名1,2;

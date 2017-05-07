@@ -1,0 +1,47 @@
+事件名	                说明
+onclick	              鼠标单击
+ondblclick            鼠标双击
+onkeyup	   	  按下并释放键盘上的一个键时触发?
+onchange?  	 文本内容或下拉菜单中的选项发生改变
+onfocus?	    获得焦点，表示文本框等获得鼠标光标。
+onblur?	   	 失去焦点，表示文本框等失去鼠标光标。
+onmouseover? 	鼠标悬停，即鼠标停留在图片等的上方
+onmouseout?       鼠标移出，即离开图片等所在的区域
+onmousemove      当鼠标移动的时候
+onmouseup        当鼠标弹起
+onmousedown      当鼠标按下
+onload		    网页文档加载事件
+onunload	    关闭网页时
+onsubmit	    表单提交事件
+onreset		   重置表单时  
+dragenter    拖拽进入
+dragleave    拖拽移出
+
+dragover   必须在这个事件里阻止默认事件，drop事件才会生效
+drop   当元素放到该对象时
+transitionend	过度之后触发，每一个属性完都会触发一次
+animationEnd	css3的动画完后触发
+
+window.onscroll=function(){ 页面滚蛋语句 }
+window.onresize=function(){ } 窗口改变事件
+onresize   窗口或框架被调整大小时发生
+
+
+jQuery事件
+1.click():  点击事件
+2.dblclick():  双击事件
+3.hover():  鼠标悬停和离开
+4.mousedown():  鼠标按下
+5.mouseenter():  鼠标进入元素
+6.mouseleave():  鼠标离开元素
+7.mousemove():  鼠标在元素内移动
+8.mouseout():  鼠标离开元素（支持事件冒泡）
+9.mouseover():  鼠标进入元素（支持事件冒泡）
+10.mouseup():  鼠标按键被释放
+11.focus():  获得焦点
+12.blur():  失去焦点
+13.change():  当内容改变时（仅限于几个表单元素）
+键盘事件：
+1.keydown(e);	//e.keyCode是按下键盘的码
+2.keypress();
+3.keyup();

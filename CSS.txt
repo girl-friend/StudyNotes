@@ -1,0 +1,130 @@
+1、清除浮动：
+ 1、overflow
+  hidden、auto、scroll
+ 2、clear   外墙、内墙
+  Right、Left、Both
+ 3、clearfix:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+2、居中：
+ 1、文字：text-align:center; line-heignt:行高;
+ 2、行内元素：给父元素：text-align:center;display:table-cell;vertical-align:middle;
+ 3、margin:auto;CSS3中的
+3、表格边框
+  table {
+	border-collapse:collapse; //边框折叠
+	border-spacing:0;
+	cellspacing:0;//边框间距
+}
+4、选择器
+	+选择器
+	ul>li*6
+	ul>li+li{
+	//选择每个li后面的紧邻li元素,通常制作border中线
+	}
+	div[class^="col-md"]{//包含class属性且以col-md开头的div元素}
+	div[class*="col-md"]{//包含class属性包含col-md的div元素}
+	div[class$="col-md"]{//包含class属性且以col-md结束的div元素}
+5、text-indent:2em;//首行缩进，rem是以html的font-size为单位的
+6、字体阴影：
+	text-shadow:-5px -10px 4px red;	//左右偏移 上下偏移 模糊度 颜色
+7、文本超出显示...
+	white-space:nowrap;	//文本超出不换行
+	overflow:hidden;	//超出隐藏
+	text-overflow:ellipsis;//超出显示...
+8、边框圆角
+	border-radius:1px 2px 3px 5px/6px 7px 8px 10px;	//前面表示4个角x轴的半径,后面为y轴;
+9、指定盒模型的宽高
+	box-sizing:border-box	//width=border+padding+content
+	box-sizing:content-box	//width=content
+CSS3
+CSS使用手册：
+	 [] 表示可选项
+	 || 或者
+	 |  多选一
+	 ？ 0个或1个
+	 *  0个或多个
+	 {} 范围
+
+伸缩布局：
+	1、display:flex; 	//给父盒子确定
+	2、flex-direction:	//子元素确定方向(主轴方向)
+		row (水平，默认)  
+		column (竖直)  
+		row reverse (水平反向) 
+		column reverse  
+	3、justify-content:		//在父盒子上确定子盒子(主轴)的对齐方式
+		flex-start (开始位置)、
+		flex-end、center (居中)、
+		space-around (平均)、
+		space-between (靠两边对齐)   
+	4、align-items:		//调整侧抽的对齐方式(侧轴总是垂直主轴)
+		flex-start (开始位置)、
+		flex-end、
+		center (居中)、
+		baseline、
+		stretch	
+	flex-wrap:wrap、nowrap; //给子元素。控制是否换行
+		align-content:	//应对flex-wrap后换行进行控制，以行为单位的对齐方式
+		flex-start (开始位置)、
+		flex-end、center (居中)、
+		space-around (平均)、
+		space-between (靠两边对齐)	
+	align-self:		//控制单个子元素对齐方式，可以覆盖父元素的align-items
+		flex-start (开始位置)、
+		flex-end、center (居中)、
+		baseline、stretch  
+	flex-flow:是flex-direction和flex-wrap的简写形式
+	flex:1;		给子元素，分配剩余的宽度比例
+	order:5;	给子元素排序，越大越在后面
+径向渐变：
+	background-image:radial-gradient(120px 80px at center center,yellow,green); //辐射范围，中心点，颜色的起止
+
+过度：
+	transition:all 1s;
+变换：
+	transform:
+		skewx(45deg),x轴上的扭曲
+		rotate(360deg),	2d旋转
+		scalex(2),	x轴上的缩放
+		translatex(2),	x轴上的平移
+	transform-origin:left top;	旋转和缩放的中心点
+3D旋转：
+	transform:rotateZ(360deg);
+	transition:all 3s;
+	transform-origin:left bottom; //旋转中心点，不要设在hover上
+	tramsform-style:preserve-3d;让元素看起来在3d空间上
+	transform:rotatex(60deg);		//x轴上旋转
+	perspective:100px;	//以100px的距离看过去
+	transition:translatez(100px);	//z轴上的平移，离观察者近100px
+	
+
+动画：
+	animation:rotate 60s steps(60) infinite;//名字，动画持续时间，60秒分60次完成，无限循环
+	animation-name:change;//动画名称
+	animation-duration: 5s;//动画持续时间
+	animation-fill-mode:forwards; //动画后的状态
+	animation-iteration-count:infinite;//无限播放
+	animation-delay:1s;  //延时1s
+	animation-play-state:paused; //动画暂停
+	animation-direction:alternate;//动画反方向
+	animation-timing-function:linear;// 动画速度
+
+@keyframes change {
+ 0% {
+   width:40px;
+   height:40px;
+}
+ 100%{
+}
+}
+
+
+#bg:target{  //选中
+z-index:4;
+}
+#bg:not(:target){  //不选中
+z-index:2;
+}

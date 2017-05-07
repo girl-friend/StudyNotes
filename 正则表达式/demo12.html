@@ -1,0 +1,63 @@
+<head>
+	<script language='javascript' src='public.js'></script>
+	<script>
+		window.onload=function(){
+			
+			$('btn1').onclick=function(){
+				var content=$('content').value;
+				var exp=$('exp').value;
+				var reg=eval('/'+exp+'/gi');
+				var result=reg.test(content);
+				$('result').value=result;
+			};
+
+			$('btn2').onclick=function(){
+				var content=$('content').value;
+				var exp=$('exp').value;
+				var reg=eval('/'+exp+'/gi');
+				var result;
+				$('result').value='';
+				while(result=reg.exec(content)){
+					$('result').value+=result+'\n';
+				}
+			};
+			$('btn3').onclick=function(){
+				var content=$('content').value;
+				var exp=$('exp').value;
+				var reg=eval('/'+exp+'/gi');
+				$('result').value=content.search(reg);
+			
+			};
+			$('btn4').onclick=function(){
+				var content=$('content').value;
+				var exp=$('exp').value;
+				var reg=eval('/'+exp+'/gi');
+				$('result').value=content.match(reg);
+			};
+			$('btn5').onclick=function(){
+				var content=$('content').value;
+				var exp=$('exp').value;
+				var reg=eval('/'+exp+'/gi');
+				$('result').value=content.replace(reg,'*');
+			};
+			$('btn6').onclick=function(){
+				var content=$('content').value;
+				var exp=$('exp').value;
+				var reg=eval('/'+exp+'/gi');
+				$('result').value=content.split(reg);
+			};
+			
+		};
+	</script>
+</head>
+<body>
+内容：<input type='text' id='content' size=60><br><br>
+正则：<input type='text' id='exp' size=40><br><br>
+结果：<textarea id='result' cols='60' rows='8'></textarea><br><br>
+<input type='button' id='btn1' value='test'>
+<input type='button' id='btn2' value='exec'>
+<input type='button' id='btn3' value='search'>
+<input type='button' id='btn4' value='match'>
+<input type='button' id='btn5' value='replace'>
+<input type='button' id='btn6' value='split'>
+</body>

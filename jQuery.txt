@@ -1,0 +1,61 @@
+1.toggleClass("demo");  添加或删除一个或多个类名
+2.bind(on)(事件，函数);  添加事件
+3.$("ul").on("click","li",函数)  事件委托
+4.addClass("类名");  为每个匹配的元素添加类名
+5.attr("属性",属性值);  添加属性（一个值时为获取属性）
+6.hasClass("类名");  元素是否有该类;
+7.html();  有值时设置内容，没有时获得内容【包括标签】
+11.val();  获得或设置元素的值（一般用于表单）
+  text();获得内容
+8.prop("属性"，值);  设置属性值或获得属性值
+9.removeAttr("属性");  移除属性
+10.removeClass();  移除一个，多个或全部样式类
+
+12.append();  在元素里面的末尾插入（或移动）参数内容  appendTo();写法相反
+13.prepend();  将参数插入到每个元素内部的前面   prependTo(); 写法相反
+14.clone();  创建匹配元素集合的深度拷贝副本
+15.after();  为每个匹配的元素的后面添加参数(作为兄弟节点)  insertAfter()写法相反
+16.before();  在元素前面添加参数   insertBefore()   写法相反
+17.detach(".demo");  移除所有匹配的元素
+18.empty();  移除所有匹配元素的子节点
+19.remove();  将匹配元素删除（同时删除元素上的事件和jQuery数据）
+20.unwrap();  将匹配元素的父级删除，保留自身（和兄弟元素）在原来的位置
+21.height();width();  获得或设置高度或宽度，不含边距
+22.innerHeight();innerWidth();  获得宽高，含内边距
+23.offset();  获得第一个或设置每一个元素的坐标（相对文档）
+24.outerHeigth(true);outerWidth(true);  获得宽高（可选择包括外边距）
+25.eq(索引);  选择一个元素
+26.filter();  选择多个元素
+27.first();last();  集合中的第一个或最后一个元素
+28.$("li").has("strong");  有strong标签的li标签
+29.is();判断当前匹配的元素集合中的元素是否为一个选择器，元素或对象
+30.$("div").map(fn);  每个div都调用方法
+31.$("div").css(1).add("p").css(2); div有样式12,p只有2
+32.contents();  获得元素的子节点，包括文字和注释节点
+33.end();  终止在当前链的最新过滤操作，并返回匹配的元素的以前状态
+34.children();  获得直接子元素
+35.closest(必写参数)；  返回最新匹配参数的祖先元素
+36.find();  返回匹配元素的后代
+37.next();  取得元素的紧邻元素，有参数时满足选择器才会返回此元素
+38.nextAll();  元素下面的所有同辈元素，不包括本身
+39.parent();  获得父级元素，可有参数
+40.parents();  获得祖先元素，可有参数
+41.offsetParent();  获得最近的有定位的祖先元素
+   position();返回元素相对于父级的位置
+42.prev();  取得紧邻的前一个同辈元素
+43.prevAll();  选择所有前面的兄弟元素
+44.siblings();  获得所有的兄弟元素，可有参数
+45、阻止事件冒泡：e.stopPropagation();
+    阻止默认操作：e.preventDefault();
+  e.target();事件触发源
+46、$("li").each(function(index,element){})函数;可以用作for循环
+    $.each(array,function(index,object){})
+47、var jq=$.noConflict();全局对象污染冲突（让jQuery释放）
+48、$(window).on('resize',resize).trigger('resize');屏幕改变时触发resize函数，并且手动触发一次
+49、$('ul').delegate('li',"click",function(e){};)//利用事件捕获给子元素委托事件，不用循环了
+自定义动画
+1、animate();  根据一组CSS属性，执行自定义动画
+2、clearQueue();  从列队中移除所有未执行的项
+3、delay();  设置一个延时来推迟执行队列中后续的项
+4、finish();  停止当前正在运行的动画，删除所有排队的动画，并完成匹配元素所有的动画
+5、stop();  停止匹配元素当前正在运行的动画

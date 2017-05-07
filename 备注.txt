@@ -1,0 +1,15 @@
+file://美帝良心想/动漫
+localhost:8090/
+localhost:8090/01/1.php
+php编码    header("Content-Type: text/html;charset=utf-8");
+http://localhost:8090/01php/
+product_list.php
+localhost:8090/01/product_add.php
+services.msc   运行--服务
+session.auto_start = 1 不能进数据库
+<a href="select_do2.php?">查询</a></td>
+http://pan.baidu.com/share/home?uk=1040300808&view=share#category/type=0C:\Windows\System32\drivers\etc
+
+
+http://localhost/01php/
+${UrlPort}

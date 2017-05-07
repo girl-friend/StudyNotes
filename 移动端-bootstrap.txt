@@ -1,0 +1,121 @@
+1、	<input type="search"/> //定义能调出搜索按钮的方式
+***********************************************
+1、	<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+	//窗口和设备的窗口保持一致，初始缩放为1:1(100%),禁止用户缩放
+2、	div.container;	//固定宽度 1170px
+	div.container-fluid;	//宽度为100%;
+3、.page-header		//设置页头，给标题加一个分割线，在h1下有条线
+	.well	//给文本的父元素，包含内容，像代码块那样
+4、<del>删除线</del>
+	text-uppercase;	//所有英文大写
+	text-lowercase;	//所有英文小写
+	text-capitalize;	//首字母大写
+5、	text-left,text-center,text-right;	文本对齐方式
+	center-block;	//块级居中
+6、	ul .list-unstyled;	//去掉列表前面的符号和原有的格式
+	ul .list-inline;	//把li之间的内容变成横向排列
+7、表格
+	.table 	表格的一个基类，如果加其他样式，都在.table的基础上
+	.table-borderd 	给表格加边框
+	.table-hover	 鼠标悬停效果
+	.table-striped 	斑马线效果，隔行黄色
+	.table-condensed 	变紧了一点
+	.table-responsive 	给table的父元素加，变成响应式
+8、颜色
+	（在表格的每行或单元格）
+	.active		鼠标悬停在行或单元格上时所设置的颜色
+	.success	标识成功或积极的动作
+	.info		标识普通的提示信息或动作
+	.warning	标识警告或需要用户注意
+	.danger		标识危险或潜在的带来负面影响的动作
+	文本：
+	<p class="text-muted">...</p>	//柔和、灰色
+	<p class="text-primary">...</p>	//初始化、深蓝
+	<p class="text-success">...</p>	//成功、绿色
+	<p class="text-info">...</p>	//提示、浅蓝
+	<p class="text-warning">...</p>	//警告、橙色
+	<p class="text-danger">...</p>	//危险、浅红
+	背景：
+	<p class="bg-primary">...</p>
+	<p class="bg-success">...</p>
+	<p class="bg-info">...</p>
+	<p class="bg-warning">...</p>
+	<p class="bg-danger">...</p>
+9、响应式图片、图片形状
+	.img-responsive		(结合栅格)
+	.center-block 		水平居中
+	.img-rounded 		圆角图片
+	.img-circle 		圆形图片
+	.img-thumbnail 		在外边加一个圆角的边框，方形图片
+10、栅格系统
+	一定要放到容器中 .container/container-fluid
+	.col-xs- :超小屏幕 	x < 768px;
+	.col-sm- :小屏幕	768px <= x <= 992px;
+	.col-md- :中等屏幕	992px <= x < 1200px;
+	.col-lg- :大屏幕	1200px <= x;
+	列偏移：
+		.col-md-offset- 只能向右偏移
+	列排序：
+		.col-md-push- 向右移
+		.col-md-pull- 向左移
+11、下拉小三角:span.caret
+	关闭按钮: X	<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+12、.pull-left	左浮动
+	.pull-right	右浮动
+	清除浮动：.clearfix
+	给父元素清除浮动或overflow:hidden父元素就自动获得高度
+13、让内容块居中：.center-block
+14、显示或隐藏
+	.show
+	.hidden
+	.invisible:不可见但是依然影响文档流
+15、按钮
+	.btn是按钮样式的基类
+	.btn-primary
+	.btn-default
+	.btn-success
+	.btn-info
+	.btn-warning
+	.btn-danger
+	.active //激活时样式
+	.btn-lg(大)  sm(小)  xs(最小)
+	按钮组：给几个按钮的父元素添加 .btn-group
+16、分页 ：给ul .pagination
+17、下拉菜单
+	<div class="dropdown">//按钮式下拉菜单把dropdown改为.btn-group;在下面的button添加dropdown
+		<button class="btn btn-default" data-toggle="dropdown">
+		下拉菜单<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+		<li>网站导航</li>
+		<li><a>1</a></li>
+		<li class="divider">设置分割线</li>
+		<li><a>3</a></li>
+		</ul>
+	</div>
+		//如果按钮在外部，可以通过data-target进行绑定
+		btn data-target="#第一个div的id"
+18、导航组件(区域)
+	ul.nav .nav-tabs/nav-pills(nav-stacked垂直)(nav-justified导航两端对齐)
+	li.active a 首页 
+	li a 		产品
+	ul
+19、导航(顶部)
+	nav.navber .nav-default navbar-fixed
+		div.container
+			div.navber-header
+				a.navber-brand 标题
+			div
+			ul.nav navber-nav
+				li.active a
+				li a
+				li a
+			ul
+		div
+	nav
+20、路径组件
+	ol.breadcrumb
+	li a 首页
+	li a 产品列表
+	li.active 详细信息
+	

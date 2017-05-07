@@ -1,0 +1,53 @@
+1、let a=2;定义变量，有块级作用域
+2、const;定义常量，必须赋值
+3、var str=`字符串`;//aa${str}aaa;
+4、var [a,b,c]=[1,2,3];//解构赋值
+   var [a,[b,c],d]=[1,[2,3],4];
+   var [{a,e},[b,c],d]={{e:1,a:2},[3,4],5};//json和顺序无关
+5、复制数组
+   var arr=[1,2,3];
+   1.var arr2=Array.from(arr);  2.var arr2=[...arr];
+6、for of; 可以循环数组，不能循环json，主要用于配合Map
+   for(var name of map){name//key,value};
+   for(var [key,value] of map){};
+   for(var key of map.keys()){}//只循环key;
+   for(var val of map.values()){}//只循环value
+  for循环数组：
+   只循环值：  for(var value of arr){}
+   只循环索引：for(var key of arr.keys()){}
+   都循环：    for(var some of arr.entries()){}
+7、Map: var map = new Map();
+   设置：map.set(name,value);
+   获取：map.get(name);
+   删除：map.delet(name);
+8、箭头函数：
+  var fn=(a,b)=>a+b;   function fn(a,b){return a+b}
+  var fn=()=>{};       function fn(){};
+  注意：
+    this:指向了window
+	arguments:不能使用了
+9、面向对象：
+	class Person{
+		constructor(name,age=0){
+			this.name=name;
+			this.age=age;
+		}
+		showName(){
+			return this.name;
+		}
+		showAge(){
+			return this.age;
+		}
+	}
+	var p1=new Person('aa',18);
+	继承：calss Woker extends Person{
+		constructor(){
+			super(name,age);//调用父级的构造函数
+		}
+	}
+		var w1=new Worker('mmm',20);
+10、模块化：
+	import a from './a.js';
+	import b from './b.js';//导入
+	export default {a,b}
+	export default function sum(){return a+b};//导出

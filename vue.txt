@@ -1,0 +1,115 @@
+1、	new Vue({
+		el:'#box',
+		data:{	//数据
+			arr:['1','2','3'],
+			json:{a:'aaa',b:'bbb'}
+		},
+		methods:{	//方法
+			add:function(){
+				this.arr.push('apple');
+			}
+		} 
+	});
+2、循环
+	v-for="(value,key,index) in arr/json"
+	{{value}}值		{{key}}键	{{index}}下标(0,1,2)
+	如果有重复数据，加上	track-by='$index/索引'	能提高循环性能
+3、绑定事件
+	v-on:click="函数名"
+	简写：@click="show($event)"	//$event事件对象，固定写法
+	@click.native="事件"	//在模板标签中调用构造器里的方法
+	onclick="vm.事件"	//在外面调用new Vue里的方法
+4、阻止事件冒泡/默认行为
+	1.	ev.cancelBubble=true;
+	2.	@click.stop
+	a.	ev.preventDefault();
+	b.	@contextmenu.prevent;	//鼠标右键阻止默认行为
+5、键盘事件
+	@keyup.enter/13="show()"	//抬起回车键时触发事件
+6、绑定属性
+	<img v-bind:src="url">	//用src="{{url}}"会报一个404的错误
+	简写：:src="url"
+7.绑定class
+	.blue{color:blue}
+	.red{background:red}
+	data:{json:{red:true,blue:false}}
+	<div :class="json"><div/>
+8、模板
+	{{*msg}}数据只绑定一次
+	{{{msg}}} html转义输出
+9、过滤器
+	{{msg|filterA|filterB}}
+	{{12|currency '￥'}}	12.00人民币
+	uppercase	大写
+	lowercase	小写
+	capitalize	首字母大写
+	@click="show | debounce 2000"	//延迟2000毫秒调用方法，配合事件
+	v-for="val in arr | limitBy 2 1"	//取2个，从0开始
+	filterBy a	//只包含a的数据
+	orderBy 1	正序排列，-1为倒叙
+	自定义过滤器
+	Vue.fiter('dome',function(input,a,b){
+		return input<10?'0'+input:''+input;
+	});
+10、钩子函数
+	created:function(){	//实例创建后调用	}
+	beforeCompile:function(){	//编译之前	}
+	compiled:	//编译之后
+	ready:		//插入到文档中
+	beforeUpdate	//数据更新前
+	updated	//数据更新后
+	beforeDestroy:	//销毁之前
+	destroyde:		//销毁之后
+11、防止闪烁
+	v-cloak		[v-cloak]:{display:none;}	//防止用户看到花括号
+	v-text="msg"	直接输出数据，不会转义
+	v-html		//可以转义html代码
+12、计算属性
+	computed:{
+		b:{
+			get:function(){
+				return 值	//就是b的值
+			}
+			set:function(val){
+				设置b值时调用，val就是设置时的值
+			}
+		}
+	}
+13、vue简单实列方法
+	vm.$el	//就是绑定的元素
+	vm.$data	//就是data
+	vm.$mount('#box')	//手动挂载
+	vm.$options.a/show()	//获取自定义属性或调用自定义方法
+	vm.$destroy		//销毁对象(销毁自定义指令时触发解绑的钩子函数)
+	vm.$log()		//查看现在数据
+	vm.$nextTick(fn(){	//数据更新后调用})
+	vm.$on('text',fn(){});	//在构造器外绑定事件
+	vm.$once('text',fn(){});	//只触发一次
+	vm.$emit('text');触发由$on和$once绑定的事件
+14、其他常用指令
+	v-if="demo"	//在data中demo值为true时加载标签，为false减轻服务器压力
+	v-show="demo"	//为false时把display改为none
+	v-pre	//原样输出，不进行渲染
+	v-once	//只进行一次渲染(数据绑定后改变数据也不会变)
+15、v-model双向数据绑定
+	v-model="a"	//给表单绑定数据,双向数据绑定
+	v-model.lazy	//懒加载，表单失去焦点时加载
+	v-model.number	//只绑定数字，如果一开始输入的是字符就无效
+	v-model.trim	//去掉前后的空格
+16、自定义指令的钩子函数
+	bind  只调用一次，指令第一次绑定到元素时调用
+	inserted  被绑定元素插入父节点时调用
+	update  被绑定于元素所在的模板更新时调用
+	componentUpdared  被绑定元素所在模板完成一次更新周期时调用
+	unbind  只调用一次，指令与元素解绑时调用
+17、watch选项
+	watch:{
+		massage:function(newVal,oldVal){
+			当data里massage值改变时触发的函数
+			newVal时改变的值，oldVal是改变之前的值
+		}
+	}
+	或者
+	vm.$watch('massage',function(new,old){	//同上	})
+18、修改模板的输出形式{{massage}}
+	delimiters:['~~','~~']

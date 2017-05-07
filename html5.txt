@@ -1,0 +1,48 @@
+1、语义标签
+	header:头部
+	footer:脚部
+	nav:导航
+	section:划分区域(内容区域)
+	article:(主体)用来在页面表示一套结构完整且独立的内容(帖子、文章、杂志、评论等)
+	aside:与主体相关的附属信息,帖子的作者信息、其他相关帖子等(也可以友情链接、侧边栏等)
+	<progress max="200" value="76">
+		<span>76</span>%	兼容低版本ie
+	</progress>进度条
+2、from表单控件
+	type: emil：提交时不是邮箱格式不提交
+		search:搜索，后面有个×
+		number:数值,只能包含数字
+		color：颜色
+		date:日期
+	属性：
+	placehilder="提示信息"
+	required:	此处必填，不能为空
+	pattern="\d{1,5}"	正则验证(写在行间容易破解)
+3、js选择器
+	document.querySelector('选择器');	只能选择一个元素
+			querySelectorAll('选择器');		获得一组元素
+			getElementByClassName('');		一组元素
+4、获取class列表属性
+	元素对象.classList
+					.length		class的个数
+					.add()		添加class
+					.remove()	删除class
+					.toggle()	添加和删除切换
+5、自定义属性
+	元素对象.dataset.miaovAll (属性为 data-miao-all)	获得自定义属性值
+6、音频和视频	<audio><video><source>
+	标签里面属性：
+		controls:	显示用户控制界面
+		auroplay:	媒体是否自动播放
+		loop:		是否循环播放
+	对象.属性:
+		currentTome:开始到播放现在所用的时间(可以设置,单位秒)
+		duration:	媒体总时间(只读)
+		volume:		0.0到1.0的音量相对值
+		muted:		是否静音
+		autobuffer:	开始的时候是否缓冲加载，autoplay时忽略此属性
+	对象.方法：
+	play():		媒体播放
+	pause():	媒体暂停
+	load():		重新加载音频/视频元素
+	poster('1.png')	视频播放前的预览图片

@@ -1,0 +1,114 @@
+1.console.log();控制台输出
+2.parseInt();取整
+3.txt.focus();自动获得焦点（方法）
+4.this.select();（鼠标经过）选择
+5.getElementsByTagName();获得某类标签对象（得到的是一个伪数组）
+6.oninput:判断用户输入事件
+7.join();把数组转为字符
+8.split();字符串转为数组
+9.parentNode 父节点
+10.nextSibling     下一个亲兄弟 (ie678)   
+   nextElementSibling  其他浏览器  
+11.previousSibling  上一个亲兄弟  同上
+   previousElementSibling
+12.children  所有的孩子节点(只有元素节点,包含注释节点，庶出)
+13.var firstDiv = document.creatElement("div");创建节点
+   demo.appendChild(firstDiv);插入节点到最后面
+   var childrens=demo.children;
+   demo.insertBefore(firstDiv,childrens[0]);添加子节点到最前面；
+14.demo.getAttribute("class"),获得属性值
+   demo.setAttribute("属性","值")设置属性值
+   removeAttribute("属性");删除属性
+15.date.getTime();
+   date.valueOf();得到毫秒数
+16.（window.）setInterval("执行的函数"，间隔时间)
+17.var endTime=new Date("2017/12/12 17:30:00");如果date括号里面写日期就是自己定义的时间，如果不写就是当前时间
+18.disabled="disabled" || "true" 表单不可用
+19.clearInterval(定时器名称)；清除定时器
+setTimeout(fn,1000);1秒后执行fn,只执行一次
+20.charAt(索引)；根据位置返回字符
+21.（last）indexOf("字符")；根据字符返回索引从前面开始（后面）数
+22.concat();连接字符串，a.concat(b);
+23.slice(取字符串的起始位置,[结束位置]);[] 可选的，不包含结束位置，起始位置可以是负数，从右边开始数
+24.substr(起始位置,[取得个数])
+25.str.toFixed(2);保留两位小数
+26.str.toUpperCase();转为大写
+27.缓动动画:leader = leader + (target - leader) / 10
+28.offsetWidth offsetHeight  得到对象的宽度和高度，
+    offsetWidth = width + border + padding
+    clientWidth  不加边宽
+    scrollWidth  大小是内容的大小
+29.offsetLeft   offsetTop  盒子到定位的父盒子边框到边框的距离
+    从父级的padding开始算，父亲的border不算
+30.offsetParent  返回该对象的父级（带有定位，不一定是亲的）
+   parentNode  返回父亲（亲的）
+31.event.pageX  pageY   以文档的基准点对齐（绝对定位）
+    clientX   clentY   以可视区为基准点（固定定位）
+    screenX        以屏幕为基准点
+32.  window.getSelection ? window.getSelection().removeAllRanges() : document.selection.empty();   // 防止拖动滑块的时候， 选中文字
+33.scrollTop  scrollLeft   被卷去的头部和左部
+   谷歌和没有声明DTD:document.body.scrollTop;
+   其他浏览器:document.documentElement.scrollTop;
+   最新浏览器:window.pageX(Y)offset;
+34.window.scrollTo(x,y)  可以把内容滚动到指定的坐标
+35.阻止冒泡  event.stopPropagation();
+    event.cancelBuble = true; //ie 
+
+   e.preventDefault();//阻止默认事件,标准
+   event.returnValue = false;//IE
+36   css   opacity:0.4   半透明
+37.event.target.id  当前对象id
+   event.srcElement.id  ie 678
+38.  获得用户选择的内容  window.getSelection(); 
+                        document.selection.createRange().text;  ie
+39.Math.abs()  取绝对值函数
+40.Math.ceil()  向上取整
+   Math.floor()  向下取整
+   Math.round()  四舍五入函数
+41.获得内和外部的样式
+	obj.currentStyle[key]  ie
+    window.getComputedStyle("元素","伪类")[key]  没有伪类用null代替
+42、btn.addEventListener('click',function(){});//添加事件，不会被重置
+43、window.location.search.split('=')[1]; //获得地址栏的数据；
+    decodeURL(数据);从URL编码转换到之前的状态；
+44、eval("js代码"); //执行代码；
+45、toString.call('数据');//返回结果:[object String];typeof有缺点
+46、return false 时实际执行了：
+	1、event.preventDefault()	//阻止默认事件
+	2、event.stopPropagation()	//阻止事件冒泡
+	3、终止函数并立即返回
+
+
+
+面向对象：
+1、实例.constructor;//检测某个实例的构造函数是哪个
+2、如果原型和构造函数中有相同属性，如果想访问原型中被屏蔽的属性：
+    1.delete 对象.属性/方法
+    2.对象.prototype.属性/方法
+3、arguments.length  //函数里面以伪数组保存实参
+	函数.length		//函数内部获得函数的形参个数
+	arguments.callee;	代表函数本身
+4、call---myclass.getAllStudentsNumber.call(student,10,200);//myclass对象的getAllStudentsNumber方法借给student用，后面跟参数
+   方法中的this指向student对象
+   apply---myclass.getAllStudentsNumber.apply(student,[10,200])
+5、伪数组
+	arguments、document中获得的集合都是伪数组--jQuery框架就是一个伪数组
+	demNodes = Array.prototype.slice.call(divs);//把伪数组转为真数组
+6、Array.prototype.push.apply(arr1,arr2);//合并数组
+7、student.prototype = new Base();//原型继承，有缺点，不能传参；用call继承
+8、闭包：一个函数可以访问另一个函数作用域的变量
+	具有封闭性：起到一个保护变量的作用
+
+
+
+HTML5中的JavaScript
+1、document.querySelector('选择器'); //返回第一个满足的
+   var lis=document.querySelectorAll('选择器'); // 返回所有满足的元素，一个元素是dom类型的数组
+   lis[0].addEventListener('click',function(e){});//removeEventListener,添加或移除事件
+2、元素对象.classList.remove('类名');classList.add('类名')；//移除和添加类名  
+   元素对象.classList.toggle('类名'【,bool】);删除或添加类名,ture为添加，false为删除；
+   element.classList.contains('类名');判断元素是否包含有类名；
+3、history.pushState('数据','设置历史状态显示的标题，目前不支持','?demo='+new Date().toLocaleTimeString());
+   //new Date()获得的事时间对象;toLocaleTimeString转成我们认识的时间字符串；
+   //toLocaleDateString转成我们认识的日期字符串；
+  window.addEventListener('popstate',function(e){ //前进或后退事件console.log('111'+e.state); });

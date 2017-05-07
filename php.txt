@@ -1,0 +1,138 @@
+1 unset(变量名)；断开变量名与数据的关系
+2 isset(变量名)；判断变量是否存在或不为空（null），存在为true
+  empty(变量)；判断变量的“内容”是否为空（不是null的空，而是没有内容）以下为空  (0,"","0",0.0,未定义的变量,false,null,array()),如果为空返回true
+3 var_dump(变量名)；输出任何变量的详细信息
+  print_r(变量)；
+  getType(变量);  返回变量的数据类型
+  setType(变量,"目标类型");   将变量强制转为目标类型。 is_xx类型();系列函数:判断是否为某种数据类型
+   is_int(变量);is_string();is_float();is_bool();is_array();is_object();      is_int();is_null();is_numeric();是否是一   个数字,is_scalar();是否是标量类型
+4.$_SERVER变量:在浏览一次网页时的一些浏览器和服务器的信息
+5.$GLOBALS变量:它里面存储了我们自己定义的所有“全局变量”；超全局变量
+6.常量定义 1  define("常量名",常量值);  2  const 常量名=常量值;
+           直接使用常量名 或 使用:constant("常量名");
+7.魔术常量
+  __FILE__  当前网页文件
+  __DIR__   当前网页路径
+  __LINE__  当前行号
+  __CLASS__  代表当前其所在的类的类名；
+  __METHOD__  当前所在的方法名
+  
+8.
+  bin:2进制   decbin(10进制数字)，10进制转为2进制，返回的字符串，其他同类
+  oct:8进制   bindec(2进制字符串)，2进制字符串转为10进制,返回的数字，其他同理 
+  dec:10进制
+  hex:16进制
+  intval('字符');//转为数字
+9.die(字符串)/;停止程序    sleep(3);程序3秒后执行
+  rand(0,100);获取随机数
+10.date("Y-m-d H:i:s");   当前时间
+11.include '载入文件路径';
+   require_once './mysql.php';   报错,一次
+12.ini_set(",PHP配置项",值),设置php.ini中的配置
+   $v1=ini_get("php配置项"),获得php.ini中的配置值
+13.strrchr(字符,"字符中的某个字符2");返回2之后的全部字符(含2)
+   substr(字符，1);返回字符串从1开始位置之后的所有字符
+14.global $v1在函数中声明一个要使用的同名全局变量
+   $GLOBAL['$v1']
+15.fun_get_args();函数内部使用返回所有实参(结果是一个数组)
+16.count(数组);获得数组的长度
+17 $v1=current($数组);  获得数组的当前指针所在单元的值
+   $v2=key($数组);      键(下标)
+   $v3=next($数组);    指针先往后移，再取值
+   $v4=prev($数组);    指针先往前移，再取值
+   $v5=end($数组);     指针移到最后再取值
+   $v6=reset($数组);    指针移到开始时再取值
+18.$n1=mysql_num_rows(结果集); 【select语句】 获得该结果集的数据行数
+   $n2=mysql_affected_rows();【其他语句】 获得列数
+   $v1=mysql_fetch_row(结果集);获得该结果集的数据行，数字索引
+   $n3=mysql_num_fields(结果集);  获得结果集的数据列数
+   $name=mysql_field_name(结果集,$i);  获得结果集的第i个字段的名字，i从0算起
+   $rec = mysql_fetch_assoc($result); 取出结果集，下标是字段名
+19、implode($s1,$arr)函数,将数组中的每一项用$s1字符连接起来成为一个长字符串
+20、
+   class c1{
+	const PI = 3.14；类常量：
+	static $count = 0;  静态属性
+}    
+$v1 = c1::PI*3*3;
+c1::$count++;
+21、self  当前类（self::静态属性或方法）
+    parent  父类  （parent::属性或方法）
+    $this        ($this->实列属性或方法)  肯定出现在类的方法中
+22、__construct();  构造方法
+    __destruct   析构方法
+23、mysql_close(数据源);  关闭数据库
+24、final 最终（类、方法）
+    abstract 抽象（类。方法）
+25、属性重载
+   取值：__get(属性名)方法；
+   赋值：__set(属性名，值)方法；
+   判断：__isset(属性名);
+   销毁：__unset(属性名);
+26、方法重载
+    实例：__call($methodName,$argument);1,不存在的方法名；2，调用时的参数，是一个数组
+    静态：__callstatic();
+27、trigger_error("报错信息"，E_USER_ERROR)；
+28、接口
+    interface   定义
+    implements  实现接口
+29、类的自动加载 
+   __autoload($class_name)方法:require './class/'.$class_name.".class.php";
+   spl_autoload_register("函数1");自定义自动加载函数
+30、判断文件是否存在   file_exists($file); 
+31、转为对象：保存在内置类 stdClass中，$obj1 = (object)其他类型数据;
+    数组-》对象属性名为下标，其他为scalar;
+32、__tostring()魔术方法:  
+     当对象当做字符串时调用，并可以return返回字符串
+33、与对象有关的系统函数：
+    is_object($obj);判断是否是一个对象
+    get_obj_vars($obj);  获得对象的所有属性名，保存在数组里
+34、与类有关的运算符：
+    $a1 instanceof A;  判断一个变量是否是某个类的实列
+35、return window.confirm("确定删除？");
+36、in_array('排球',$aihao);判断数据是否存在数组中
+37、header("refresh:$time; url=$url");    自动跳转
+
+PDO对象 
+   $pdo->exec($sql);  适合增删改语句
+   $pdo->query($sql);  适合执行查询语句
+39、$dsn = "mysql:host=locahost;port=3306;dbname=php39";
+    $opt = array(PDO::MYSQL_ATTR_INIT_COMMAND =>'set names utf8');
+    $pdo = new PDO($dsn,"root",'123',$opt);
+40、pdo错误  静默模式
+    $e = $pdo->errorinfo()
+    错误信息：$e[2]
+41、结果集$stem->fetch(【返回类型】);获得一行结果
+          $stem->fetchAll(【返回类型】);获得结果集的所有数据
+          $stem->fetchColumn([$i]);获取结果集中的“下一行”数据的第$i个字段的值（列）
+          结果是一个“标量数据”
+42、异常
+   try{
+    }catch(Exception $e){
+	echo $e->GetMessage();//异常信息内容
+	echo $e->GetCode(); //异常信息代号
+	}
+  throw new Excption ("异常1",333); 人为抛出异常
+43、setcookie("cookie名","值",0[有效时间],"/"[有效路径],有效域名,是否https,是否仅仅http);只能从右省略
+44、session_start();
+   赋值:$_SESSION['名1']=值1;
+   取值:直接当做一个数组使用：$_SESSION['名1']
+  session_set_cookie_params(3600【超时时间秒】,"/"【路径】,""【域名】,false,false)
+
+session_destroy()；删除当前session并结束session;
+45、sql注入防护：
+   addslashes($POST数据)
+46、上传文件：
+	<form action="abc.php" methed="post" enctype="multipart/form-data">
+		<input type="file" name="fime[]"/>
+	</form>
+   if(is_uploaded_file($file['tmp_name'])){//判断是否是上传的文件
+	move_uploaded_file($file['tmp_name'],'./'.$fname.$ext);保存路径
+	}
+47、<img src=""  onerror="this.src='';"/>   //图片加载出错时可以用
+	<img src=""  onclick="this.src='';"/>	//验证码点击刷新时可以用
+48、iconv("原字符编码","目标字符编码","要转换的字符")
+49、getcwd()函数；获取当前工作目录
+50、ucfirst(字符),将单词的首字母大写
+51、trim(字符串);//把最左边和最右边的空格去掉
+52、str_repeat("字符",次数);重复输出字符
