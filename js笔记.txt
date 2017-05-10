@@ -98,6 +98,9 @@ setTimeout(fn,1000);1秒后执行fn,只执行一次
 7、student.prototype = new Base();//原型继承，有缺点，不能传参；用call继承
 8、闭包：一个函数可以访问另一个函数作用域的变量
 	具有封闭性：起到一个保护变量的作用
+9、obj.isPrototypeOf(p1);	判断p1的原型对象是否是obj;
+10、var a = Object.getPrototypeOf(p1);	//获得p1的原型对象
+11、p3.hasOwnProperty('name');	//判断属性是否属于实例对象
 
 
 

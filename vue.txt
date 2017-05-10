@@ -11,7 +11,7 @@
 		} 
 	});
 2、循环
-	v-for="(value,key,index) in arr/json"
+	v-for="(value,key,index) in arr/json limitBy 2 1"
 	{{value}}值		{{key}}键	{{index}}下标(0,1,2)
 	如果有重复数据，加上	track-by='$index/索引'	能提高循环性能
 3、绑定事件
@@ -45,12 +45,21 @@
 	capitalize	首字母大写
 	@click="show | debounce 2000"	//延迟2000毫秒调用方法，配合事件
 	v-for="val in arr | limitBy 2 1"	//取2个，从0开始
-	filterBy a	//只包含a的数据
+	filterBy a	//只包含‘a’的数据
 	orderBy 1	正序排列，-1为倒叙
 	自定义过滤器
-	Vue.fiter('dome',function(input,a,b){
+	Vue.fiter('dome',function(input,a,b){	//如：过滤9,input就是9,返回09,a,b是接收的参数;
 		return input<10?'0'+input:''+input;
 	});
+	双向过滤器：
+	Vue.filter('filterHtml',{
+		read.function(input){	//model->view
+			return input.replace(/[<]+>/g,'');	//过滤html标签
+		},
+		write:function(val){	//view->model
+			return val;
+		}
+	})
 10、钩子函数
 	created:function(){	//实例创建后调用	}
 	beforeCompile:function(){	//编译之前	}
@@ -96,7 +105,12 @@
 	v-model.lazy	//懒加载，表单失去焦点时加载
 	v-model.number	//只绑定数字，如果一开始输入的是字符就无效
 	v-model.trim	//去掉前后的空格
-16、自定义指令的钩子函数
+16、自定义指令
+	v-指令名='参数';	//参数可以在data里
+	Vue.directive('指令名字',fn(el,binding){
+	})
+	
+	自定义指令的钩子函数
 	bind  只调用一次，指令第一次绑定到元素时调用
 	inserted  被绑定元素插入父节点时调用
 	update  被绑定于元素所在的模板更新时调用
@@ -110,6 +124,6 @@
 		}
 	}
 	或者
-	vm.$watch('massage',function(new,old){	//同上	})
+	vm.$watch('massage',function(new,old){	//同上	},{deep:turn});	深度监听(json内)
 18、修改模板的输出形式{{massage}}
 	delimiters:['~~','~~']
