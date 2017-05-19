@@ -11,9 +11,9 @@
 		} 
 	});
 2、循环
-	v-for="(value,key,index) in arr/json limitBy 2 1"
-	{{value}}值		{{key}}键	{{index}}下标(0,1,2)
-	如果有重复数据，加上	track-by='$index/索引'	能提高循环性能
+	v-for="(value,key,index) in arr/json limitBy 2 1"	//数组不要key
+	{{value}}值		{{key}}键	{{index}}下标(0,1,2)	
+	如果有重复数据，在标签加上	track-by='$index/索引'	能提高循环性能,在2.0里变成了:key="index"
 3、绑定事件
 	v-on:click="函数名"
 	简写：@click="show($event)"	//$event事件对象，固定写法
@@ -39,6 +39,7 @@
 	{{{msg}}} html转义输出
 9、过滤器
 	{{msg|filterA|filterB}}
+	json	把obj转为json数据
 	{{12|currency '￥'}}	12.00人民币
 	uppercase	大写
 	lowercase	小写
@@ -47,10 +48,12 @@
 	v-for="val in arr | limitBy 2 1"	//取2个，从0开始
 	filterBy a	//只包含‘a’的数据
 	orderBy 1	正序排列，-1为倒叙
+	2.0删除了所有的过滤器
 	自定义过滤器
-	Vue.fiter('dome',function(input,a,b){	//如：过滤9,input就是9,返回09,a,b是接收的参数;
+	Vue.fiter('demo',function(input,a,b){	//如：过滤9,input就是9,返回09,a,b是接收的参数;
 		return input<10?'0'+input:''+input;
 	});
+	{{msg | demo('12','3')}}
 	双向过滤器：
 	Vue.filter('filterHtml',{
 		read.function(input){	//model->view
@@ -61,14 +64,23 @@
 		}
 	})
 10、钩子函数
-	created:function(){	//实例创建后调用	}
-	beforeCompile:function(){	//编译之前	}
-	compiled:	//编译之后
-	ready:		//插入到文档中
-	beforeUpdate	//数据更新前
-	updated	//数据更新后
-	beforeDestroy:	//销毁之前
-	destroyde:		//销毁之后
+		created:function(){	//实例创建后调用	}
+		beforeCompile:function(){	//编译之前	}
+		compiled:	//编译之后
+		ready:		//插入到文档中
+		beforeUpdate	//数据更新前
+		updated	//数据更新后
+		beforeDestroy:	//销毁之前
+		destroyed:		//销毁之后
+	2.0的生命周期
+		beforeCreate	//组件实例刚刚被创建(属性都没有)
+		created			//实例创建完成(有属性,dom还没生产)
+		beforeMount		//模板编译之前
+		mounted			//模板编译完成
+		beforeUpdate	//组件(数据)更新之前
+		updated			//组件(数据)更新完毕
+		beforeDestroy	//销毁之前
+		destroyed		//销毁之后
 11、防止闪烁
 	v-cloak		[v-cloak]:{display:none;}	//防止用户看到花括号
 	v-text="msg"	直接输出数据，不会转义
@@ -109,6 +121,7 @@
 	v-指令名='参数';	//参数可以在data里
 	Vue.directive('指令名字',fn(el,binding){
 	})
+	2.0变成了 Vue.config...
 	
 	自定义指令的钩子函数
 	bind  只调用一次，指令第一次绑定到元素时调用
@@ -127,3 +140,64 @@
 	vm.$watch('massage',function(new,old){	//同上	},{deep:turn});	深度监听(json内)
 18、修改模板的输出形式{{massage}}
 	delimiters:['~~','~~']
+19、全局组件
+	//另一种方式参考Vue.extend
+	<aaa></aaa>	//必须在vue对象下
+	Vue.component('aaa',{
+		data(){		//data必须是一个函数，并且有返回值
+			return {
+				msg:'数据'
+			}
+		},
+		methods:{
+                change(){
+                    this.message = 222;
+                }
+            },
+		template:'<h1>h1标签{{msg}}</h1>'	//把aaa替换成的模板
+	});
+20、组件之间传递数据
+	1、子组件获取父组件data
+		<bbb :m="数据名"></bbb>
+		子组件内：props:['m']
+		子组件如果想改变父组件的数据：
+		1
+			a、父组件传一个对象给子组件：msg:{a:1}
+			b、子组件方法中改变：	this.msg.a=2;	这样两边的a都改变了
+		2
+			给子组件定义一个空数据用mounted函数中转等于父组件的数据
+			再改变子组件数据的时候父组件的数据就不改变了
+	2、父组件获得子组件数据
+		在子组件里的方法中:	this.$emit(事件名,数据)
+		在子组件标签中：:事件名="get"
+		在父组件中添加方法:		get(msg){	//msg就是子组件发送的数据}
+	3、单一事件管理组件通信
+		var Event = new Vue();
+		//在a组件方法中发送数据
+		Event.$emit(事件名,this.msg);
+		//在b组件中接收数据
+		Event.$on(事件名,function(data){//data就是接收的数据	}.bind(this));
+21、过渡
+	<transition name="fade"></transition>
+	.fade-enter		.fade-leave
+	.fade-enter-active,fade-leave-active{
+		transition:all 3s;
+	}
+	元素显示时：
+	从.fade-enter过渡到.fade-enter-active然后变为原始属性
+	隐藏时：
+	从原始属性到.fade-leave-active在消失;.fade-leave好像没用
+	有8个钩子函数，参考手册
+	
+	配合animate.css:
+	<transition enter-active-class="zoomOut" leave-active-class="wobble">
+	<p v-show="show" class="animated"></p>
+	</transition>
+	多个元素动画
+	<transition-group enter-active-class="zoomOut" leave-active-class="wobble">
+        <p v-show="show" class="animated" :key="1"></p>
+        <p v-show="show" class="animated":key="2"></p>        
+    </transition-group>
+22、路由实例方法
+	router.push({path:'home'});	//直接添加一个路由，表现为切换路由，本质往历史记录里添加一个
+	router.replace({path:'news'})	//把当前路由替换为news，不会刷新页面和历史记录里添加

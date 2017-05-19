@@ -22,7 +22,7 @@ drop   当元素放到该对象时
 transitionend	过度之后触发，每一个属性完都会触发一次
 animationEnd	css3的动画完后触发
 
-window.onscroll=function(){ 页面滚蛋语句 }
+window.onscroll=function(){ 页面滚动语句 }
 window.onresize=function(){ } 窗口改变事件
 onresize   窗口或框架被调整大小时发生
 

@@ -1,7 +1,23 @@
+
+cnpm install 包名 --save-dev	//下载包时把包名放在配置文件中，方便别人加载
+	简写	i:install
+			-D:--save-dev
+			-S:--save
 1、live-server
 	开启一个服务器，文件更改时浏览器自动更新
 2、vue-cli初始化
-	vue init webpack vuecliTest
-	npm install		//加载依赖
-	npm run dev		//模拟运行,开启一个服务器
-	npm run build	//打包生成项目文件
+		npm install vue-cli -g	//生成vue全局环境
+		vue --version	//插看版本
+	生成项目模板：
+		vue init 模板名 本地名称  如： vue init webpack(webpck-simple) vuecliTest
+		npm install		//加载依赖
+		npm run dev		//模拟运行,开启一个服务器
+		npm run build	//打包生成项目文件
+3、bower--->(前端)包管理器
+	npm install bower -g
+		验证：bower --version
+	bower info 包名		//查看有多少版本
+	bower uninstall 包名	//卸载包
+	cnpm install 包名@1.0.28	//下载指定版本的包
+4、安装element-ui
+	npm i element-ui -D
