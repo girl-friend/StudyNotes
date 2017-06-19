@@ -178,7 +178,7 @@
 		//在b组件中接收数据
 		Event.$on(事件名,function(data){//data就是接收的数据	}.bind(this));
 21、过渡
-	<transition name="fade"></transition>
+	<transition name="fade" mode="out-in"></transition>
 	.fade-enter		.fade-leave
 	.fade-enter-active,fade-leave-active{
 		transition:all 3s;
@@ -188,6 +188,7 @@
 	隐藏时：
 	从原始属性到.fade-leave-active在消失;.fade-leave好像没用
 	有8个钩子函数，参考手册
+	mode是过渡模式,out-in是先退出后进入,in-out是先进入后退出
 	
 	配合animate.css:
 	<transition enter-active-class="zoomOut" leave-active-class="wobble">
@@ -201,3 +202,97 @@
 22、路由实例方法
 	router.push({path:'home'});	//直接添加一个路由，表现为切换路由，本质往历史记录里添加一个
 	router.replace({path:'news'})	//把当前路由替换为news，不会刷新页面和历史记录里添加
+21、vue-router传递参数
+	1、name传参
+		在router中的配置中设置name属性：
+		{
+			path:'/',
+			name:'Hello',
+			component:Hello
+		}
+		在模板中获得name属性{{$route.name}}
+	2、router-link传参
+		<router-link :to="{name:hi1,params:{key:value}}"></router-link>
+		name:就是在路由配置中的name值
+		params:要传的参数
+		在hi1.vue的模板中用{{$route.params.username}}显示参数
+		在方法中this.$route.params.username
+22、单页面多路由
+	<router-view></router-view>
+	<router-view name="left" style="float:left"></router-view>
+	<router-view name="right" style="float:right"></router-view>
+	在router中配置时
+	components:{
+		default:Hello,
+		left:Hi1,
+		right:Hi2
+	}
+23、去掉路由的#/：在router中加上mode:'history'
+24、404页面：在router中添加path:'*'然后配置component的404模板
+25、路由中的钩子函数：
+	1.写在router配置中的
+		{
+		  path:'/params/:newsId(\\d+)/:newsTitle',
+		  component:Params,
+		  beforeEnter:(to,from,next)=>{	//进入此路由时的钩子
+			console.log('我进入了params模板');
+			console.log(to);	//路由将要跳转的路径信息
+			console.log(from);	//跳转前的路径信息
+			next();括号里为true或false
+		},
+	2.写在.vue的钩子函数：
+		export default {
+			name:'params',
+			data(){
+				return{
+					mag:''
+				}
+			},
+			beforRouteEnter:(to,from,next)=>{
+				console.log("准备进入路由");
+				next();
+			},
+			beforRouteLeave:(to,from,next)=>{
+				consol.log("准备离开路由");
+				next();
+			}
+		}
+26、前进/后退
+	在模板中
+		<button @click="goback">后退</button>
+		<button @click="goHome">回到首页</button>
+	然后在js中
+	export default {
+		name:'app',
+		methods:{
+			goback(){
+				this.$router.go(-1);//1表示前进
+			},
+			goHome(){
+				this.$router.push('/');//可以用于判断用户未登录然后跳转
+				that.$router.replace('/404') //替换掉当前路由
+			}
+		}
+	}
+27、获得vuex的数据
+	在模板js中引入：import store from '@/vuex/store'
+	直接在模板中输出：{{$store.state.count}}
+	用计算属性获得：
+		1：computed:{
+			count(){	//count就是值了
+				return this.$store.state.count	
+			}
+		}
+		2和3：引入: import {mapState} from 'Vuex'
+		computed:mapState({
+			count:state=>state.count
+		})
+		computed:mapState(['count'])
+		
+		
+编辑器模板：
+	<template></template>
+	<script type="text/ecmascript"></script>
+	<style lang="stylus" rel="stylesheet/stylus" scoped></style>
+	
+	

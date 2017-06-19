@@ -6,7 +6,8 @@
    var [{a,e},[b,c],d]={{e:1,a:2},[3,4],5};//json和顺序无关
 5、复制数组
    var arr=[1,2,3];
-   1.var arr2=Array.from(arr);  2.var arr2=[...arr];
+   1.var arr2=Array.from(arr);  
+   2.var arr2=[...arr];
 6、for of; 可以循环数组，不能循环json，主要用于配合Map
    for(var name of map){name//key,value};
    for(var [key,value] of map){};
