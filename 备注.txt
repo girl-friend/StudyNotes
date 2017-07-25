@@ -8,8 +8,13 @@ localhost:8090/01/product_add.php
 services.msc   运行--服务
 session.auto_start = 1 不能进数据库
 <a href="select_do2.php?">查询</a></td>
-http://pan.baidu.com/share/home?uk=1040300808&view=share#category/type=0C:\Windows\System32\drivers\etc
+http://pan.baidu.com/share/home?uk=1040300808&view=share#category/type=0
+C:\Windows\System32\drivers\etc
 
 
 http://localhost/01php/
 ${UrlPort}
+
+
+vscode的插件
+C:\Users\719462227\.vscode\extensions

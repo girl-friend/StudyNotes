@@ -20,10 +20,10 @@
 }
 4、选择器
 	+选择器
-	ul>li*6
-	ul>li+li{
-	//选择每个li后面的紧邻li元素,通常制作border中线
-	}
+		ul>li*6
+		ul>li+li{
+		//选择每个li后面的紧邻li元素,通常制作border中线
+		}
 	div[class^="col-md"]{//包含class属性且以col-md开头的div元素}
 	div[class*="col-md"]{//包含class属性包含col-md的div元素}
 	div[class$="col-md"]{//包含class属性且以col-md结束的div元素}
@@ -60,7 +60,7 @@ CSS使用手册：
 		flex-end、center (居中)、
 		space-around (平均)、
 		space-between (靠两边对齐)   
-	4、align-items:		//调整侧抽的对齐方式(侧轴总是垂直主轴)
+	4、align-items:		//调整侧轴的对齐方式(侧轴总是垂直主轴)
 		flex-start (开始位置)、
 		flex-end、
 		center (居中)、
@@ -83,34 +83,51 @@ CSS使用手册：
 	background-image:radial-gradient(120px 80px at center center,yellow,green); //辐射范围，中心点，颜色的起止
 
 过度：
-	transition:all 1s;
+	transition:		//样式，持续时间，过渡类型，延迟过渡时间
+		border-color .5s ease-in .1s,
+		background-color .5s ease-in .1s,
+		color .5s ease-in .1s;
+	obj.addEventListener("transitionend",function(){})	//过渡之后触发事件
 变换：
 	transform:
+		rotate(30deg),	2d旋转30度
 		skewx(45deg),x轴上的扭曲
-		rotate(360deg),	2d旋转
 		scalex(2),	x轴上的缩放
 		translatex(2),	x轴上的平移
-	transform-origin:left top;	旋转和缩放的中心点
-3D旋转：
-	transform:rotateZ(360deg);
+		matrix(a,b,c,d,e,f) //默认为(1,0,0,1,0,0)
+			位移：x轴上的位移:e=e+x
+				  y轴上的位移:f=f+y
+			缩放：x轴缩放：a=x*a c=x*c e=x*e;
+				  y轴缩放：b=y*b d=y*d f=y*f;
+			斜切：x轴斜切：c=Math.tan(xDeg/180*Math.PI)
+				  y轴斜切：b=Math.tan(yDeg/180*Math.PI)
+	transform-origin:left top;	旋转和缩放的 中心点
+3D变换：
 	transition:all 3s;
-	transform-origin:left bottom; //旋转中心点，不要设在hover上
-	tramsform-style:preserve-3d;让元素看起来在3d空间上
-	transform:rotatex(60deg);		//x轴上旋转
+	transform:
+		rotateZ(360deg);
+		rotatex(60deg);		//x轴上旋转
+		translatez(100px);	//z轴上的平移，离观察者近100px
+		scalez()： 指定对象的z轴缩放 
+	transform-origin:left bottom 0; //变换中心点，不要设在hover上
+	tramsform-style:preserve-3d;让元素的子元素（看起来）在3d空间上
 	perspective:100px;	//以100px的距离看过去
-	transition:translatez(100px);	//z轴上的平移，离观察者近100px
+	perspective-origin: 50% 50%;	//景深基点(以什么角度看过去，设在父元素上)
+	backface-visibility:visible | hidden;
+		visible： 指定元素背面可见，允许显示正面的镜像。 
+		hidden： 指定元素背面不可见 
 	
 
 动画：
-	animation:rotate 60s steps(60) infinite;//名字，动画持续时间，60秒分60次完成，无限循环
+	animation:change 60s steps(60) infinite;//名字，动画持续时间，60秒分60次完成，无限循环
 	animation-name:change;//动画名称
 	animation-duration: 5s;//动画持续时间
 	animation-fill-mode:forwards; //动画后的状态
-	animation-iteration-count:infinite;//无限播放
+	animation-iteration-count:infinite;//动画循环次数（无限播放）
 	animation-delay:1s;  //延时1s
-	animation-play-state:paused; //动画暂停
-	animation-direction:alternate;//动画反方向
-	animation-timing-function:linear;// 动画速度
+	animation-play-state:paused; //动画状态（动画暂停），可以hover时使用
+	animation-direction:alternate;//动画反方向运动
+	animation-timing-function:linear;// 动画的过渡类型
 
 @keyframes change {
  0% {
@@ -120,6 +137,7 @@ CSS使用手册：
  100%{
 }
 }
+obj.addEventListener("aniiationend",function(){})	//动画之后触发事件
 
 
 #bg:target{  //选中

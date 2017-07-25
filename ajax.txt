@@ -11,6 +11,7 @@
     xhr.open("post","./02post.php",true);
 	//post请求时设置请求头
     xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
+	或上传时的请求头： xhr.setRequestHeader('X-Request-With', 'XMLHttpRequest');
     xhr.send("use="+val);
 	xhr.onreadystatechange=function(){
 		if(xhr.readyState==4){
@@ -20,7 +21,7 @@
 			}
 		}
 	}
-	onreadystatechange在h5中不推荐使用可以使用onload(请求完成并返回正确)代替
+	onreadystatechange在h5中不推荐使用,可以使用onload(请求完成并返回正确)代替
 4、	get:中文/特殊符号需要编码
 	post:中文不需要编码,但特殊符号需要
 	js:var val=encodeURIComponent(str);//js中把有特殊字符的参数进行编码
@@ -43,8 +44,8 @@
 	xhr.send(f);
 8、文件上传进度条
 	xhr.upload.onprogress = function(e){ //文件上传时每隔100ms左右执行一次
-		var loaded = e.loaded;
-		var roral = e.total;
+		var loaded = e.loaded; //要发送的总量
+		var roral = e.total;	//已发送的总量
 		var per = Math.floor((loaded/total)*100)+"%";
 		document.getElementById('son').style.width=per;
 	}
@@ -64,4 +65,10 @@
 		document.body.appendChild(script);
 		获得的一个函数调用如：weather(...);(在url后有_jsonp=函数名,可自定义)所以在之前要定义一个函数来获取数据
 		function(data){//处理数据}
-	
+	4、IE78跨域
+		var xhr = new XDomainRequest();
+		xhr.onload = function(){
+			alert(this.responseText);
+		}
+		xhr.open('get','http://www.b.com/ajsx.php',true);
+		xhr.send();

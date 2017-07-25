@@ -1,6 +1,9 @@
 1、let a=2;定义变量，有块级作用域
 2、const;定义常量，必须赋值
 3、var str=`字符串`;//aa${str}aaa;
+	blog.indexOf(val)>0		es5判断blog字符串里是否有val
+	es6：blog.includes(val)
+	复制字符串：'zmz|'.repeat(3)	相当于3个'zmz|'
 4、var [a,b,c]=[1,2,3];//解构赋值
    var [a,[b,c],d]=[1,[2,3],4];
    var [{a,e},[b,c],d]={{e:1,a:2},[3,4],5};//json和顺序无关
@@ -16,7 +19,9 @@
   for循环数组：
    只循环值：  for(var value of arr){}
    只循环索引：for(var key of arr.keys()){}
-   都循环：    for(var some of arr.entries()){}
+   都循环：    for(var some of arr.entries()){} 或 for(let [index,val] of arr.entries)
+   手动循环：	list = arr.entries();
+				console.log(list.next().value)
 7、Map: var map = new Map();
    设置：map.set(name,value);
    获取：map.get(name);
@@ -53,3 +58,14 @@
 	import b from './b.js';//导入
 	export default {a,b}
 	export default function sum(){return a+b};//导出
+11、判断a是否是数字：Number.isFinite(a);
+	判断是否是整数：Number.isInteger(a);
+12、遍历数组：
+	1、for of
+	2、arr.forEach((val,index)=>console.log(index,val))		//打印0 "zzz"   1 "xxx" 
+	3、arr.filter(x=>console.log(x))		//打印数组值
+	4、arr.some(x=>console.log(x))		//打印数组值
+	5、console.log(arr.map(x=>'web'))	// 把数组值都替换成web然后输出
+13、把数组转为字符串
+	arr.toString();	// 以逗号分隔
+	arr.join('-');	// 以‘-’分隔

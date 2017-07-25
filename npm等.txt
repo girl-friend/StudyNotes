@@ -4,6 +4,7 @@ cnpm install 包名 --save-dev	//下载包时把包名放在配置文件中，�
 			-D:--save-dev
 			-S:--save
 1、live-server
+	npm安装后直接在文件夹下使用live-server命令
 	开启一个服务器，文件更改时浏览器自动更新
 2、vue-cli初始化
 		npm install vue-cli -g	//生成vue全局环境
@@ -25,6 +26,37 @@ cnpm install 包名 --save-dev	//下载包时把包名放在配置文件中，�
 5、git控制台清空
 	reset
 6、vscode 英文变中文：ctrl+shift+p :config zh-CN
+7、使用eslint
+	全局安装：npm install -g eslint
+	npm init
+	eslint --init
+	文件.eslintrc.json为
+	{
+		"extends": "standard",
+		"plugins": [
+			"standard",
+			"promise"
+		],
+		"rules": {
+			//关闭额外的分号检查
+			//0:关闭，1:警告，2:异常
+			// "semi": 0,
+			//字符串必须使用单引号
+			"quotes": [
+				"error",
+				"single"
+			]
+		}
+	}
+8、使用stylus
+	npm install stylus -g(vue中stylus-loader lang="stylus")
+	新建example文件夹
+	新建demo.stly文件
+	新建/example/dist文件夹
+	打开命令行界面
+	输入 stylus -w demo.styl -o dist
+	-w 是自动监视文件 -o 是将编译后的CSS文件输出到指定文件中
+	在demo.styl里面写内容，保存即可
 	
 	
 	

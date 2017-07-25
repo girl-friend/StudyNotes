@@ -46,3 +46,102 @@
 	pause():	媒体暂停
 	load():		重新加载音频/视频元素
 	poster('1.png')	视频播放前的预览图片
+7、JSON.parse():把字符串转成json(字符串中的属性要严格加上引号)
+	JSON.stringify():把json转成字符串(会自动把双引号加上)
+	深拷贝json对象：(互不影响)
+		var a = { name : { age : 100 }}
+		var str = JSON.stringify(a)
+		var b = JSON.parse(str)
+8、window.location.hash = 111;	设置哈希值，可以触发历史管理
+	window.onhashchange = function(){	当哈希改变时
+		window.location.hash.substring(1)	获得改变后的哈希值(去掉#号)
+	}
+	history.pushState('数据','设置历史状态显示的标题，目前不支持','?demo='+new Date().toLocaleTimeString());
+		//new Date()获得的事时间对象;toLocaleTimeString转成我们认识的时间字符串；
+		//toLocaleDateString转成我们认识的日期字符串；
+	window.addEventListener('popstate',function(e){ //前进或后退事件console.log('111'+e.state); });
+9、拖放
+	元素标签里 draggable="true" 就可以拖拽
+	在dragstart事件里 
+		e.dataTransfer.setData('name','hello');		设置值
+		e.dataTransfer.getData('name');		获取值
+		e.dataTransfer.effectAllowed = 'link'; 	光标样式
+		e.dataTransfer.setDragImage(oImg,0,0);		拖拽时候变成图片
+	在drop事件里
+		e.preventDefault();
+		var fs = e.dataTransfer.files;	返回拖拽进来的内容的filesList列表
+		console.log(fs)
+10、跨文档通信
+	iframe对象.contentWindow.document.body.style....	//contentWindow就是iframe里文档的window对象 
+11、workers 异步加载js文件，可以提高性能
+12、内容可编辑：contenteditable="true"
+	语音输入：	<input type="text" x-webkit-speech />
+13、地理位置对象
+	var timer = navigator.geolocation.getCurrentPosition(...)
+		单次定位请求：getCurrentPosition(请求成功function(position){}，请求失败，数据收集方式{
+			enableHighAcuracy : true,	// 更精确的查找，默认false
+			timeout : 5000,		// 获取位置允许最长时间，默认infinity
+			maximumAge : 5000	// 位置可以缓存的最大时间，默认0
+		})
+		请求成功函数：
+			经度：position.coords.longitude
+			维度：position.coords.latitude
+			准确度：position.coords.accuracy
+			海拔：position.coords.altitude
+			海拔准确度：position.coords.altitudeAcuracy
+			行进方向：position.coords.heading
+			地面速度：position.coords.speed
+			时间戳：new Date(position.timestamp)
+		请求失败函数：
+			err.code	// 失败时的编号
+			0：不包括其他错误编号中的错误
+			1：用户拒绝浏览器获取位置信息
+			2：尝试获取用户星星，但失败了
+			3：设置了timeout值，获取位置超时了
+		多次定位请求：watchPosition
+			移动设备有用，位置改变才会触发
+			配置参数：frequency 更新的频率
+		关闭更新请求：navigator.geolocation.clearWatch(timer)
+14、本地存储
+	storage
+		sessionStorage:临时会话，页面关闭，本地储存消失
+		localStorage：永久存储（可以手动删除数据）
+	特点：
+		存储量限制（5M）
+		客户端完成，不会请求服务器处理
+		sessionStorage数据不共享，localStorage共享
+	api：window.sessionStorage/localStorage.
+			setItem('key',value)	// 设置值
+			getItem('key')			// 获取值
+			removeItem('key')		// 删除值
+			clear()					// 删除全部数据
+	localStorage的多数据操作：
+		for(let i=0; i<localStorage.length; i++){
+			var key = localStorage.key(i);	//通过key属性获取名称
+			var value = localStorage.getItem(key);	//通过名称获取值
+		}
+	存储事件：
+		当数据有修改或删除时，就会触发storage事件
+		在数据改变的当前页面不会触发此事件
+		e.key:修改或删除的key值，如果调用clear()，key为null
+		e.newValue:新设置的值，如果调用removeStorage(),key为null
+		e.oldValue:调用改变前的value值
+		e.storageArea:当前的storage对象
+		e.url：触发该脚本变化的文档的url
+		注：session同窗口才可以，例：iframe操作
+	webSQL数据库
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+

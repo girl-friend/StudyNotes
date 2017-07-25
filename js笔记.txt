@@ -24,7 +24,7 @@
 16.（window.）setInterval("执行的函数"，间隔时间)
 17.var endTime=new Date("2017/12/12 17:30:00");如果date括号里面写日期就是自己定义的时间，如果不写就是当前时间
 18.disabled="disabled" || "true" 表单不可用
-19.clearInterval(定时器名称)；清除定时器
+19.clearInterval(定时器名称)；清除定时器 
 setTimeout(fn,1000);1秒后执行fn,只执行一次
 20.charAt(索引)；根据位置返回字符
 21.（last）indexOf("字符")；根据字符返回索引从前面开始（后面）数
@@ -65,6 +65,7 @@ setTimeout(fn,1000);1秒后执行fn,只执行一次
 40.Math.ceil()  向上取整
    Math.floor()  向下取整
    Math.round()  四舍五入函数
+   Math.random() 0-1的随机数(包括0，不包括1)
 41.获得内和外部的样式
 	obj.currentStyle[key]  ie
     window.getComputedStyle("元素","伪类")[key]  没有伪类用null代替
@@ -101,6 +102,13 @@ setTimeout(fn,1000);1秒后执行fn,只执行一次
 9、obj.isPrototypeOf(p1);	判断p1的原型对象是否是obj;
 10、var a = Object.getPrototypeOf(p1);	//获得p1的原型对象
 11、p3.hasOwnProperty('name');	//判断属性是否属于实例对象
+12、'name' in p1;	//判断p1中是否存在name属性
+13、原型：prototype 
+		创建每一个函数都有一个prototype属性，这个属性其实是一个指针，而这个指针指向一个对象
+		这个对象的用途就是将特定的属性和方法包含在内，起到一个所有实例共享的作用
+	原型对象实际上就是一个构造函数的实例对象，与普通的实例对象没有本质上的区别，js中的每一个对象
+	都有一个原型对象。不过它比较特殊，该对象所包含的所有属性和方法能够供构造函数所有的实例共享，
+	这就是其他语言所说的继承，而JavaScript通过原型对象来实现继承，简称原型继承。
 
 
 
@@ -111,7 +119,14 @@ HTML5中的JavaScript
 2、元素对象.classList.remove('类名');classList.add('类名')；//移除和添加类名  
    元素对象.classList.toggle('类名'【,bool】);删除或添加类名,ture为添加，false为删除；
    element.classList.contains('类名');判断元素是否包含有类名；
-3、history.pushState('数据','设置历史状态显示的标题，目前不支持','?demo='+new Date().toLocaleTimeString());
-   //new Date()获得的事时间对象;toLocaleTimeString转成我们认识的时间字符串；
-   //toLocaleDateString转成我们认识的日期字符串；
-  window.addEventListener('popstate',function(e){ //前进或后退事件console.log('111'+e.state); });
+3、
+
+
+
+
+
+
+
+
+
+
