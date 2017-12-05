@@ -69,3 +69,58 @@
 13、把数组转为字符串
 	arr.toString();	// 以逗号分隔
 	arr.join('-');	// 以‘-’分隔
+14、对象的key值构建
+	let key = 'skill'
+	let obj = {
+	[key] = 'web'
+	}
+15、+0===-0	// true
+		NaN===NaN	// false
+		Object.is(+0,-0)		// false
+		Object.is(NaN,NaN)	// true
+		===同值相等
+		Object.is严格相等
+16、set数据结构
+	let setArr = new Set(['zmz','zzz'])	// 重复的数据不起作用
+	setArr.add('mmm')		// 添加
+	setArr.has('zmz')	// 查找
+	setArr.delete('zmz')	// 删除
+	setArr.clear()		// 删除全部
+	setArr.size	// 里面数组的个数
+	可以使用for of 或forEach循环输出
+	WeakSet：		// 保存对象
+		let weakobj = new WeakSet()
+		let obj = {a:'aaa',b:'bbb'}
+		weakobj.add(obj)		//必须使用add方法添加数据
+17、map数据结构
+	let map = new Map();
+	设置值：map.set(a,b)	// 前面为key，后面为value，都可以是任意数据类型的值
+	取值：map.get(a)
+	删除特定的值：map.delete(a)
+	删除全部：map.clear()
+	数据个数：map.size
+	查找是否存在：map.has(a)
+18、proxy
+	let pro = new Proxy({
+		add:function(val){
+			return val + 100
+		},
+		name:'zmz'
+	},{
+		get:function(target,key,property){	// 获取某项值时调用
+			return target[key]	// target为要获取的对象
+		},
+		set:function(target,key,value,receiver){	// 设置某项值时调用
+			// 不返回值就不会改变
+			return target[key]=value	// value为要设置的值，receiver为原始值
+		}
+	})
+	// 未完。。
+	
+	
+	
+	
+	
+	
+	
+	

@@ -1,0 +1,68 @@
+1、	<input type="search"/> //定义能调出搜索按钮的方式
+2、	<meta name="viewport" content="width=device-width, initial-scale=1.0,
+		maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	//窗口和设备的窗口保持一致，初始缩放为1:1(100%),禁止用户缩放
+3、*, ::before, ::after{
+	-webkit-tap-highlight-color: transparent;	// 清除点击默认的高亮效果
+	-webkit-box-sizing: border-box;	// 以border开始计算宽度
+}		
+5、页面下拉加载更多效果
+	let timeoutId
+	window.addEventListener('scroll', function() {
+		if ('正在加载中') {
+			return
+		}
+		if(timeoutId) {
+			clearTimeout(timeoutId)
+		}
+		timeoutId = setTimeout(callback, 50)
+	})
+	function callback() {
+		// 返回元素的大小及其相对于视口的位置(相对顶部)
+		const top = Element.getBoundingClientRect().top	
+		const windowHeight = window.screen.height
+		if(top && top < windowHeight) {
+			// 当Element(加载更多标签)滚动到页面显示范围之内的时候执行加载函数
+			loadMoreFn()
+		}
+	}
+	
+weex
+
+  安装环境：
+  E:\Android\Android Studio
+  E:\Android\sdk
+
+  npm install weex-toolkit -g
+  yarn global add webpack
+  weex // 查看可用命令
+  weex -v 查看版本号
+  weex create helloWeex
+  npm install
+  修改package.json："build": "webpack --watch"		// 实时打包
+  weex platform add android	// 添加对android的支持
+  npm run build
+  npm run dev	// 执行后就可以关闭命令行，热更新不需要
+  npm run serve
+
+  http://192.168.0.101:8080/webpack-dev-server/web/	// 热更新
+
+react native
+  npm -g install react-native-cli
+  react-native init demo
+  react-native run-android	先开启虚拟机再执行，也可以直接在Android studio中直接打开
+  npm start 
+
+  在虚拟机上按两次r更新
+
+🍕
+
+	
+	
+	
+	
+	
+	
+	
+	
+	

@@ -55,16 +55,21 @@
 		$url = "接口";
 		$cont = file_get_contents($url);
 		echo $cont;
-	2、
+	2、CORS
 		在跨域的php中允许本域访问(服务端)
 		header('Access-Control-Allow-Origin:http://www.a.com');//可以把域名改为*允许所有访问
-	3、js
+	3、jsonp
 		var url='';
 		var script = document.creatElement('script');
 		script.src = url;
-		document.body.appendChild(script);
-		获得的一个函数调用如：weather(...);(在url后有_jsonp=函数名,可自定义)所以在之前要定义一个函数来获取数据
-		function(data){//处理数据}
+		document.getElementsByTagName('head')[0].appendChild(script);
+    // 这里是后台返回的字符串
+    box({
+      'name': 'test'
+    })
+		function box(data){
+      //处理数据 
+    }
 	4、IE78跨域
 		var xhr = new XDomainRequest();
 		xhr.onload = function(){
@@ -72,3 +77,27 @@
 		}
 		xhr.open('get','http://www.b.com/ajsx.php',true);
 		xhr.send();
+  5、使用window.name来进行跨域
+  6、html5 postMessage解决跨域、跨窗口消息传递
+    5和6一般都是夸文档、窗口
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

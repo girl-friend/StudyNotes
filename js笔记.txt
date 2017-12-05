@@ -97,8 +97,10 @@ setTimeout(fn,1000);1秒后执行fn,只执行一次
 	demNodes = Array.prototype.slice.call(divs);//把伪数组转为真数组
 6、Array.prototype.push.apply(arr1,arr2);//合并数组
 7、student.prototype = new Base();//原型继承，有缺点，不能传参；用call继承
-8、闭包：一个函数可以访问另一个函数作用域的变量
+
+8、闭包（作用）：一个函数可以访问另一个函数作用域的变量，让这些变量的值始终保持在内存中
 	具有封闭性：起到一个保护变量的作用
+
 9、obj.isPrototypeOf(p1);	判断p1的原型对象是否是obj;
 10、var a = Object.getPrototypeOf(p1);	//获得p1的原型对象
 11、p3.hasOwnProperty('name');	//判断属性是否属于实例对象
@@ -119,7 +121,6 @@ HTML5中的JavaScript
 2、元素对象.classList.remove('类名');classList.add('类名')；//移除和添加类名  
    元素对象.classList.toggle('类名'【,bool】);删除或添加类名,ture为添加，false为删除；
    element.classList.contains('类名');判断元素是否包含有类名；
-3、
 
 
 

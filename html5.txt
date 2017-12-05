@@ -29,7 +29,7 @@
 					.remove()	删除class
 					.toggle()	添加和删除切换
 5、自定义属性
-	元素对象.dataset.miaovAll (属性为 data-miao-all)	获得自定义属性值
+	元素对象.dataset.miaovAll (属性为 data-miaov-all)	获得自定义属性值
 6、音频和视频	<audio><video><source>
 	标签里面属性：
 		controls:	显示用户控制界面
