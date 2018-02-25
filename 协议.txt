@@ -1,0 +1,6 @@
+1、netstat -nb
+  查看连接参数b为查看程序名称
+2、ipconfig -all
+   可以查看连接详细信息
+3、pathping
+    可以查看哪里丢包多

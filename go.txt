@@ -1,0 +1,35 @@
+1、GOPATH:工作目录
+2、GOROOT:安装go的目录
+3、go命令：
+  go get : 获取远程包
+  go run : 直接运行程序
+  go build : 测试编译，检查是否有编译错误
+  go fmt : 格式化源码
+  go install : 编译包文件并编译整个程序
+  go test : 运行测试文件
+  go doc : 查看文档
+4、变量声明与赋值
+  声明：var <变量名称> <变量类型>
+  赋值：<变量名称> = <表达式>
+  声明同时赋值：var <变量名称>[变量类型]=<表达式>
+            或者 a := 1 ,可以省略var关键字（全局变量不可用，必须显式声明）
+5、&符号会生成一个指向其作用对象的指针
+    *符号表示指针指向的底层的值
+6、可用make创建slice
+    // 第二个参数为长度，第三个为容量
+    a:= make([]int, 5, 10)
+7、对slice的容量改变后，它引用是一个新的底层数组，这个底层数组是复制原来的，
+    此时改变slice的值不会影响原来的数组（原来的数组改变也不会影响slice）
+    len(a)取长度，cap(a)取容量
+8、channel：
+      创建：ch:=make(chan int)
+      ch <- v // 将v送入channel ch内
+      v:=<-ch // 从ch接收，并赋值给v
+9、goto、break、continue
+  goto：跳到标签处
+  break：跳出标签同级的循环
+  continue：跳出标签处的此次循环，执行下一次循环
+10、switch语句不需要break，如果条件符合还希望执行下一个，
+  需要手动的添加fallthrough，添加fallthrough后不判断下一个的条件
+      
+    
