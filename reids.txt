@@ -1,0 +1,162 @@
+安装：
+  解压后 执行 make
+  然后进入src文件夹执行make install
+  复制redis.conf到其他文件夹下并修改默认开启 daemonize yes
+  在/usr/loacl/bin 目录下执行redis-server /home/zmz/develop/myredis/redis.conf
+  然后执行redis-cli -p 6379
+  ping
+  
+  1、dbsize：
+    查看有几个k
+  
+  2、keys *：
+    查看k；如：keys *, keys k?
+  
+  3、shutdown + exit：退出
+  
+  4、exists k1：
+    查看k1是否存在
+  5、move k1 2：
+    把k1移动到2号库
+    
+  6、ttl k1：查看k1还有多少秒过期
+  
+  7、expire k1：为k1设置过期时间
+  
+  string：
+    8、append k1 555：增加555字符串到k1的后面
+  
+    9、incr/decr：加减1，必须是数字，如incr k1
+      incrby/decrby：加减固定的数字，如incrby k1 3
+      
+    10、getrange k1 0 -1：获取下标之间的字符串，-1 表示最后一个
+      setrange k1 0 zzz：设置下标为0开始的字符：如：k1为2344，执行命令后为zzz4
+      
+    11、setnx k1 v1：当k1没有值时才生效
+    
+    12、mset k1 v1 k2 v2：批量设置
+        mget k1 k2：批量获取
+        msetnx k1 v1 k2 v2：批量设置，如果其中一个有值则都不成功
+        
+    13、getset k1 11：设置k1为11并返回旧值
+  
+  list：
+    14、lpush k1 0 1 2 3：依次从左边存数据
+        rpush k1 0 1 22：依次从右边存数据
+        lange k1 0 -1：查看list的数据
+        
+    15、lpop k1：从左边删1
+        rpop k1：从右边删1
+        
+    16、lindex k1 2：获取下标2的值
+        llen k1：查看k1的长度
+        
+    17、lrem k1 2 3：删除2个3，如原来是243335，则现在是2345
+    
+    18、ltrim k1 0 4：截取0到4的值在赋值给k1
+    
+    19、rpoplpush k1 k2：把k1的最后一个放到k2的第一个
+  
+    20、lset k1 1 x：把k1的1号元素设置为x
+    
+    21、linsert k1 before/after x z：把z插到k1中x值的 前/后 面
+    
+  set：
+    22、sadd k1 1 1 2 2：设置值，重复的值只设置一次（k1为 1 2）
+    
+    23、smembers k1：查看k1的值
+    
+    24、sismember k1 x：判断k1中是否有x
+    
+    25、scard：获取集合里面元素的个数
+    
+    26、srem k1 x：删除k1中的x元素
+    
+    27、srandmember k1 3：从k1里随机出3个数
+    
+    28、spop k1：随机出栈（一个元素）
+  
+    29、smove k1 k2 5：把k1里面的元素5移动到k2
+    
+    30、差集：
+          sdiff k1 k2：返回在k1里不在k2里的元素
+        交集：
+          sinter k1 k2：返回都有的
+        并集：
+          sunion：返回所有的
+  hash：
+    31、设置值：hset h1 name zhang
+        获取值：hget h1 name：获取值
+        设置多个：hmset h2 id 11 name zmz age 23
+        获取多个：hmget h2 id name age
+        获取所有键值对：hgetall h2
+        删除：hdel h1 name
+    
+    32、查看有几个键值对：hlen h2
+    
+    33、判断是否有值：hexists h2 age，有返回1，没有返回0
+    
+    34、返回所有的key：hkeys h2
+        返回所有的val：hvals h2
+     
+    35、增加2：HINCRBY  h2 age 2
+        增加0.5：HINCRBYFLOAT h2 age 0.5
+        
+    36、设置值--当key没有时才有效：hsetnx h2 age 23
+    
+  zset：
+    37、增加值：zadd z1 60 v1 70 v2 80 v3
+        获取值：zrange z1 0 -1 [withscores]，有withscores表示带指示值
+    
+    38、获取范围值：zrangebyscore z1 （60 70 [withscores] limit 2 2，
+            （（表示不包含）,limit从结果中下标为2开始截取2个
+        
+    39、删除值：zrem z1 v2
+    
+    40、值的个数：zcard z1
+        指示分数之间的个数：zcount z1 60 70
+        根据值获得值得下标：zrank z1 v2
+        根据值获得分数：zscore z1 v2
+    
+    41、逆序获得下标值：zrevrank z1 v2
+        逆序获得值：zrevrange z1 0 -1
+        逆序根据分数获得值：zrevrangebyscore z1 80 70
+  
+  
+  
+  save：手动保存到.rdb文件
+  配置文件里：
+    stop-writes-on-bgsave-error yes：后台出错时停止写操作
+    
+    appendonly no：开启/关闭aof（复制命令到aof文件）
+    
+  事务：
+    开启事务：multi
+    完成：exec
+    放弃：discard
+    监控：watch k1 ，在watch后执行事务，如果watch的值改变了的话则事务不通过
+    取消监控：unwatch，执行exec之前加的监控锁都会被取消掉
+    
+  主从复制：
+    查看状态：info replication
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

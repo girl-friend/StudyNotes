@@ -1,5 +1,10 @@
 1、如果提示缺少依赖关系的话，输入：sudo apt-get install -f
   依赖关系解决之后，再次输入命令：sudo dpkg -i [软件名名称].deb
+  设置环境变量：
+    在家目录中的.bashrc文件后添加:
+    export PATH=$PATH:/home/zmz/develop/go/go/bin
+  
+  
 2、常用命令：（有多个选项时可以省略“-”和之间的空格，如：ls -lha）
   1、ls [-a]：查看当前文件夹下的内容。
       -a：可以查看隐藏文件
@@ -65,12 +70,156 @@
     echo hello：在终端中输出hello
     echo hello > 1.txt：把应该输出到终端中的信息重定向到1.txt中
     >> ：追加到文件中
+    
+  15、管道 |
+    左边命令的输出可以作为右边命令的输入
   
+  16、关机、重启
+    shutdown
+    r：重启
+      shutdown -r now：立即重启
+      shutdown 20:10：在指定时间关机
+      shutdown +10: 10分钟后关机
+      shutdown -c：取消关机计划
+    
+  17、ifconfig：查看网卡配置信息
   
+  18、ssh使用
+    在linux安装ssh服务端：sudo apt-get install openssh-server
+    win10中开启openssh应用
+    ssh [-p port] user@remote：连接linux的ssh服务端
+    （ssh -p 22 zmz@192.168.222.129）
+    exit：退出当前用户的登录
   
+  19、scp 远程拷贝文件
+    // 从当前复制文件到远程（远程以用户的家目录作为参照）
+    端口一般为22
+    scp -P port 01.go user@192.168.222.129:Desktop/01.go
+    // 从远程复制到当前目录
+    scp -P port user@remote:Desktop/01.go 01.go 
+    复制文件夹：
+    // 把当前目录下的demo复制到远程的桌面目录下
+    scp -P 22 -r demo user@remote:Desktop
   
+  20、免密码登录
+    1：在Windows中输入ssh-keygen，一路回车
+    2：ssh-copy-id -p port user@remote（window下不支持）
+   
+  22、配置别名：
+    在Windows的user文件夹下新建config文件:
+      Host linux
+        HostName 192.168.222.129
+        User zmz
+        Port 22
+    登录linux：ssh linux
+    使用scp从Windows拷文件到linux：
+    scp ~Desktop "Go 学习笔记 第四版.pdf"  linux:桌面
   
+  23、修改文件（权限、拥有者、组）
+    chmod +/-rwx 文件名|目录名（不能精确到拥有者，组，其他）
+    对文件夹执行命令必须有可执行权限，修改文件夹内容必须有可写权限
+    递归修改文件权限（r：4，w：2，x：1）
+    chmod -R 755 文件名|目录名
+    
+    修改文件|目录的拥有者：
+    chown 用户名 文件名|目录名
+    
+    递归修改文件|目录的组
+    chgrp -R 组名 文件名|目录名
+    
+  24、群组操作
+      sudo groupadd dev：创建dev组
+           cat /etc/group：查看组文件
+           groupdel dev：删除dev组
+           chgrp -R dev 文件/目录名：递归修改文件/目录的所属组
+      
+  25、用户操作
+    sudo  useradd -m -g dev zhang：创建用户名为zhang的用户
+          -m：自动创建家目录
+          -g：为用户分配组为dev（否则会新建一个同名的组）
+          
+          passwd zhang：为用户创建密码
+          （sudo passwd root修改root的密码）
+          
+          userdel -r 用户名：删除用户
+          -r：会自动删除用户家目录
+          
+          cat /etc/passwd | grep ：确认用户信息
+    
+  26、查看用户信息
+    用户信息保存在etc/passwd
+    组信息保存在etc/group
+    
+    id [用户名]：查看用户UID和GID
+    who 查看当前所有登录的用户列表
+    whoami 查看当前登录用户的账户名
+   
+  27、修改用户组
+    修改用户的主组（passwd中的GID）：usermod -g 组 用户名
+    修改用户的附加组：usermod -G 组 用户名 （需要重新登录才能生效）
+    修改用户登录 Shell：usermod -s /bin/bash 用户名
+   
+  28、which 命令：查看名所在目录
+ 
+  29、su - 用户：切换用户，-表示同时切换目录，否则目录不变
+      exit退出当前用户返回到上一个用户
+   
+  30、查看时间和日期
+    date：查看系统时间
+    cal：查看日历，-y选项可以查看一年的日历
   
+  31、查看磁盘占用情况
+    df -h：查看系统
+    du -h [目录名]：显示目录的文件大小情况
+    
+  32、进程信息
+    ps aux：查看进程的详细状况
+      a：显示终端上的所有进程，包括其他用户的进程
+      u：显示进程的详细状态
+      x：显示没有控制终端的进程
+    
+    top：动态显示运行中的进程并且排序 q退出
+    
+    kill [-9] 进程代号：终止指定代号的进程，-9表示强行终止
+    查看进程：ps -ef|grep redis
+   
+  33、查找文件
+    find [路径] -name "*.go"：查找指定路径下扩展名是.go的文件，包括子目录
+      
+  34、软链接
+    ln -s 被链接的源文件 链接文件：
+      （源文件要使用绝对路径）
+      建立文件的软链接，类似Windows的快捷方式
+      没有-s则创建硬链接
+      
+  35、打包/解包
+    打包文件：
+      tar -cvf 打包文件.tar 被打包的文件/路径。。
+    解包文件：
+      tar -xvf 打包文件.tar
+    tar 选项：
+      c：生成档案文件，创建打包文件
+      x：解开档案文件
+      v：列出归档解档的详细过程，显示进度
+      f：指定档案文件名称，f后面一定是.tar文件，所以必须放选项最后
+    
+  36、压缩/解压缩
+    tar和gzip命令可以结合使用实现文件打包和压缩
+    压缩文件：
+    tar -zcvf 打包文件.tar.gz 被压缩的文件/路径..
+    解压缩文件：
+    tar -zxvf 打包文件.tar.gz
+    解压缩到指定路径：
+    tar -zxvf 打包文件.tar.gz -C 目标路径
+    
+    用bzip2压缩和解压缩
+    打包压缩：tar -jcvf 打包文件.tar.bz2 被压缩的文件/路径。。。
+    解压缩：tar -jxvf 打包文件.tar.bz2
+  
+  37、软件安装
+    安装软件：sudo apt install 软件包
+    卸载软件：sudo apt remove 软件名
+    更新已安装的包：sudo apt upgrade
   
   
   

@@ -1,5 +1,12 @@
-一。1.创建数据库:create datebase 名;
-2.查看已存在数据库：show datebase;
+
+管理员：
+net start mysql57 启动；
+net stop mysql57 关闭；
+
+mysql -u root -p；在命令行进入mysql
+
+一。1.创建数据库:create database 名;
+2.查看已存在数据库：show databases;
 3.删除数据库：drop database 名;
 4.创建表：
 create table 名(字段 数据类型()
