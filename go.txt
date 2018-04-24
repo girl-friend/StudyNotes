@@ -30,6 +30,9 @@
     
 8、channel：
       创建：ch:=make(chan int, 3) // 可以存储3个，存储第四个时会阻塞
+      r := make(<-chan bool)          // 只读
+      w := make(chan<- []os.FileInfo) // 只写
+
       ch <- v // 将v送入channel ch内
       v:=<-ch // 从ch接收，并赋值给v
       close(ch) // 关闭channel
@@ -68,9 +71,11 @@
   wg.Wait()
  
 12、runtime
-  终止当前goroutine：runtime.Goexit()，defer函数还会继续调用
-  让出底层线程，将当前goroutine暂停，放回队列等待下次被调度执行：
-    runtime.Gosched()
+  runtime.Goexit()：终止当前goroutine，defer函数还会继续调用
+  
+  runtime.Gosched()：让出底层线程，将当前goroutine暂停，放回队列等待下次被调度执行
+  
+  runtime.GOMAXPROCS(2)：设置可以并行计算的cpu核数的最大值，并返回之前的值
  
 13、判断类型（没有测试）
   value,ok:="str".(string)
@@ -79,14 +84,71 @@
   switch value := "str".(type) {
 		case string:
       。。。
+      
+14、map
+      m := make(map[string]int)
+      引用传递
+      m := map[int]string{1: "ma"}
+      获取值m[1]：v, ok := m[1]
+      删除值m[1]：delete(m, 1)
+      
+15、struct
+      值传递
+      type Stu struct {
+        id int
+        name string
+      }
+      var s1 Stu = Stu{1, "zmz"}
+      s2 := Stu{id:1} // 指定成员初始化，其他为零值
+  
+16、错误
+  err := errors.New("错误信息")
+  fmt.Println(err)
+  
+  panic("致命错误")
+  
+  defer func() { // recover必须放在defer中
+    if err := recover(); if err != nil {
+      fmt.Println(err)
+    }
+  }()
 
+17、字符串操作
+  包含：
+    strings.Contains("hello", "he") // 包含返回true，不包含返回false
+    
+  拼接：
+    s := []string{"a", "b"}
+    strings.Join(s, "-") // 返回"a-b"
+    
+  索引：
+    strings.Index("abcHello", "Hello") // 返回3，如果不包含返回-1
+    
+  重复：
+    strings.Repeat("go", 3) // 返回gogogo
+    
+  拆分：
+    strings.Split("a-b-c", "-") // 返回slice [a, b, c]
+   
+  去掉两边的字符：
+    strings.Trim("     abc   ") // 返回 "abc"
 
+  以空格拆分：
+    strings.Fields("  a   b c") // 返回slice [a, b, c]
+    
+18、原子函数
+  atomic.AddInt64(&count, 1) // 加1
+  
+  atomic.StoreInt64(&shutdown, 1) // 设置值
+  
+  atomic.LoadInt64(&shutdown) // 读
 
-
-
-
-
-
+19、互斥锁
+  var mux sync.Mutex
+  代码区域只能有一个goroutine执行：
+  mutex.Lock() 
+  // 代码
+  mutex.Unlock()
 
 
 

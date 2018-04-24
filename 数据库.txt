@@ -3,7 +3,12 @@
 net start mysql57 启动；
 net stop mysql57 关闭；
 
-mysql -u root -p；在命令行进入mysql
+mysql -u root -p [-h主机名] [-P3306]；在命令行进入mysql
+123456
+
+把命令输出到日志：\T G://1.txt
+
+取消输出：\t
 
 一。1.创建数据库:create database 名;
 2.查看已存在数据库：show databases;

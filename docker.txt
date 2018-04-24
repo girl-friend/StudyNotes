@@ -1,0 +1,14 @@
+1、 docker pull：可以从 Registry 下载镜像。
+    docker run -it ubuntu：先下载镜像（如果本地没有），然后再启动容器。
+      -it参数作用是以交互模式进入容器，并打开终端
+    
+2、 docker images：查看镜像
+    docker ps 或 docker container ls：显示正在运行的容器。
+      查出的names为docker给容器随机分配的名字
+      
+3、创建新镜像：docker commit 容器名 新镜像名
+
+4、Dockerfile构建镜像：http://www.cnblogs.com/CloudMan6/p/6830067.html
+
+5、查看镜像构建历史：docker history ubuntu-with-vi-dockerfile:latest
+  

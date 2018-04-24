@@ -86,7 +86,7 @@
           sunion：返回所有的
   hash：
     31、设置值：hset h1 name zhang
-        获取值：hget h1 name：获取值
+        获取值：hget h1 name
         设置多个：hmset h2 id 11 name zmz age 23
         获取多个：hmget h2 id name age
         获取所有键值对：hgetall h2

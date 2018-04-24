@@ -1,0 +1,13 @@
+1、查看上一条警告：show warnings
+
+2、查看创建数据库时的语句：show create database test;
+
+3、打开数据库：use test;
+
+4、查看当前打开的数据库：select database();
+
+5、创建表：
+create table [if not exists] 名(
+  字段 数据类型() comment '给字段注释' [完整性约束条件]
+  ...
+)engine=引擎名称 charset='编码方式';
