@@ -57,7 +57,7 @@
 10、switch语句不需要break，如果条件符合还希望执行下一个，
   需要手动的添加fallthrough，添加fallthrough后不判断下一个的条件
 
-11、sync.WaitGroup
+11、sync.WaitGroup  // 函数传参好像需要指针类型
   wg := new(sync.WaitGroup)
   // 后面的wg.Wait将等待2个wg.Done
   wg.Add(2)
