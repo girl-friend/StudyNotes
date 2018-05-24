@@ -1,10 +1,41 @@
-1、git config --global user.name "zmz"
+1、git config --global user.name "clannad"
 2、git config --global user.email "719462227@qq.com"
 3、git config --list	查看
-4、git init		在项目中初始化
-5、git add 文件名	添加到暂存区域
+4、git init：		在项目中初始化
+5、git add 文件名：	添加到暂存区域
 6、git commit -m "说明，做了什么"
-7、git status	查看当前状态
+7、git status：	查看仓库当前状态
 8、git reset HEAD	把添加到暂存区域的文件恢复回去
 	git reset HEAD~10	把10次之前的快照放回到暂存区域
-9、git checkout -- 文件名		暂存区域的文件覆盖回已经被修改的文件(危险)
+9、git checkout -- 文件名：	暂存区域的文件覆盖回已经被修改的文件(危险)
+
+10、git reflog：记录每一次命令（可以查看改动）
+	可以使用git reset --hard commit_id 回到未来版本
+	
+11、git reset HEAD 文件名：把暂存区的文件修改丢弃
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
